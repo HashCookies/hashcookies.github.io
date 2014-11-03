@@ -395,31 +395,14 @@ permalink: /team/
 <div class="full-container" id="team-members">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-3 profile">
-				<img src="/assets/images/milind-av.png" alt="" class="avatar" />
-				<h4>Milind Alvares</h4>
-				<span class="designation">Designer / Dev</span>
-			</div>
-			<div class="col-md-3 profile">
-				<img src="/assets/images/av-axel.jpg" alt="" class="avatar" />
-				<h4>Axel D'Souza</h4>
-				<span class="designation">Operations</span>
-			</div>
-			<div class="col-md-3 profile">
-				<img src="/assets/images/avatar3.jpg" alt="" class="avatar" />
-				<h4>Alistair Rodrigues</h4>
-				<span class="designation">Dev / Sys Admin</span>
-			</div>
-			<div class="col-md-3 profile">
-				<img src="/assets/images/DSC_0007.jpg" alt="" class="avatar" />
-				<h4>Larry David Jr.</h4>
-				<span class="designation">Entertainment</span>
-			</div>
+			{% for member in site.data.members %}
+				<div class="col-md-3 profile">
+					<img src="/assets/images/{{ member.avatar }}" alt="{{ member.name }} profile pic" class="avatar" />
+					<h4>{{ member.name }}</h4>
+					<span class="designation">{{ member.designation }}</span>
+				</div>
+			{% endfor %}
 		</div>
-<!--		<div class="row">
-			<h4>latest @ the bakery <small>TEAM BLOG</small></h4>
-			<p class="post-title">Finally, fiber optic internet makes its way into the HQ.</p>
-		</div>-->
 	</div>
 </div>
 <div class="container"  id="hiring-block">
