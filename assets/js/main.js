@@ -127,8 +127,9 @@ $(document).ready(function() {
 	});
 	
 	$('#contact-messages, #request-quote-form').submit(function(e) {
-		var formdata = $(this).serialize();
-		if ($('#request-quote').data('bs.modal').isShown) {
+		var $this = $(this);
+		var formdata = $this.serialize();
+		if ($this.parent().parent().attr('id') == 'request-quote') {
 			$('#request-quote .btn-submit').val('Sending...');
 		}
 		$.ajax({
@@ -137,14 +138,14 @@ $(document).ready(function() {
 			url: 'https://formkeep.com/f/9ec0ca575bff',
 			success: function(data) {
 				console.log(data);
-				if ($('#request-quote').data('bs.modal').isShown) {
+				if ($this.parent().parent().attr('id') == 'request-quote') {
 					$('#request-quote').modal('hide');
 					$('#request-quote .btn-submit').val('Send Request');
 				}
-				if ($('#cm-message').length) {
-					$('#cm-message').slideUp().attr('type', 'hidden');
-					$('#cm-name').removeClass('hidden').attr('type', 'text');
-					$('#cm-status').html('<strong>Message sent!</strong> Would you like to a your name and contact info?')
+				
+				if ($this.parent().parent().parent().parent().attr('id') == 'contact-modal') {
+					$('#cm-message').val('').attr('placeholder', '');
+					$('#cm-status').html('<strong>Message sent!</strong> Feel free to add more details...');
 				}
 			},
 			error: function(data) {

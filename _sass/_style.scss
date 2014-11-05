@@ -937,6 +937,12 @@ body.bts {
 		float: left;
 		margin-top: 10px;
 	}
+	#cm-message {
+		-webkit-transition-duration: 400ms;
+		&:focus {
+			height: 60px;
+		}
+	}
 }
 
 #footer {
