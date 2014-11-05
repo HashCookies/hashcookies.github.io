@@ -29,28 +29,6 @@ $(document).ready(function() {
 		'marginTop': winH
 	});
 	
-//	$('.mountains').css({
-//		left: (winW - 1602) / 2,
-//		top: winH - 350
-//	});
-
-	
-//	$('#rear-mountain').css({
-//		top: winH - 300
-//	});
-	
-	
-//	$('#responsive-slides').cycle({
-//		timeout: 4000,
-//		delay: 500,
-//		speed: 700
-//	});
-//	
-//	$('#ticker').cycle({
-//		speed: 400,
-//		timeout: 4300,
-//		fx: 'scrollUp'
-//	});
 	
 	$('#proj-invoices').waypoint(function() {
 		$(this).addClass('visible');
@@ -72,17 +50,6 @@ $(document).ready(function() {
 	$('.screenshot-wrap, #browser-frames, #social-web').waypoint(function() {
 		$(this).addClass('animate');
 	}, { offset: '70%'});
-	
-//	var v = $("#large-cloud-icons g"), cur = 0;
-//	for(var j, x, i = v.length; i; j = parseInt(Math.random() * i), x = v[--i], v[i] = v[j], v[j] = x);
-//	function fadeInNextLI() {
-//	  v.eq(cur++).addClass('popin');
-//	  if(cur != v.length) setTimeout(fadeInNextLI, 100);
-//	}
-//	
-//	setTimeout(function() {
-//		fadeInNextLI()
-//	}, 4000);
 	
 	setTimeout(function() {
 		$('#clouds-pair #icons g').addClass('popin');
@@ -157,6 +124,39 @@ $(document).ready(function() {
 		
 		skrollr.init();
 		
+	});
+	
+	$('#contact-messages, #request-quote-form').submit(function(e) {
+		var formdata = $(this).serialize();
+		if ($('#request-quote').data('bs.modal').isShown) {
+			$('#request-quote .btn-submit').val('Sending...');
+		}
+		$.ajax({
+			type: 'POST',
+			data: formdata,
+			url: 'https://formkeep.com/f/9ec0ca575bff',
+			success: function(data) {
+				console.log(data);
+				if ($('#request-quote').data('bs.modal').isShown) {
+					$('#request-quote').modal('hide');
+					$('#request-quote .btn-submit').val('Send Request');
+				}
+				if ($('#cm-message').length) {
+					$('#cm-message').slideUp().attr('type', 'hidden');
+					$('#cm-name').removeClass('hidden').attr('type', 'text');
+					$('#cm-status').html('<strong>Message sent!</strong> Would you like to a your name and contact info?')
+				}
+			},
+			error: function(data) {
+				console.log(data);
+			}
+		});
+		e.preventDefault();
+	});
+	
+	$('.request-block a').click(function() {
+		var proj = $(this).attr('data-project');
+		$('#request-quote #project-type').val(proj);
 	});
 	
 });

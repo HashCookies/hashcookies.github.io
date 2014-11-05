@@ -849,9 +849,7 @@ body.bts {
 			font-family: $serif;
 		}
 	}
-	textarea {
-		height: 340px;
-	}
+	
 	h4 {
 		margin-bottom: 10px;
 		/*color: $vibBlue;*/
@@ -870,6 +868,24 @@ body.bts {
 	.modal-footer {
 		background: #eee;
 		padding: 0;
+	}
+}
+
+#request-quote {
+	textarea {
+		height: 340px;
+	}
+	#project-type {
+		border: none;
+		border-bottom: 1px solid $lightG;
+		display: inline-block;
+		text-align:center;
+		width: 170px;
+		font-weight: bold;
+		&:focus {
+			outline: none;
+			border-bottom-color: #ddd;
+		}
 	}
 }
 
@@ -905,6 +921,21 @@ body.bts {
 		path {
 			fill: $red;
 		}
+	}
+	.btn {
+		width: auto;
+		padding: 6px 8px;
+		margin-top: 10px;
+		font-size: 13px;
+		background-color: $vibBlue;
+		border-color: $vibBlue;
+	}
+	#cm-status {
+	}
+	#cm-inputs {
+		width: 80%;
+		float: left;
+		margin-top: 10px;
 	}
 }
 
@@ -1229,17 +1260,17 @@ background: lighten($dark, 2%);
 
 #stars-1 {
 	top: 50px;
-	background-image: url(../images/stars-1.png);
+	background-image: url(../assets/images/stars-1.png);
 	background-position: top center;
 }
 
 #stars-2 {
-	background-image: url(../images/stars-2.png);
+	background-image: url(../assets/images/stars-2.png);
 	background-position: top center;
 }
 
 #stars-3 {
-	background-image: url(../images/stars-3.png);
+	background-image: url(../assets/images/stars-3.png);
 	background-position: top center;
 }
 

@@ -79,9 +79,16 @@
    	  	<!-- Header ends -->
      	
 		<div class="modal-body">
-			<form method="post" action="">
-				<input type="text" name="message" value="" placeholder="Type message and hit enter to send" class="form-control" />
+			<span id="cm-status"></span>
+			<form id="contact-messages" accept-charset="UTF-8" action="https://formkeep.com/f/9ec0ca575bff" method="POST">
+				<div id="cm-inputs">
+					<input type="hidden" name="utf8" value="✓">
+					<textarea id="cm-message" name="message" placeholder="Feel free to say anything!" class="form-control" rows="1"></textarea>
+					<input type="hidden" id="cm-name" name="name" class="form-control" />
+				</div>
+				<input type="submit" class="btn btn-primary pull-right" value="Send Message" />
 			</form>
+			
         </div> <!--end modal body-->
 
      </div>  <!-- Content ends -->
@@ -90,57 +97,59 @@
 
 <div class="modal fade bs-example-modal-lg" id="request-quote" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
-    <div class="modal-content">
- 		<div class="modal-header">
-			<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
- 			<h4 class="text-center">Request for a <strong>Portfolio</strong> Website</h4></br>	
-			<div class="col-md-9"> 
-	        	<div class="row">
-    	        	<div class="col-md-6">
-	    	        	<div class="form-group">
-	    	        		<label for="email">Your Email</label>
-						    <input class="form-control input-lg" type="email" placeholder="Your Email">
+  	<form id="request-quote-form" accept-charset="UTF-8" action="https://formkeep.com/f/9ec0ca575bff" method="POST">
+		<input type="hidden" name="utf8" value="✓">
+	    <div class="modal-content">
+	 		<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+	 			<h4 class="text-center">Request for a <input type="text" name="project-type" id="project-type" value="Portfolio" /> Website</h4></br>	
+				<div class="col-md-9"> 
+		        	<div class="row">
+	    	        	<div class="col-md-6">
+		    	        	<div class="form-group">
+		    	        		<label for="email">Your Email</label>
+							    <input class="form-control input-lg" type="email" name="Email" placeholder="Your Email">
+		    			 	</div>
 	    			 	</div>
-    			 	</div>
-    			 	<div class="col-md-6">
-	    			 	<div class="form-group">
-	    			 		<label for="phone">Your phone</label>
-	    			 		<input class="form-control input-lg" type="email" placeholder="Your Phone">
+	    			 	<div class="col-md-6">
+		    			 	<div class="form-group">
+		    			 		<label for="phone">Your phone</label>
+		    			 		<input class="form-control input-lg" type="text" name="phone" placeholder="Your Phone">
+		    			 	</div>
 	    			 	</div>
-    			 	</div>
-			 	</div>
-			</div>
-			<div class="col-md-3">	    			 	
- 				<button class="btn btn-large btn-primary" type="submit">Send Request</button>	         			
- 			</div>
- 		</div>
-   	  	<!-- Header ends -->
-   	  	<div class="clearfix"></div>
-     	
-		<div class="modal-body">
-			<div class="col-md-7">
-				<h4>Project Brief (Optional)</h4>
-        	</div>
-        	<div class="clearfix"></div>
-        	<div class="col-md-7">	        		
-				<textarea class="form-control" rows="10"></textarea>		
-    		</div> 
-    		<div class="col-md-5" id="optional-instructions">
-    			<h5>Information that we need:</h5>
-    			<ul>
-    				<li>A description of your business.</li>
-    				<li>Is there an existing website?</li>
-    				<li>Links to websites that resemble your project plan.</li>
-    				<li>Project deadline.</li>
-    				<li>Specific features required like blog, shopping cart, mobile layout…</li>
-    				<li>Content ready?</li>
-    				<li>Require domain and hosting?</li>
-    				<li>What is the budget for this project?<br /> <strong>(Why we ask about budget)</strong></li>
-    			</ul>
-    			<!--<p class="tooltip">The production of software can go through an endless amount of refinements. However, time is money, so it's important to know how much we can spend, so we can decide what to spend it on. Budget decides the complexity of features that we would pursue. How many design iterations? Will the site have a separate mobile frontend? Will it be ajaxed? Do we animate? We'd rather give you a simple but working site than promise tons of features that are ultimately broken because the budget couldn't sustain it.</p>-->
-    		</div>
-        </div> <!--end modal body-->
-
-     </div>  <!-- Content ends -->
+				 	</div>
+				</div>
+				<div class="col-md-3">	    			 	
+	 				<input class="btn btn-large btn-primary btn-submit" type="submit" value="Send Request" />
+	 			</div>
+	 		</div>
+	   	  	<!-- Header ends -->
+	   	  	<div class="clearfix"></div>
+	     	
+			<div class="modal-body">
+				<div class="col-md-7">
+					<h4>Project Brief (Optional)</h4>
+	        	</div>
+	        	<div class="clearfix"></div>
+	        	<div class="col-md-7">	        		
+					<textarea name="description" class="form-control" rows="10"></textarea>		
+	    		</div> 
+	    		<div class="col-md-5" id="optional-instructions">
+	    			<h5>Information that we need:</h5>
+	    			<ul>
+	    				<li>A description of your business.</li>
+	    				<li>Is there an existing website?</li>
+	    				<li>Links to websites that resemble your project plan.</li>
+	    				<li>Project deadline.</li>
+	    				<li>Specific features required like blog, shopping cart, mobile layout…</li>
+	    				<li>Content ready?</li>
+	    				<li>Require domain and hosting?</li>
+	    				<li>What is the budget for this project?<br /> <strong>(Why we ask about budget)</strong></li>
+	    			</ul>
+	    			<!--<p class="tooltip">The production of software can go through an endless amount of refinements. However, time is money, so it's important to know how much we can spend, so we can decide what to spend it on. Budget decides the complexity of features that we would pursue. How many design iterations? Will the site have a separate mobile frontend? Will it be ajaxed? Do we animate? We'd rather give you a simple but working site than promise tons of features that are ultimately broken because the budget couldn't sustain it.</p>-->
+	    		</div>
+	        </div> <!--end modal body-->
+	     </div>  <!-- Content ends -->
+	    </form>
   </div>
 </div>
