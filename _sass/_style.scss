@@ -943,7 +943,6 @@ body.bts, body.light-bg {
 	background: lighten($dark, 2%);
 	#footer-logo-wrap {
 		padding-top: 20px;
-		padding-bottom: 20px;
 	}
 	#hc-logo {
 		#hc-logo2 path {
@@ -954,6 +953,7 @@ body.bts, body.light-bg {
 
 .footer-nav {
 	padding-left: 0;
+	margin-left: 15px;
 	li {
 		padding: 0;
 		border-right: 1px solid lighten($dark, 10%);
@@ -1512,9 +1512,6 @@ body.bts, body.light-bg {
 		hr {
 			border-color: #ddd;
 		}
-		#footer-logo-wrap {
-			border-right-color: #ddd;
-		}
 		#hc-logo {
 			#hc-logo2 path {
 				fill: $red;
@@ -1524,11 +1521,17 @@ body.bts, body.light-bg {
 			color: $darkBlue;
 		}
 		.footer-nav {
-			margin-top: 45px;
 			li {
 				color: $dark;
 				font-weight: 100;
 				font-size: 18px;
+				border-right-color: #ddd;
+				border-left-color: #ddd;
+				a {
+					&:hover {
+						background: #fafafa;
+					}
+				}
 			}	
 		} 
 	}
