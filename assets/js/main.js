@@ -128,6 +128,7 @@ $(document).ready(function() {
 	
 	$('#contact-messages, #request-quote-form').submit(function(e) {
 		var $this = $(this);
+		var cmValue = $('#cm-message').val();
 		var formdata = $this.serialize();
 		if ($this.parent().parent().attr('id') == 'request-quote') {
 			$('#request-quote .btn-submit').val('Sending...');
@@ -144,12 +145,16 @@ $(document).ready(function() {
 				}
 				
 				if ($this.parent().parent().parent().parent().attr('id') == 'contact-modal') {
+					if ($('#cm-original').val() == '') {
+						$('#cm-original').val(cmValue);
+					}
 					$('#cm-message').val('').attr('placeholder', '');
 					$('#cm-status').html('<strong>Message sent!</strong> Feel free to add more details...');
 				}
 			},
 			error: function(data) {
 				console.log(data);
+				alert('Sorry, something went wrong! Please try again or contact fresh@hashcooki.es');
 			}
 		});
 		e.preventDefault();

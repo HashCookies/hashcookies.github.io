@@ -1,8 +1,9 @@
 @import 'bootstrap/bootstrap';
 
-$serif: "FreightText", Georgia, serif;
-$sans: "Brandon Grotesque", Helvetica, sans-serif;
-$sansAlt: "Bree", sans-serif;
+$serif: bree-serif, Georgia, serif;
+$sans: bree, Helvetica, sans-serif;
+$sansAlt: bree, sans-serif;
+$mono: 'Source Code Pro', Courier, monospace;
 $yl: #e8ea1c;
 $red: #ee4853;
 $lightG: #f0f3f4;
@@ -43,6 +44,10 @@ $black: #332222;
 			}
 		}
 	}
+}
+
+p {
+	font-weight: 300;
 }
 
 .navbar {
@@ -102,7 +107,7 @@ body {
 	color: $yl;
 }
 
-body.bts {
+body.bts, body.light-bg {
 	background: white;
 	color: $dark;
 }
@@ -130,10 +135,11 @@ body.bts {
 #main-intro {
 	font-family: $serif;
 	font-style: italic;
+	font-weight: 300;
 	/*font-weight: 100;*/
 	text-align: center;
 	p {
-		font-size: 22px;
+		font-size: 20px;
 	}
 	.intro-text {
 		opacity: 0;
@@ -400,9 +406,12 @@ body.bts {
 		font-weight: bold;
 		font-family: $sansAlt;
 		text-transform: uppercase;
+		margin-bottom: 5px;
 	}
 	p {
 		font-size: 18px;
+		font-family: $serif;
+		font-weight: 100;
 		strong {
 			font-weight: normal;
 		}
@@ -539,8 +548,11 @@ body.bts {
 		}
 	}
 	p {
+		font-family: $serif;
+		font-weight: 100;
+		font-size: 18px;
 		em {
-			font-family: $serif;
+
 		}
 	}
 }
@@ -637,6 +649,10 @@ body.bts {
 #proj-arev {
 	background: white;
 	padding: 50px 0;
+	h4 {
+		font-size: 24px;
+		color: #333;
+	}
 	.screenshot-wrap {
 		position: relative;
 	}
@@ -1531,7 +1547,7 @@ background: lighten($dark, 2%);
 	}
 }
 
-.bts {
+.bts, .light-bg {
 	h2 {
 		text-transform: lowercase;
 		font-weight: 100;
@@ -1624,5 +1640,53 @@ img.avatar {
 			font-size: 12px;
 			-webkit-transform: translateY(-2px);
 		}
+	}
+}
+
+.post-list {
+	margin: 50px 0;
+	padding-left: 0;
+	li {
+		list-style: none;
+		font-family: $mono !important;
+		h4 {
+			font-family: $mono !important;
+			text-transform: none;
+			a {
+				color: inherit;
+			}
+		}
+	}
+}
+
+h2#blog-header {
+	font-family: $mono;
+	border-bottom: 1px solid $darkBlue;
+	padding-bottom: 5px;
+	display: inline-block;
+	font-size: 24px;
+	a {
+		color: inherit;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+.post {
+	font-family: $mono !important;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	h1 {
+		font-family: $mono;
+		font-weight: bold;
+		text-transform: none;
+		font-size: 24px;
+	}
+	p {
+		font-family: $mono;
+		font-size: 18px;
+		line-height: 150%;
+		
 	}
 }
