@@ -144,8 +144,6 @@ body.bts, body.light-bg {
 	.intro-text {
 		opacity: 0;
 		-webkit-transition-duration: 1600ms;
-		/*-webkit-transform: scale(.9);*/
-		/*-webkit-transition-delay: 6s;*/
 	}
 	.intro-text.animate {
 		opacity: 1;
