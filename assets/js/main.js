@@ -90,14 +90,7 @@ $(document).ready(function() {
 		$.scrollTo('#intro-container', 1600, {offset: -100});
 		return false;
 	});
-//	setTimeout(function(){
-//		$('#navbar-main').animate({
-//			marginTop: '20px',
-//			opacity: 1
-//		}, 800);
-//	}, 11000);
 
-//	skrollr.init();
 	
 	$(window).load(function() {
 		
@@ -122,9 +115,9 @@ $(document).ready(function() {
 		$('#gpc-frame .browser-line').attr('x2', $gpc.width());
 		$('#gpc-frame .address-bar').attr('width', $gpc.width() - 90);
 		
-		if ($(window).width() > 767) {
+		if(!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
 		    skrollr.init();
-		 }
+		}
 		
 	});
 	
