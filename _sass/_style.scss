@@ -978,6 +978,9 @@ body.bts, body.light-bg {
 		&:first-child {
 			border-left: 1px solid lighten($dark, 10%);
 		}
+		&:last-child {
+			border-right: none;
+		}
 	}
 }
 
@@ -1639,18 +1642,43 @@ img.avatar {
 	}
 }
 
-h2#blog-header {
-	font-family: $mono;
-	border-bottom: 1px solid $darkBlue;
-	padding-bottom: 5px;
+.post-header {
+	width: 100%;
+	z-index: 2000;
+	position: absolute;
+	top: 0px;
+	left: 20px;
+	.blog & {
+		position: static;
+	}
+}
+
+#header-logo {
+	float: left;
+	margin-top: 15px;
+	path {
+		fill: $red;
+	}	
+} 
+
+#blog-header {
+	font-family: $sans;
 	display: inline-block;
 	font-size: 18px;
-	font-weight: bold;
+	color: lighten($dark, 20%);
+	float: left;
+	margin-top: 30px;
+	font-weight: 100;
 	a {
-		color: #333;
+		color: inherit;
 		&:hover {
 			text-decoration: none;
 		}
+	}
+	&:before {
+		content:'\002F';
+		display: inline-block;
+		margin: 0 5px;
 	}
 }
 
@@ -1694,4 +1722,6 @@ h2#blog-header {
 #footer, #push {
 	height: 108px;
 }
+
+
 
