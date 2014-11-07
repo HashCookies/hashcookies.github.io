@@ -111,7 +111,6 @@ $(document).ready(function() {
 				var src = $(this).attr('data-src');
 				$(this).attr('src', src);
 			});
-			skrollr.init();
 		}, 9000);
 		
 		setTimeout(function() {
