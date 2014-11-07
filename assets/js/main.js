@@ -122,7 +122,9 @@ $(document).ready(function() {
 		$('#gpc-frame .browser-line').attr('x2', $gpc.width());
 		$('#gpc-frame .address-bar').attr('width', $gpc.width() - 90);
 		
-		skrollr.init();
+		if ($(window).width() > 767) {
+		    skrollr.init();
+		 }
 		
 	});
 	
