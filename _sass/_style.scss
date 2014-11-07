@@ -3,7 +3,7 @@
 $serif: bree-serif, Georgia, serif;
 $sans: bree, Helvetica, sans-serif;
 $sansAlt: bree, sans-serif;
-$mono: 'Source Code Pro', Courier, monospace;
+$mono: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $yl: #e8ea1c;
 $red: #ee4853;
 $lightG: #f0f3f4;
@@ -483,7 +483,8 @@ body.bts, body.light-bg {
 		}
 	}
 	.lead {
-		font-weight: 400;
+		font-weight: 100;
+		font-family: $serif;
 		line-height: 160%;
 		font-size: 20px;
 		@media (max-width: $screen-md-max) {
@@ -964,7 +965,7 @@ body.bts, body.light-bg {
 		font-family: $sans;
 		font-weight: bold;
 		a {
-			padding: 40px 40px 40px 40px;
+			padding: 40px 40px;
 			color: lighten($darkBlue, 20%);
 			display: block;
 			width: 100%;
@@ -1506,6 +1507,9 @@ body.bts, body.light-bg {
 		color: $darkBlue;
 		font-family: $sans;
 	}
+	.lead {
+		font-family: $serif;
+	}
 	#footer {
 		background: transparent;
 		border-top: 1px solid #ddd;
@@ -1614,13 +1618,24 @@ img.avatar {
 	li {
 		list-style: none;
 		font-family: $mono !important;
+		margin-bottom: 20px;
 		h4 {
-			font-family: $mono !important;
+			font-family: $serif !important;
 			text-transform: none;
+			display: inline;
+			font-weight: 100;
 			a {
 				color: inherit;
 			}
 		}
+		.post-meta {
+			color: #999;
+			font-style: italic;
+			font-family: $serif;
+		}
+	}
+	* {
+		color: #222;
 	}
 }
 
@@ -1629,9 +1644,10 @@ h2#blog-header {
 	border-bottom: 1px solid $darkBlue;
 	padding-bottom: 5px;
 	display: inline-block;
-	font-size: 24px;
+	font-size: 18px;
+	font-weight: bold;
 	a {
-		color: inherit;
+		color: #333;
 		&:hover {
 			text-decoration: none;
 		}
@@ -1642,16 +1658,40 @@ h2#blog-header {
 	font-family: $mono !important;
 	margin-top: 50px;
 	margin-bottom: 50px;
+	color: #222;
+	a {
+		color: #222;
+	}
 	h1 {
-		font-family: $mono;
-		font-weight: bold;
+		font-family: $serif;
+		font-weight: normal;
 		text-transform: none;
-		font-size: 24px;
+		font-size: 48px;
 	}
 	p {
 		font-family: $mono;
-		font-size: 18px;
-		line-height: 150%;
+		font-size: 16px;
+		line-height: 160%;
+		font-weight: 400;
 		
 	}
+	.post-meta {
+		font-style: italic;
+		font-size: 14px;
+		font-family: $serif;
+		margin: 20px 0 22px;
+	}
 }
+
+.page-content {
+	min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    /* Negative indent footer by it's height */
+    margin: 0 auto -108px;
+}
+
+#footer, #push {
+	height: 108px;
+}
+

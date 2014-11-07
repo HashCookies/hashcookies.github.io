@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Book 2 : page 1"
+title:  "Other India Bookstore storefront"
 date:   2014-11-02 14:55:53
 categories: hashcookies
 author: "Milind Alvares"
