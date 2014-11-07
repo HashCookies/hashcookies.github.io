@@ -108,6 +108,11 @@ $(document).ready(function() {
 		
 		setTimeout(function() {
 			$('#scroll-tip').addClass('animate');
+			var images = $('.lazy');
+			images.each(function() {
+				var src = $(this).attr('data-src');
+				$(this).attr('src', src);
+			});
 		}, 9000);
 		
 		setTimeout(function() {
