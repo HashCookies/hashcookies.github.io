@@ -1686,7 +1686,7 @@ img.avatar {
 	margin-bottom: 50px;
 	color: #222;
 	a {
-		color: #222;
+		color: lighten($dark, 20%);
 	}
 	h1 {
 		font-family: $serif;
