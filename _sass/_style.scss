@@ -567,8 +567,7 @@ body.bts, body.light-bg {
 		font-weight: 100;
 	}
 	.screenshot-wrap {
-		width: 90%;
-		max-width: 1400px;
+		width: 99%;
 		overflow: hidden;
 	}
 	
@@ -1642,7 +1641,7 @@ img.avatar {
 }
 
 .post-header {
-	width: 100%;
+	max-width: 500px;
 	z-index: 2000;
 	position: absolute;
 	top: 0px;
