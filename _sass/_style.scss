@@ -505,11 +505,15 @@ body.bts, body.light-bg {
 	margin-top: 200px;
 	z-index: 0;
 	height: 450px;
+	
 	.screenshot {
 		position: absolute;
 		-webkit-transform: translateY(0);
 		-webkit-transform-origin-y: bottom;
 		height: 444px;
+	}
+	@media (max-width: $screen-sm-max) {
+		overflow-x: hidden;
 	}
 }
 
@@ -966,7 +970,7 @@ body.bts, body.light-bg {
 	li {
 		padding: 0;
 		border-right: 1px solid lighten($dark, 10%);
-		float: left;
+		
 		list-style: none;
 		text-transform: uppercase;
 		font-size: 18px;
@@ -988,6 +992,17 @@ body.bts, body.light-bg {
 		}
 		&:last-child {
 			border-right: none;
+		}
+		@media (min-width: $screen-sm-min) {
+			float: left;
+			a {
+				padding: 20px 20px;
+			}
+		}
+		@media (min-width: $screen-md-max) {
+			a {
+				padding: 25px 40px;
+			}
 		}
 	}
 }
@@ -1096,16 +1111,6 @@ body.bts, body.light-bg {
 		position: fixed;
 	}
 	
-}
-
-#tiny-clouds {
-	position: absolute;
-	bottom: 200px;
-	left: 62%;
-	z-index: -5;
-	@media (min-width: $screen-md-max) {
-		position: fixed;
-	}
 }
 
 @-webkit-keyframes logosmall {
@@ -1222,12 +1227,6 @@ body.bts, body.light-bg {
 	@media (min-width: $screen-md-max) {
 		position: fixed;
 	}
-}
-
-#front-mountain-wrap {
-	position: absolute;
-	z-index: 1;
-	display: none;
 }
 
 #mid-mountain-1 {
