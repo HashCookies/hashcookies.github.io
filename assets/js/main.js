@@ -6,7 +6,8 @@ var winW = $(window).width();
 $(document).ready(function() {
 	var $cover = $('.cover');
 	
-	$cover.height(winH);
+	$cover.height(winH).width(winW);
+	$('#clouds-container').width(winW).height(winH);
 	
 	var coverTop = (winH - $cover.height()) / 2
 	

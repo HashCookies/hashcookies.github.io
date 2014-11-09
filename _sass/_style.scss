@@ -105,6 +105,7 @@ body {
 	font-family: $sans;
 	background-color: $dark;
 	color: $yl;
+	overflow-x: hidden;
 }
 
 body.bts, body.light-bg {
@@ -129,8 +130,11 @@ body.bts, body.light-bg {
 .cover {
 	color: $yl;
 	width: 100%;
-	margin-bottom: 350px;
 	height: 1200px;
+	overflow-x: hidden;
+	@media (min-width: $screen-md-max) {
+		margin-bottom: 350px;
+	}
 }
 
 #main-intro {
@@ -376,6 +380,7 @@ body.bts, body.light-bg {
 
 #services-wrap {
 	color: $yl;
+	overflow-x: hidden;
 	position: relative;
 	z-index: 20;
 	background: $dark;
@@ -470,7 +475,7 @@ body.bts, body.light-bg {
 }
 
 #intro-container {
-	/*background: #1a3e4b;*/
+	background: #1a3e4b;
 	margin-top: 0px;
 	padding-top: 100px;
 	position: relative;
@@ -489,6 +494,9 @@ body.bts, body.light-bg {
 		@media (max-width: $screen-md-max) {
 			font-size: 18px;
 		}
+	}
+	@media (min-width: $screen-md-max) {
+		background: transparent;
 	}
 }
 
@@ -1005,12 +1013,15 @@ body.bts, body.light-bg {
 
 
 #large-cloud-group {
-	position: fixed;
+	position: absolute;
 	left: 0;
 	z-index: -5;
 	bottom: 150px;
 	#code-icon path {
 		fill: #1c404b;
+	}
+	@media (min-width: $screen-md-max) {
+		position: fixed;
 	}
 }
 
@@ -1053,13 +1064,17 @@ body.bts, body.light-bg {
 	
 }
 
+#clouds-container {
+	overflow: hidden;
+	position: absolute;
+}
 
 #clouds-pair {
 	z-index: -5;
 	
 	width: 387px;
 	height: 214px;
-	position: fixed;
+	position: absolute;
 	bottom: 250px;
 	right: -90px;
 	#small-clouds path, #small-clouds ellipse {
@@ -1077,13 +1092,20 @@ body.bts, body.light-bg {
 			-webkit-animation: cloudlong 3s linear;
 		}
 	}
+	@media (min-width: $screen-md-max) {
+		position: fixed;
+	}
+	
 }
 
 #tiny-clouds {
-	position: fixed;
+	position: absolute;
 	bottom: 200px;
 	left: 62%;
 	z-index: -5;
+	@media (min-width: $screen-md-max) {
+		position: fixed;
+	}
 }
 
 @-webkit-keyframes logosmall {
@@ -1191,12 +1213,15 @@ body.bts, body.light-bg {
 }
 
 .mountains {
-	position: fixed;
+	position: absolute;
 	z-index: -10;
 	bottom: 0px;
 	width: 100% !important;
 
 	right: 0;
+	@media (min-width: $screen-md-max) {
+		position: fixed;
+	}
 }
 
 #front-mountain-wrap {
@@ -1219,9 +1244,12 @@ body.bts, body.light-bg {
 }
 
 #main-intro {
-	position: fixed;
 	z-index: 0;
+	position: absolute;
 	top: 280px;
+	@media (min-width: $screen-md-max) {
+		position: fixed;
+	}
 }
 
 .stars {
