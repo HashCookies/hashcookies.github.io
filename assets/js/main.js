@@ -133,6 +133,11 @@ $(document).ready(function() {
 		if(!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
 		    skrollr.init();
 		}
+		
+		$('#main-intro').css({
+			top: (winH - 450) / 2,
+			left: (winW - $('#main-intro').width()) / 2
+		});
 	});
 	
 	$('#contact-messages, #request-quote-form').submit(function(e) {
