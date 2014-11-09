@@ -52,6 +52,9 @@ $(document).ready(function() {
 		$(this).addClass('animate');
 	}, { offset: '70%'});
 	
+	if((/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
+	    $('.screenshot-wrap, #browser-frames, #social-web').addClass('animate');
+	}
 	
 	
 	$('#menu-btn').click(function() {
