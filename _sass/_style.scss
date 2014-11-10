@@ -415,29 +415,43 @@ body.bts, body.light-bg {
 		font-weight: bold;
 		font-family: $sansAlt;
 		text-transform: uppercase;
-		font-size: 30px;
+		font-size: 24px;
 		.amp {
 			font-family: Baskerville;
 			font-style: italic;
 			font-weight: normal;
 		}
+		@media (min-width: $screen-sm-min) {
+			font-size: 30px;
+		}
 	}
 	.lead {
-		font-size: 24px;
+		font-size: 16px;
+		@media (min-width: $screen-sm-min) { 
+			font-size: 24px;
+		}
 	}
 	h4 {
-		font-size: 24px;
+		font-size: 18px;
 		font-weight: bold;
 		font-family: $sansAlt;
 		text-transform: uppercase;
 		margin-bottom: 5px;
+		margin-top: 20px;
+		@media (min-width: $screen-sm-min) {
+			font-size: 24px;
+			margin-top: 10px;
+		}
 	}
 	p {
-		font-size: 18px;
+		font-size: 16px;
 		font-family: $serif;
 		font-weight: 100;
 		strong {
 			font-weight: normal;
+		}
+		@media (min-width: $screen-sm-min) {
+			font-size: 18px;
 		}
 	}
 	hr {
@@ -445,20 +459,29 @@ body.bts, body.light-bg {
 	}
 }
 
+
+
 #services-block-2 {
-	padding-top: 30px;
-	h3 {
-		margin-top: 40px;
+	@media (min-width: $screen-sm-min) {
+		padding-top: 30px;
+		h3 {
+			margin-top: 40px;
+		}
 	}
+	
 }
 
 .page-title {
-	font-size: 80px;
-	text-align: center;
+	font-size: 32px;
 	font-family: $sansAlt;
 	font-weight: bold;
 	text-transform: uppercase;
-	margin: 120px auto 10px;
+	margin: 40px auto 10px;
+	@media (min-width: $screen-sm-min) {
+		margin: 120px auto 10px;
+		font-size: 80px;
+		text-align: center;
+	}
 }
 
 .request-quote-block {
@@ -787,7 +810,9 @@ body.bts, body.light-bg {
 
 #proj-invoices {
 	overflow: hidden;
-	height: 550px;
+	@media (min-width: $screen-sm-min) {
+		height: 550px;
+	}
 	img {
 		width: 600px;
 		border: 1px solid lighten($dark, 73%);
