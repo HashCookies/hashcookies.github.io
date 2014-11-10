@@ -142,36 +142,54 @@ body.bts, body.light-bg {
 #main-intro {
 	font-family: $serif;
 	font-style: italic;
-	font-weight: 300;
+	font-weight: 400;
 	/*font-weight: 100;*/
 	text-align: center;
 	p {
-		font-size: 20px;
+		font-size: 14px;
+		font-weight: 400;
+		@media (min-width: $screen-xs-max) {
+			font-size: 20px;
+			br {
+				display: none;
+			}
+		}
 	}
+	
 	.intro-text {
 		opacity: 0;
 		-webkit-transition-duration: 1600ms;
+		padding: 0 15px;
+		@media (max-width: $screen-xs-max) {
+			margin-bottom: 20px;
+		}
 	}
 	.intro-text.animate {
 		opacity: 1;
 		-webkit-transform: scale(1);
 	}
 	.main-title {
-		margin-top: 50px;
+		margin-top: 20px;
 		font-family: $sansAlt;
-		font-size: 24px;
 		font-style: normal;
+		@media (min-width: $screen-sm-min) {
+			margin-top: 50px;
+		}
 	}
 	h1 {
-		font-size: 42px;
+		font-size: 30px;
 		margin-top: 0;
 		text-transform: uppercase;
 		font-weight: bold;
+		text-align: center;
 		span {
 			text-transform: none;
 /*			font-weight: 100;
 			font-family: $serif;
 			font-style: italic;*/
+		}
+		@media (min-width: $screen-sm-min) {
+			font-size: 42px;
 		}
 	}
 }
@@ -488,13 +506,16 @@ body.bts, body.light-bg {
 #intro-container {
 	background: #1a3e4b;
 	margin-top: 0px;
-	padding-top: 100px;
+	padding-top: 20px;
 	position: relative;
 	z-index: 30;
 	.titles {
 		h2 {
 			margin-top: 0;
-			font-size: 60px;
+			font-size: 30px;
+			@media (max-width: $screen-sm-min) {
+				font-size: 60px;
+			}
 		}
 	}
 	.lead {
@@ -505,9 +526,15 @@ body.bts, body.light-bg {
 		@media (max-width: $screen-md-max) {
 			font-size: 18px;
 		}
+		@media (max-width: $screen-xs-max) {
+			font-size: 16px;
+		}
 	}
 	@media (min-width: $screen-md-max) {
 		background: none;
+	}
+	@media (min-width: $screen-sm-min) {
+		padding-top: 100px;
 	}
 }
 
@@ -527,6 +554,10 @@ body.bts, body.light-bg {
 		margin-top: 200px;
 		overflow-x: visible;
 	}
+	@media (max-width: $screen-xs-max) {
+		height: 200px;
+		overflow-y: hidden;
+	}
 }
 
 #scr-ggw {
@@ -536,6 +567,11 @@ body.bts, body.light-bg {
 
 #scr-aether {
 	z-index: 50;
+	@media (max-width: $screen-xs-max) {
+		img {
+			width: 100%;
+		}
+	}
 	
 }
 
@@ -555,11 +591,18 @@ body.bts, body.light-bg {
 	z-index: 30;
 	color: $black;
 	border-bottom: 1px solid #ddd;
-	padding-top: 50px;
-	padding-bottom: 50px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 	overflow: hidden;
+	@media (min-width: $screen-xs-max) {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
 	.section {
-		padding: 50px 0;
+		padding: 20px 0;
+		@media (min-width: $screen-xs-max) {
+			padding: 50px 0;
+		}
 	}
 	h5 {
 		font-size: 30px;
@@ -574,9 +617,9 @@ body.bts, body.light-bg {
 	p {
 		font-family: $serif;
 		font-weight: 100;
-		font-size: 18px;
-		em {
-
+		font-size: 16px;
+		@media (min-width: $screen-sm-min) {
+			font-size: 18px;
 		}
 	}
 }
@@ -1221,6 +1264,14 @@ body.bts, body.light-bg {
 	margin-bottom: 40px;
 	-webkit-transform: scale(0.8);
 	-webkit-transition-duration: 1400ms;
+	@media (max-width: $screen-xs-max) {
+		margin-top: 50px;
+		margin-bottom: 40px;
+		svg {
+			width: 130px;
+			height: 130px;
+		}
+	}
 }
 
 #hc-logo-large.animate {

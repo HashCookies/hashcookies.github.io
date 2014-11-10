@@ -81,7 +81,7 @@ $(document).ready(function() {
 			left: ($aet.parent().width() - $aet.width()) / 2
 		});
 		
-		$('#intro-screenshots').height($aet.height());
+		
 		
 		$('#cg-frame .main-frame').attr('height', $cg.height() + 50).attr('width', $cg.width() + 1);
 		$('#cg-frame .browser-line').attr('x2', $cg.width());
@@ -132,6 +132,7 @@ $(document).ready(function() {
 		
 		if(!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
 		    skrollr.init();
+		    $('#intro-screenshots').height($aet.height());
 		}
 		
 		$('#main-intro').css({
