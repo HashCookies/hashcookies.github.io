@@ -1346,31 +1346,35 @@ body.bts, body.light-bg {
 	}
 }
 
-.stars {
-	position: fixed;
-	height: 293px;
-	left: 0;
-	right: 0;
-	top: 0;
-	z-index: -50;
-	background-repeat: repeat-x;
+@media (min-width: $screen-xs-max) {
 	
-}
+	.stars {
+		position: fixed;
+		height: 293px;
+		left: 0;
+		right: 0;
+		top: 0;
+		z-index: -50;
+		background-repeat: repeat-x;
+		
+	}
+	
+	#stars-1 {
+		top: 50px;
+		background-image: url(../assets/images/stars-1.png);
+		background-position: top center;
+	}
+	
+	#stars-2 {
+		background-image: url(../assets/images/stars-2.png);
+		background-position: top center;
+	}
+	
+	#stars-3 {
+		background-image: url(../assets/images/stars-3.png);
+		background-position: top center;
+	}
 
-#stars-1 {
-	top: 50px;
-	background-image: url(../assets/images/stars-1.png);
-	background-position: top center;
-}
-
-#stars-2 {
-	background-image: url(../assets/images/stars-2.png);
-	background-position: top center;
-}
-
-#stars-3 {
-	background-image: url(../assets/images/stars-3.png);
-	background-position: top center;
 }
 
 @-webkit-keyframes socialweblines {
