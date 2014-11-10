@@ -85,11 +85,10 @@ $(document).ready(function() {
 		
 	
 		$('#work-container').load('portfolio/index.html #post-content', function() {
-			refreshUI();
-			s.refresh();
+			refreshUI();			
+			redrawSVG();
 			$('#services-container').load('services/index.html #post-content', function() {
 				refreshUI();
-				s.refresh();
 			});
 		});
 		
@@ -107,8 +106,28 @@ $(document).ready(function() {
 		
 		$('#work-container').find('#intro-screenshots').height($aet.height());	
 		
+		if (s) {
+			s.refresh();
+		}
 	}
 	
+	function redrawSVG() {
+		$('#work-container').find('#cg-frame .main-frame').attr('height', $('#work-container').find('#scr-cg').height() + 50).attr('width', $('#work-container').find('#scr-cg').width() + 1);
+		$('#work-container').find('#cg-frame .browser-line').attr('x2', $('#work-container').find('#scr-cg').width());
+		$('#work-container').find('#cg-frame .address-bar').attr('width', $('#work-container').find('#scr-cg').width() - 90);
+		
+		$('#work-container').find('#arev-frame .main-frame').attr('height', $('#work-container').find('#scr-arev').height() + 50).attr('width', $('#work-container').find('#scr-arev').width() + 1);
+		$('#work-container').find('#arev-frame .browser-line').attr('x2', $('#work-container').find('#scr-arev').width());
+		$('#work-container').find('#arev-frame .address-bar').attr('width', $('#work-container').find('#scr-arev').width() - 90);
+		
+		$('#work-container').find('#palm-frame .main-frame').attr('height', $('#work-container').find('#scr-palmarinha').height() + 50).attr('width', $('#work-container').find('#scr-palmarinha').width());
+		$('#work-container').find('#palm-frame .browser-line').attr('x2', $('#work-container').find('#scr-palmarinha').width());
+		$('#work-container').find('#palm-frame .address-bar').attr('width', $('#work-container').find('#scr-palmarinha').width() - 90);
+		
+		$('#work-container').find('#gpc-frame .main-frame').attr('height', $('#work-container').find('#scr-gpc').height() + 50).attr('width', $('#work-container').find('#scr-gpc').width() + 1);
+		$('#work-container').find('#gpc-frame .browser-line').attr('x2', $('#work-container').find('#scr-gpc').width());
+		$('#work-container').find('#gpc-frame .address-bar').attr('width', $('#work-container').find('#scr-gpc').width() - 90);
+	}
 	
 	$(window).load(function() {
 		
@@ -116,6 +135,8 @@ $(document).ready(function() {
 			left: ($aet.parent().width() - $aet.width()) / 2
 		});
 		
+		
+		redrawSVG();
 		
 		
 		setTimeout(function() {
