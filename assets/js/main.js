@@ -74,16 +74,22 @@ $(document).ready(function() {
 		return false;
 	});
 	
+	var s; // skrollr
 	
-	
-	if(!(/Android|iPhone|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
-		
+	if(!(/Android|iPhone|iPod|iPad|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
 		var s = skrollr.init();
+	}
+	
+	if(!(/Android|iPhone|iPod|iPad|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
+		
+		
 	
 		$('#work-container').load('portfolio/index.html #post-content', function() {
 			refreshUI();
+			s.refresh();
 			$('#services-container').load('services/index.html #post-content', function() {
 				refreshUI();
+				s.refresh();
 			});
 		});
 		
@@ -101,7 +107,6 @@ $(document).ready(function() {
 		
 		$('#work-container').find('#intro-screenshots').height($aet.height());	
 		
-		s.refresh();
 	}
 	
 	
@@ -110,26 +115,6 @@ $(document).ready(function() {
 		$aet.css({
 			left: ($aet.parent().width() - $aet.width()) / 2
 		});
-		
-		
-		
-		
-		
-//		$('#cg-frame .main-frame').attr('height', $cg.height() + 50).attr('width', $cg.width() + 1);
-//		$('#cg-frame .browser-line').attr('x2', $cg.width());
-//		$('#cg-frame .address-bar').attr('width', $cg.width() - 90);
-//		
-//		$('#arev-frame .main-frame').attr('height', $arev.height() + 50).attr('width', $arev.width() + 1);
-//		$('#arev-frame .browser-line').attr('x2', $arev.width());
-//		$('#arev-frame .address-bar').attr('width', $arev.width() - 90);
-//		
-//		$('#palm-frame .main-frame').attr('height', $palm.height() + 50).attr('width', $palm.width());
-//		$('#palm-frame .browser-line').attr('x2', $palm.width());
-//		$('#palm-frame .address-bar').attr('width', $palm.width() - 90);
-//		
-//		$('#gpc-frame .main-frame').attr('height', $gpc.height() + 50).attr('width', $gpc.width() + 1);
-//		$('#gpc-frame .browser-line').attr('x2', $gpc.width());
-//		$('#gpc-frame .address-bar').attr('width', $gpc.width() - 90);
 		
 		
 		
@@ -159,6 +144,10 @@ $(document).ready(function() {
 		}, 7000);
 		
 		setTimeout(function() {
+			$('#main-intro').css({
+				top: (winH - 450) / 2,
+				left: (winW - $('#main-intro').width()) / 2
+			});
 			$('#hc-cup-main').addClass('animate');
 		}, 200);
 		
@@ -167,10 +156,7 @@ $(document).ready(function() {
 			$('#intro-screenshots').height($aet.height());		
 		}
 		
-		$('#main-intro').css({
-			top: (winH - 450) / 2,
-			left: (winW - $('#main-intro').width()) / 2
-		});
+		
 		
 
 	});
