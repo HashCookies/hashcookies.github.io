@@ -961,6 +961,14 @@ body.bts, body.light-bg {
 	}
 }
 
+.modal-backdrop {
+	z-index: -1000;
+}
+
+.page #post-content {
+	padding-top: 70px;
+}
+
 #request-quote {
 	textarea {
 		height: 340px;
@@ -1620,6 +1628,13 @@ body.bts, body.light-bg {
 	circle {
 		display: none;
 	}
+	@media (max-width: $screen-xs-max) {
+		margin-left: 0;
+		svg {
+			width: 100%;
+			height: 160px;	
+		}
+	}
 }
 
 .bts, .light-bg {
@@ -1629,6 +1644,9 @@ body.bts, body.light-bg {
 		font-size: 60px;
 		color: $darkBlue;
 		font-family: $sans;
+		@media (max-width: $screen-xs-max) {
+			font-size: 42px;
+		}
 	}
 	.lead {
 		font-family: $serif;
@@ -1832,35 +1850,39 @@ img.avatar {
 	}
 }
 
-body {
-	margin-bottom: 74px;
-	@media (min-width: $screen-md-max) {
-		margin-bottom: 34px;
+@media (min-width: $screen-xs-max) {
+
+	body {
+		margin-bottom: 74px;
+		@media (min-width: $screen-md-max) {
+			margin-bottom: 34px;
+		}
 	}
-}
-
-body.blog {
-	margin-bottom: 0 !important;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-#footer {
-	position: absolute;
-	bottom: 0;
-	z-index: 1000;
-	width: 100%;
-	height: 74px;
-}
-
-#blog-footer {
-	background: #f7f7f7;
-	border: 1px solid #f0f0f0;
-	max-width: 550px;
-	padding: 25px 30px;
-	font-weight: 100;
 	
+	body.blog {
+		margin-bottom: 0 !important;
+	}
+	
+	html {
+	  position: relative;
+	  min-height: 100%;
+	}
+	
+	#footer {
+		position: absolute;
+		bottom: 0;
+		z-index: 1000;
+		width: 100%;
+		height: 74px;
+	}
+	
+	#blog-footer {
+		background: #f7f7f7;
+		border: 1px solid #f0f0f0;
+		max-width: 550px;
+		padding: 25px 30px;
+		font-weight: 100;
+		
+	}
+
 }

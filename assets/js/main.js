@@ -32,21 +32,30 @@ $(document).ready(function() {
 	}
 	
 	function redrawSVG() {
-		$('#work-container').find('#cg-frame .main-frame').attr('height', $('#work-container').find('#scr-cg').height() + 50).attr('width', $('#work-container').find('#scr-cg').width() + 1);
-		$('#work-container').find('#cg-frame .browser-line').attr('x2', $('#work-container').find('#scr-cg').width());
-		$('#work-container').find('#cg-frame .address-bar').attr('width', $('#work-container').find('#scr-cg').width() - 90);
+		var container;
+		if ($('#work-container').length > 0) {
+			container = $('#work-container');
+		} else {
+			container = $('body');
+		}
 		
-		$('#work-container').find('#arev-frame .main-frame').attr('height', $('#work-container').find('#scr-arev').height() + 50).attr('width', $('#work-container').find('#scr-arev').width() + 1);
-		$('#work-container').find('#arev-frame .browser-line').attr('x2', $('#work-container').find('#scr-arev').width());
-		$('#work-container').find('#arev-frame .address-bar').attr('width', $('#work-container').find('#scr-arev').width() - 90);
+		container.find('#cg-frame .main-frame').attr('height', container.find('#scr-cg').height() + 50).attr('width', container.find('#scr-cg').width() + 1);
+		container.find('#cg-frame .browser-line').attr('x2', container.find('#scr-cg').width());
+		container.find('#cg-frame .address-bar').attr('width', container.find('#scr-cg').width() - 90);
 		
-		$('#work-container').find('#palm-frame .main-frame').attr('height', $('#work-container').find('#scr-palmarinha').height() + 50).attr('width', $('#work-container').find('#scr-palmarinha').width());
-		$('#work-container').find('#palm-frame .browser-line').attr('x2', $('#work-container').find('#scr-palmarinha').width());
-		$('#work-container').find('#palm-frame .address-bar').attr('width', $('#work-container').find('#scr-palmarinha').width() - 90);
+		container.find('#arev-frame .main-frame').attr('height', container.find('#scr-arev').height() + 50).attr('width', container.find('#scr-arev').width() + 1);
+		container.find('#arev-frame .browser-line').attr('x2', container.find('#scr-arev').width());
+		container.find('#arev-frame .address-bar').attr('width', container.find('#scr-arev').width() - 90);
 		
-		$('#work-container').find('#gpc-frame .main-frame').attr('height', $('#work-container').find('#scr-gpc').height() + 50).attr('width', $('#work-container').find('#scr-gpc').width() + 1);
-		$('#work-container').find('#gpc-frame .browser-line').attr('x2', $('#work-container').find('#scr-gpc').width());
-		$('#work-container').find('#gpc-frame .address-bar').attr('width', $('#work-container').find('#scr-gpc').width() - 90);
+		container.find('#palm-frame .main-frame').attr('height', container.find('#scr-palmarinha').height() + 50).attr('width', container.find('#scr-palmarinha').width());
+		container.find('#palm-frame .browser-line').attr('x2', container.find('#scr-palmarinha').width());
+		container.find('#palm-frame .address-bar').attr('width', container.find('#scr-palmarinha').width() - 90);
+		
+		container.find('#gpc-frame .main-frame')
+			.attr('height', container.find('#scr-gpc').height() + 50)
+			.attr('width', container.find('#scr-gpc').width() + 1);
+		container.find('#gpc-frame .browser-line').attr('x2', container.find('#scr-gpc').width());
+		container.find('#gpc-frame .address-bar').attr('width', container.find('#scr-gpc').width() - 90);
 		
 	}
 
