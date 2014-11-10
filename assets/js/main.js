@@ -80,7 +80,7 @@ $(document).ready(function() {
 		var s = skrollr.init();
 	}
 	
-	if(!(/Android|iPhone|iPod|iPad|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
+	if(!(/Android|iPhone|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
 		
 		
 	
