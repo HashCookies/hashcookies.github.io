@@ -536,7 +536,7 @@ body.bts, body.light-bg {
 		h2 {
 			margin-top: 0;
 			font-size: 30px;
-			@media (max-width: $screen-sm-min) {
+			@media (min-width: $screen-sm-min) {
 				font-size: 60px;
 			}
 		}
@@ -1056,8 +1056,6 @@ body.bts, body.light-bg {
 	margin-left: 15px;
 	li {
 		padding: 0;
-		border-right: 1px solid lighten($dark, 10%);
-		
 		list-style: none;
 		text-transform: uppercase;
 		font-size: 16px;
@@ -1074,17 +1072,19 @@ body.bts, body.light-bg {
 				text-decoration: none;
 			}
 		}
-		&:first-child {
-			border-left: 1px solid lighten($dark, 10%);
-		}
+		
 		&:last-child {
 			border-right: none;
 		}
 		@media (min-width: $screen-sm-min) {
 			float: left;
 			font-size: 16px;
+			border-right: 1px solid lighten($dark, 10%);
 			a {
 				padding: 20px 15px;
+			}
+			&:first-child {
+				border-left: 1px solid lighten($dark, 10%);
 			}
 		}
 		@media (min-width: $screen-md-max) {
