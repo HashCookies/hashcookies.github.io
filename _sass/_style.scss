@@ -493,14 +493,19 @@ body.bts, body.light-bg {
 	}
 	.request-block {
 		margin-top: 5px;
-		
+		margin-bottom: 15px;
 		@media (min-width: $screen-md-max) {
 			padding: 25px;
+			margin-bottom: 0;
 		}
 		h4 {
 			font-size: 18px !important;
 			color: lighten($darkBlue, 20%);
 			text-align: center;
+			margin-top: 0px !important;
+			@media (min-width: $screen-sm-max) {
+				margin-top: 15px !important;
+			}
 		}		
 		svg {
 			@media (max-width: $screen-md-min) {
