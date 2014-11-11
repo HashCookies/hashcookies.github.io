@@ -133,6 +133,7 @@ body.bts, body.light-bg {
 	width: 100%;
 	height: 1200px;
 	overflow-x: hidden;
+	position: relative;
 	@media (min-width: $screen-md-max) {
 		margin-bottom: 350px;
 		overflow-x: visible;
@@ -492,21 +493,26 @@ body.bts, body.light-bg {
 	}
 	.request-block {
 		margin-top: 5px;
-		
+		margin-bottom: 15px;
 		@media (min-width: $screen-md-max) {
 			padding: 25px;
+			margin-bottom: 0;
 		}
 		h4 {
 			font-size: 18px !important;
 			color: lighten($darkBlue, 20%);
 			text-align: center;
+			margin-top: 0px !important;
+			@media (min-width: $screen-sm-max) {
+				margin-top: 15px !important;
+			}
 		}		
 		svg {
 			@media (max-width: $screen-md-min) {
 				width: 200px;
 			}
 			@media (max-width: $screen-md-max) {
-				width: 300px;
+				width: 220px;
 			}
 			&:hover {
 				opacity: 0.6;
@@ -960,6 +966,14 @@ body.bts, body.light-bg {
 	}
 }
 
+.modal-backdrop {
+	z-index: -1000;
+}
+
+.page #post-content {
+	padding-top: 70px;
+}
+
 #request-quote {
 	textarea {
 		height: 340px;
@@ -1337,31 +1351,35 @@ body.bts, body.light-bg {
 	}
 }
 
-.stars {
-	position: fixed;
-	height: 293px;
-	left: 0;
-	right: 0;
-	top: 0;
-	z-index: -50;
-	background-repeat: repeat-x;
+@media (min-width: $screen-xs-max) {
 	
-}
+	.stars {
+		position: fixed;
+		height: 293px;
+		left: 0;
+		right: 0;
+		top: 0;
+		z-index: -50;
+		background-repeat: repeat-x;
+		
+	}
+	
+	#stars-1 {
+		top: 50px;
+		background-image: url(../assets/images/stars-1.png);
+		background-position: top center;
+	}
+	
+	#stars-2 {
+		background-image: url(../assets/images/stars-2.png);
+		background-position: top center;
+	}
+	
+	#stars-3 {
+		background-image: url(../assets/images/stars-3.png);
+		background-position: top center;
+	}
 
-#stars-1 {
-	top: 50px;
-	background-image: url(../assets/images/stars-1.png);
-	background-position: top center;
-}
-
-#stars-2 {
-	background-image: url(../assets/images/stars-2.png);
-	background-position: top center;
-}
-
-#stars-3 {
-	background-image: url(../assets/images/stars-3.png);
-	background-position: top center;
 }
 
 @-webkit-keyframes socialweblines {
@@ -1619,6 +1637,13 @@ body.bts, body.light-bg {
 	circle {
 		display: none;
 	}
+	@media (max-width: $screen-xs-max) {
+		margin-left: 0;
+		svg {
+			width: 100%;
+			height: 160px;	
+		}
+	}
 }
 
 .bts, .light-bg {
@@ -1628,6 +1653,9 @@ body.bts, body.light-bg {
 		font-size: 60px;
 		color: $darkBlue;
 		font-family: $sans;
+		@media (max-width: $screen-xs-max) {
+			font-size: 42px;
+		}
 	}
 	.lead {
 		font-family: $serif;
@@ -1831,35 +1859,48 @@ img.avatar {
 	}
 }
 
-body {
-	margin-bottom: 74px;
-	@media (min-width: $screen-md-max) {
-		margin-bottom: 34px;
+@media (min-width: $screen-xs-max) {
+
+	body {
+		margin-bottom: 74px;
+		@media (min-width: $screen-md-max) {
+			margin-bottom: 34px;
+		}
+	}
+	
+	body.blog {
+		margin-bottom: 0 !important;
+	}
+	
+	html {
+	  position: relative;
+	  min-height: 100%;
+	}
+	
+	#footer {
+		position: absolute;
+		bottom: 0;
+		z-index: 1000;
+		width: 100%;
+		height: 74px;
+	}
+	
+	#blog-footer {
+		background: #f7f7f7;
+		border: 1px solid #f0f0f0;
+		max-width: 550px;
+		padding: 25px 30px;
+		font-weight: 100;
+		
 	}
 }
 
-body.blog {
-	margin-bottom: 0 !important;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-#footer {
-	position: absolute;
-	bottom: 0;
-	z-index: 1000;
-	width: 100%;
-	height: 74px;
-}
-
-#blog-footer {
-	background: #f7f7f7;
-	border: 1px solid #f0f0f0;
-	max-width: 550px;
-	padding: 25px 30px;
-	font-weight: 100;
-	
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) { 
+	#browser-frames svg {
+		-webkit-transform: scale(0.8);
+		-webkit-transform-origin: top left;	
+	}
 }
