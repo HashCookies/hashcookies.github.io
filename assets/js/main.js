@@ -42,7 +42,6 @@ $(document).ready(function() {
 		
 		container.find('.browser-frame-wrap').each(function() {
 			var $this = $(this);
-			console.log($this);
 			$this.find('.main-frame')
 				.attr('height', $this.find('img.screenshot').height() + 50)
 				.attr('width',  $this.find('img.screenshot').width() + 1);
@@ -76,11 +75,6 @@ $(document).ready(function() {
 	$('#hc-logo-large').css({
 		left: (winW - 180) / 2
 	});
-	
-	$('#start').css({ 
-		'marginTop': winH
-	});
-	
 	
 	$('#proj-invoices').waypoint(function() {
 		$(this).addClass('visible');
@@ -145,6 +139,15 @@ $(document).ready(function() {
 			$('body').addClass('loaded');
 		}
 		
+		$('#main-intro').css({
+			top: (winH - 450) / 2,
+			left: (winW - $('#main-intro').width()) / 2
+		});
+		
+		$('#hc-logo-large').css({
+			left: (winW - 180) / 2
+		});
+		
 		$aet.css({
 			left: ($aet.parent().width() - $aet.width()) / 2
 		});
@@ -168,7 +171,7 @@ $(document).ready(function() {
 					refreshUI();
 				});
 			}
-		}, 9000);
+		}, 5000);
 		
 		setTimeout(function() {
 			$('.intro-text').addClass('animate');

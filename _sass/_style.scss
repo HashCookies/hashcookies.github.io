@@ -489,8 +489,12 @@ body.light-bg {
 
 .request-quote-block {
 	margin-top: 50px;
+<<<<<<< HEAD
 	margin-bottom: 50px;
 	}
+=======
+	margin-bottom: 20px;
+>>>>>>> bdcfeac390a02d4b15ab2c913b42c5655473a040
 	h3 {
 		font-size: 48px !important;
 	}
@@ -527,7 +531,7 @@ body.light-bg {
 		}
 	}
 	.glyphicon {
-		font-size: 18px;
+		font-size: 14px;
 	}
 	.bullets {
 		color: lighten($darkBlue, 20%);
@@ -535,6 +539,14 @@ body.light-bg {
 	#request-instruction {
 		margin-top: 20px;
 		color: lighten($darkBlue, 20%);
+	}
+	.btn {
+		margin-top: 20px;
+		margin-bottom: 20px;
+		background: $yl;
+		color: $dark;
+		padding: 10px 15px;
+		border-radius: 3px;
 	}
 
 }
@@ -895,6 +907,7 @@ body.light-bg {
 .modal {
 	color: $black;
 	background: transparentize($darkBlue, 0.3);
+	z-index: 50001;
 	.modal-content {
 		box-shadow: none;
 	}
@@ -1534,7 +1547,7 @@ body.light-bg {
 
 #navigation {
 	position: fixed;
-	z-index: 500000;
+	z-index: 5000;
 	right: 20px;
 	top: 20px;
 	#menu-btn {
