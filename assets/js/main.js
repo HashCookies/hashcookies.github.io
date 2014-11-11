@@ -15,11 +15,11 @@ $(document).ready(function() {
 				$(this).addClass('animate');
 		}, { offset: '70%'});
 		
-		$('#work-container').find('#scr-aether').css({
-			left: ($('#work-container').find('#scr-aether').parent().width() - 813) / 2
+		$('#skrollr-body').find('#scr-aether').css({
+			left: ($('#skrollr-body').find('#scr-aether').parent().width() - 813) / 2
 		});
 		
-		$('#work-container').find('#intro-screenshots').height($aet.height());	
+		$('#skrollr-body').find('#intro-screenshots').height($('#skrollr-body').find('#scr-aether').height());	
 		
 		if((/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
 		    $('.screenshot-wrap, #browser-frames, #social-web').addClass('animate');
