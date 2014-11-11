@@ -11,14 +11,17 @@ $(document).ready(function() {
 
 	function refreshUI() {
 		$('.screenshot-wrap, #browser-frames, #social-web').waypoint(function() {
-				$(this).addClass('animate');
-		}, { offset: '70%'});
+			$(this).addClass('animate');
+		}, { 
+			offset: '70%'
+		});
 		
 		$('#skrollr-body').find('#scr-aether').css({
 			left: ($('#skrollr-body').find('#scr-aether').parent().width() - 813) / 2
 		});
 		
-		$('#skrollr-body').find('#intro-screenshots').height($('#skrollr-body').find('#scr-aether').height());	
+		$('#skrollr-body').find('#intro-screenshots')
+			.height($('#skrollr-body').find('#scr-aether').height());	
 		
 		if((/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
 		    $('.screenshot-wrap, #browser-frames, #social-web').addClass('animate');
@@ -27,7 +30,6 @@ $(document).ready(function() {
 		if (s) {
 			s.refresh();
 		}
-		
 	}
 	
 	function redrawSVG() {
@@ -52,9 +54,6 @@ $(document).ready(function() {
 				.attr('width', $this.find('img.screenshot').width() - 90);
 		});
 	}
-
-
-
 
 	var $cover = $('.cover');
 	
@@ -104,9 +103,6 @@ $(document).ready(function() {
 		$(this).addClass('animate');
 	}, { offset: '70%'});
 	
-	
-	
-	
 	$('#menu-btn').click(function() {
 		$('#menu-btn').toggleClass('clicked');
 		$('#nav-items').toggle();
@@ -149,10 +145,7 @@ $(document).ready(function() {
 			left: ($aet.parent().width() - $aet.width()) / 2
 		});
 		
-		
-		
 		redrawSVG();
-		
 		
 		setTimeout(function() {
 			$('#clouds-pair #icons g').addClass('popin');
@@ -190,17 +183,19 @@ $(document).ready(function() {
 				top: (winH - 450) / 2,
 				left: (winW - $('#main-intro').width()) / 2
 			});
-			$('#hc-cup-main').addClass('animate');
-			
-		}, 200);
-		
+		}, 200);		
 		
 		if(!(/Android|iPhone|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
 			$('#intro-screenshots').height($aet.height());		
 		}
 		
-		
-		
+		if ($('body').hasClass('bts')) {
+			$('#hc-cup-main').addClass('animate');
+			
+			setTimeout(function() {
+				$('body').addClass('loaded');
+			}, 2600)
+		}
 
 	});
 	

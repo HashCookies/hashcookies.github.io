@@ -1911,3 +1911,17 @@ and (orientation : landscape) {
 		-webkit-transform-origin: top left;	
 	}
 }
+
+.bts {
+	.fading {
+		opacity: 0;
+		-webkit-transition-duration: 800ms;
+		-webkit-transform: translateY(10px);
+	}
+}
+.bts.loaded {
+	.fading {
+		opacity: 1;
+		-webkit-transform: translateY(0px);
+	}
+}
