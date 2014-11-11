@@ -38,27 +38,19 @@ $(document).ready(function() {
 			container = $('body');
 		}
 		
-		container.find('.screenshot-wrap').each(function() {
-			console.log($(this));
+		container.find('.browser-frame-wrap').each(function() {
+			var $this = $(this);
+			console.log($this);
+			$this.find('.main-frame')
+				.attr('height', $this.find('img.screenshot').height() + 50)
+				.attr('width',  $this.find('img.screenshot').width() + 1);
+			
+			$this.find('.browser-line')
+				.attr('x2', $this.find('img.screenshot').width());
+			
+			$this.find('#cg-frame .address-bar')
+				.attr('width', $this.find('img.screenshot').width() - 90);
 		});
-		
-		container.find('#cg-frame .main-frame').attr('height', container.find('#scr-cg').height() + 50).attr('width', container.find('#scr-cg').width() + 1);
-		container.find('#cg-frame .browser-line').attr('x2', container.find('#scr-cg').width());
-		container.find('#cg-frame .address-bar').attr('width', container.find('#scr-cg').width() - 90);
-		
-		container.find('#arev-frame .main-frame').attr('height', container.find('#scr-arev').height() + 50).attr('width', container.find('#scr-arev').width() + 1);
-		container.find('#arev-frame .browser-line').attr('x2', container.find('#scr-arev').width());
-		container.find('#arev-frame .address-bar').attr('width', container.find('#scr-arev').width() - 90);
-		
-		container.find('#palm-frame .main-frame').attr('height', container.find('#scr-palmarinha').height() + 50).attr('width', container.find('#scr-palmarinha').width());
-		container.find('#palm-frame .browser-line').attr('x2', container.find('#scr-palmarinha').width());
-		container.find('#palm-frame .address-bar').attr('width', container.find('#scr-palmarinha').width() - 90);
-		
-		container.find('#gpc-frame .main-frame')
-			.attr('height', container.find('#scr-gpc').height() + 50)
-			.attr('width', container.find('#scr-gpc').width() + 1);
-		container.find('#gpc-frame .browser-line').attr('x2', container.find('#scr-gpc').width());
-		container.find('#gpc-frame .address-bar').attr('width', container.find('#scr-gpc').width() - 90);
 		
 	}
 
