@@ -38,6 +38,10 @@ $(document).ready(function() {
 			container = $('body');
 		}
 		
+		container.find('.screenshot-wrap').each(function() {
+			console.log($(this));
+		});
+		
 		container.find('#cg-frame .main-frame').attr('height', container.find('#scr-cg').height() + 50).attr('width', container.find('#scr-cg').width() + 1);
 		container.find('#cg-frame .browser-line').attr('x2', container.find('#scr-cg').width());
 		container.find('#cg-frame .address-bar').attr('width', container.find('#scr-cg').width() - 90);
