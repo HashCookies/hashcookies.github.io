@@ -159,6 +159,7 @@ body.light-bg {
 	
 	.intro-text {
 		opacity: 0;
+		-webkit-transform: translateY(-10px);
 		-webkit-transition-duration: 1600ms;
 		padding: 0 15px;
 		@media (max-width: $screen-xs-max) {
@@ -167,7 +168,7 @@ body.light-bg {
 	}
 	.intro-text.animate {
 		opacity: 1;
-		-webkit-transform: scale(1);
+		-webkit-transform: translateY(0);
 	}
 	.main-title {
 		margin-top: 20px;
@@ -1126,7 +1127,7 @@ body.light-bg {
 	position: absolute;
 	left: 0;
 	z-index: -5;
-	bottom: 150px;
+	bottom: 190px;
 	#code-icon path {
 		fill: #1c404b;
 	}
@@ -1165,12 +1166,9 @@ body.light-bg {
 	fill-opacity: 0;
 	fill: #1E4856;
 	stroke-opacity: 0;
-	.animate & {
 		stroke-opacity: 1;
 		stroke-width: 0;
 		fill-opacity: 1;
-		-webkit-animation: cloudlong 3s linear;
-	}
 	
 }
 
@@ -1180,13 +1178,12 @@ body.light-bg {
 }
 
 #clouds-pair {
-	z-index: -5;
-	
-	width: 387px;
+	z-index: -9;
+	width: 250px;
 	height: 214px;
 	position: absolute;
-	bottom: 250px;
-	right: -90px;
+	bottom: 130px;
+	right: 20px;
 	#small-clouds path, #small-clouds ellipse {
 		stroke: #0dbdcf;
 		fill: #1E4856;
@@ -1195,12 +1192,9 @@ body.light-bg {
 		stroke-width: 1px;
 		fill-opacity: 0;
 		stroke-opacity: 0;
-		.animate & {
 			stroke-opacity: 1;
 			stroke-width:0;
 			fill-opacity: 1;
-			-webkit-animation: cloudlong 3s linear;
-		}
 	}
 	@media (min-width: $screen-md-max) {
 		position: fixed;
@@ -1337,6 +1331,7 @@ body.light-bg {
 }
 
 #mid-mountain-2 {
+	z-index: -8;
 	svg {
 		position: absolute;
 		right: 0;
@@ -1618,6 +1613,17 @@ body.light-bg {
 		}
 	}
 }
+
+#navigation, .post-header {
+	opacity: 0;
+	transition-duration: 800ms;
+	-webkit-transform: translateY(-10px);
+	.loaded &, .blog & {
+		opacity: 1;
+		-webkit-transform: translateY(0px);
+	}
+}
+
 
 #hc-cup-main {
 	margin-top: 100px;

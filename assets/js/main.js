@@ -140,6 +140,10 @@ $(document).ready(function() {
 	
 	
 	$(window).load(function() {
+	
+		if ($('body').hasClass('default-page')) {
+			$('body').addClass('loaded');
+		}
 		
 		$aet.css({
 			left: ($aet.parent().width() - $aet.width()) / 2
@@ -147,17 +151,10 @@ $(document).ready(function() {
 		
 		redrawSVG();
 		
-		setTimeout(function() {
-			$('#clouds-pair #icons g').addClass('popin');
-		}, 2000)
 		
 		setTimeout(function() {
 			$('#hc-logo-large').addClass('animate');
 		}, 500);
-		
-		setTimeout(function() {
-			$('#clouds-container').addClass('animate');
-		},	3500);
 		
 		setTimeout(function() {
 			$('#scroll-tip').addClass('animate');
@@ -176,7 +173,10 @@ $(document).ready(function() {
 		setTimeout(function() {
 			$('.intro-text').addClass('animate');
 			redrawSVG();
-		}, 7000);
+			setTimeout(function() {
+				$('body').addClass('loaded');
+			}, 1500);
+		}, 3500);
 		
 		setTimeout(function() {
 			$('#main-intro').css({
@@ -240,4 +240,3 @@ $(document).ready(function() {
 	
 	
 });
-
