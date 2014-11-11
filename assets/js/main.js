@@ -42,7 +42,6 @@ $(document).ready(function() {
 		
 		container.find('.browser-frame-wrap').each(function() {
 			var $this = $(this);
-			console.log($this);
 			$this.find('.main-frame')
 				.attr('height', $this.find('img.screenshot').height() + 50)
 				.attr('width',  $this.find('img.screenshot').width() + 1);
@@ -168,7 +167,7 @@ $(document).ready(function() {
 					refreshUI();
 				});
 			}
-		}, 9000);
+		}, 5000);
 		
 		setTimeout(function() {
 			$('.intro-text').addClass('animate');
