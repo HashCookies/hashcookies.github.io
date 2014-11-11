@@ -9,7 +9,6 @@ $(document).ready(function() {
 
 
 
-
 	function refreshUI() {
 		$('.screenshot-wrap, #browser-frames, #social-web').waypoint(function() {
 				$(this).addClass('animate');
@@ -132,7 +131,7 @@ $(document).ready(function() {
 	
 	var s; // skrollr
 	
-	if(!(/Android|iPhone|iPod|iPad|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
+	if(!(/Android|iPhone|iPod|iPad|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera) && ($('body').hasClass('skrolling'))){
 		var s = skrollr.init();
 	}
 	
