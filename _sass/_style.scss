@@ -100,6 +100,7 @@ h1, h2, h3, h4 {
 
 .underline {
 	text-decoration: underline;
+	color: #357f95;
 }
 
 body {
@@ -1914,8 +1915,30 @@ and (max-device-width : 1024px)
 and (orientation : landscape) { 
 	#browser-frames svg {
 		-webkit-transform: scale(0.8);
-		-webkit-transform-origin: top left;	
+		-webkit-transform-origin: top left;
+		
+		
 	}
+}
+
+@media (max-width: $screen-xs-max)	{
+	#browser-frames {
+		height: 200px;
+		svg {
+			-webkit-transform: scale(0.5);
+			-webkit-transform-origin: top left;
+		}
+	}
+	
+	#social-web {
+		height: 200px;
+		svg {
+			-webkit-transform: scale(0.35);
+			-webkit-transform-origin: top left;
+		}		
+
+	}	
+
 }
 
 .bts {
