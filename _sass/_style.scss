@@ -526,7 +526,7 @@ body.light-bg {
 		}
 	}
 	.glyphicon {
-		font-size: 18px;
+		font-size: 14px;
 	}
 	.bullets {
 		color: lighten($darkBlue, 20%);
@@ -534,6 +534,14 @@ body.light-bg {
 	#request-instruction {
 		margin-top: 20px;
 		color: lighten($darkBlue, 20%);
+	}
+	.btn {
+		margin-top: 20px;
+		margin-bottom: 20px;
+		background: $yl;
+		color: $dark;
+		padding: 10px 15px;
+		border-radius: 3px;
 	}
 
 }
