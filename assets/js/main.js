@@ -76,11 +76,6 @@ $(document).ready(function() {
 		left: (winW - 180) / 2
 	});
 	
-	$('#start').css({ 
-		'marginTop': winH
-	});
-	
-	
 	$('#proj-invoices').waypoint(function() {
 		$(this).addClass('visible');
 	}, { offset: '75%' });
@@ -143,6 +138,15 @@ $(document).ready(function() {
 		if ($('body').hasClass('default-page')) {
 			$('body').addClass('loaded');
 		}
+		
+		$('#main-intro').css({
+			top: (winH - 450) / 2,
+			left: (winW - $('#main-intro').width()) / 2
+		});
+		
+		$('#hc-logo-large').css({
+			left: (winW - 180) / 2
+		});
 		
 		$aet.css({
 			left: ($aet.parent().width() - $aet.width()) / 2
