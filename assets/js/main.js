@@ -51,7 +51,6 @@ $(document).ready(function() {
 			$this.find('#cg-frame .address-bar')
 				.attr('width', $this.find('img.screenshot').width() - 90);
 		});
-		
 	}
 
 
