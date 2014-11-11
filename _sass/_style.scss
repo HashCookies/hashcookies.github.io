@@ -902,6 +902,7 @@ body.light-bg {
 .modal {
 	color: $black;
 	background: transparentize($darkBlue, 0.3);
+	z-index: 50001;
 	.modal-content {
 		box-shadow: none;
 	}
@@ -1529,7 +1530,7 @@ body.light-bg {
 
 #navigation {
 	position: fixed;
-	z-index: 500000;
+	z-index: 5000;
 	right: 20px;
 	top: 20px;
 	#menu-btn {
