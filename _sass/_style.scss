@@ -1909,7 +1909,12 @@ and (max-device-width : 1024px)
 and (orientation : landscape) { 
 	#browser-frames svg {
 		-webkit-transform: scale(0.8);
-		-webkit-transform-origin: top left;	
+		-webkit-transform-origin: top left;
+		
+		@media (max-width: $screen-xs-max)	{
+			-webkit-transform: scale(0.5);
+			-webkit-transform-origin: top left;
+		}
 	}
 }
 
