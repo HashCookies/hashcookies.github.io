@@ -1,4 +1,4 @@
-<header class="post-header">
+<header class="post-header" id="main-header">
 	<a href="/" id="menu-btn">
 		<svg id="header-logo" width="45" height="45" viewBox="0 0 288 288" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
 			<!-- Generator: Sketch 3.0 (7574) - http://www.bohemiancoding.com/sketch -->
@@ -21,14 +21,11 @@
 		<!--<h2 id="page-header">{{page.title}}</h2>-->
 	</a>
 	<ul id="nav-items">
-		<li {% if page.title == "Home" %}class='current'{% endif %}>
-			<a href="/" alt="Home">Home</a>
-		</li>
 		<li {% if page.title == 'Portfolio' %}class='current'{% endif %}>
 			<a href="/portfolio" alt="Work">Portfolio</a>
 		</li>
-		<li><a href="/services" alt="Services">Design Services</a></li>
-		<li><a href="/team" alt="team">Behind the Scenes</a></li>
+		<li><a href="/services" alt="Services">Services</a></li>
+		<li><a href="/team" alt="team">The Team</a></li>
 		<li><a href="/journal/" alt="blog">Journal</a></li>
 		<li>
 			<a href="#" data-toggle="modal" data-target="#request-quote" alt="Request a Quote">
