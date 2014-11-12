@@ -241,7 +241,7 @@ $(document).ready(function() {
 	    if (currentScroll < 200) {
 	    	$('#main-header').css({
 	    		opacity: 1 - (currentScroll / 100)
-	    	}).removeClass('scrolled');
+	    	}).removeClass('scrolled').removeClass('show');
 	    }
 	    
 	    

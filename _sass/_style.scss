@@ -1559,6 +1559,9 @@ body.light-bg {
 	svg {
 		padding-right: 1px;
 	}
+	&:focus {
+		outline: none;
+	}
 }
 
 #nav-items {
