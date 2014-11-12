@@ -105,11 +105,6 @@ $(document).ready(function() {
 		return false;
 	});
 	
-	$('#nav-items a').click(function() {
-		$('#nav-items').hide();
-		$('#menu-btn').removeClass('clicked');
-	});
-	
 	$('#scroll-tip').click(function() {
 		$.scrollTo('#intro-container', 1600, {offset: -100});
 		return false;
