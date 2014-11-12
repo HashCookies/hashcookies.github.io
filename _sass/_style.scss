@@ -489,7 +489,12 @@ body.light-bg {
 
 .request-quote-block {
 	margin-top: 50px;
+<<<<<<< HEAD
+	margin-bottom: 50px;
+	}
+=======
 	margin-bottom: 20px;
+>>>>>>> bdcfeac390a02d4b15ab2c913b42c5655473a040
 	h3 {
 		font-size: 48px !important;
 	}
@@ -996,6 +1001,9 @@ body.light-bg {
 	padding-top: 70px;
 }
 
+
+}
+
 #request-quote {
 	textarea {
 		height: 340px;
@@ -1061,11 +1069,20 @@ body.light-bg {
 		width: 80%;
 		float: left;
 		margin-top: 10px;
+		@media (max-width: $screen-xs-max) {
+			width: 100%;
+		}
 	}
 	#cm-message {
 		-webkit-transition-duration: 400ms;
 		&:focus {
 			height: 60px;
+		}
+	}
+	.btn {
+		@media (max-width: $screen-xs-max) {
+			width: 100%;
+			font-size: 15px;
 		}
 	}
 }
