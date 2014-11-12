@@ -99,7 +99,8 @@ $(document).ready(function() {
 	
 	$('#menu-btn').click(function() {
 		$('#menu-btn').toggleClass('clicked');
-		$('#nav-items').toggle();
+		$('#page-header').slideToggle();
+		$('#nav-items').slideToggle();
 		
 		return false;
 	});

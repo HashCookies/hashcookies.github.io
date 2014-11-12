@@ -1381,17 +1381,17 @@ body.light-bg {
 	
 	#stars-1 {
 		top: 50px;
-		background-image: url(../assets/images/stars-1.png);
+		background-image: url(../images/stars-1.png);
 		background-position: top center;
 	}
 	
 	#stars-2 {
-		background-image: url(../assets/images/stars-2.png);
+		background-image: url(../images/stars-2.png);
 		background-position: top center;
 	}
 	
 	#stars-3 {
-		background-image: url(../assets/images/stars-3.png);
+		background-image: url(../images/stars-3.png);
 		background-position: top center;
 	}
 
@@ -1579,55 +1579,43 @@ body.light-bg {
 			padding-right: 1px;
 		}
 	}
-	#nav-items {
-		padding: 0;
-		display: none;
-		padding-top: 0px;
-		position: absolute;
-		z-index: -1;
-		right: 39px;
-		top: 24px;
-		width: 230px;
+}
+
+#nav-items {
+	padding: 0;
+	display: none;
+	padding-top: 0px;
+	position: absolute;
+	z-index: 100;
+	left: 80px;
+	top: 30px;
+	background: none;
+	border-top: 0;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	.blog & {
+		position: static;
+		margin-top: 28px;
+	}
+	li {
+		text-transform: uppercase;
+		color: $dark;
+		list-style: none;
+		font-family: $sans;
+		font-weight: bold;
+		font-size: 14px;
+		padding: 0px 10px;
+		margin-bottom: 0;
 		float: left;
-		border: 1px solid transparentize(#47a7c4, 0.7);
-		background: transparentize(white, 0);
-		border-top: 0;
-		border-bottom-left-radius: 3px;
-		border-bottom-right-radius: 3px;
-		li {
-			text-transform: uppercase;
-			color: $dark;
-			list-style: none;
-			font-family: $sans;
-			font-weight: 600;
-			font-size: 14px;
-			
-			border-bottom: 1px solid transparentize(#47a7c4, 0.7);
-			padding: 13px 25px 11px;
-			margin-bottom: 0;
-			a {
-				color: #47a7c4;
-			}
-			&:last-child {
-				border-bottom: 0;
-			}
-			&:first-child {
-				border-top: 1px solid transparentize(#47a7c4, 0.7);;
-			}	
+		a {
+			color: #47a7c4;
 		}
-		#contact-item {
-			text-transform: none;
-			font-weight: normal;
-			a {
-				color: inherit;
-			}
-			strong {
-				color: #47a7c4;
-				text-transform: uppercase;
-				display: block;
-				margin-bottom: 4px;
-			}
+		&:last-child {
+			padding-right: 0;
 		}
+		&:first-child {
+		
+		}	
 	}
 }
 
@@ -1836,7 +1824,7 @@ img.avatar {
 	}	
 } 
 
-#blog-header {
+#page-header {
 	font-family: $sans;
 	display: inline-block;
 	font-size: 18px;
