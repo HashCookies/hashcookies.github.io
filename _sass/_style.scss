@@ -1594,16 +1594,16 @@ body.light-bg {
 	border-bottom-left-radius: 3px;
 	border-bottom-right-radius: 3px;
 	.blog & {
-		position: static;
-		margin-top: 28px;
+		left: auto;
+		margin-left: 60px;
 	}
 	li {
 		text-transform: uppercase;
 		color: $dark;
 		list-style: none;
 		font-family: $sans;
-		font-weight: bold;
-		font-size: 14px;
+		font-weight: 100;
+		font-size: 16px;
 		padding: 0px 10px;
 		margin-bottom: 0;
 		float: left;
@@ -1778,7 +1778,7 @@ img.avatar {
 }
 
 .post-list {
-	margin: 50px 0;
+	margin: 100px 0 50px;
 	padding-left: 0;
 	li {
 		list-style: none;
@@ -1812,7 +1812,7 @@ img.avatar {
 	top: 0px;
 	left: 20px;
 	.blog & {
-		position: static;
+		left: auto;
 	}
 }
 
