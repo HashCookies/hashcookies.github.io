@@ -909,6 +909,12 @@ body.light-bg {
 	.modal-header {
 		overflow: auto;
 		padding-bottom: 20px;
+
+		@media (max-width: $screen-xs-max) {
+				padding: 5px 10px 10px;
+
+		}
+
 		h4 {
 			color: $black;
 			font-family: $sans;
@@ -1033,6 +1039,10 @@ body.light-bg {
 	}
 	ul {
 		margin-top: 23px;
+		@media (max-width: $screen-xs-max) {
+			margin-top: 5px;
+		}
+
 		li {
 			border-bottom: none;
 			font-size: 14px;
@@ -1043,6 +1053,13 @@ body.light-bg {
 	} 
 	#hc-logo {
 		margin-top: 5px;
+
+		@media (max-width: $screen-xs-max) {
+			width: 80px;
+			padding-right: 10px;
+			margin-top: 18px;
+		}
+
 		path {
 			fill: $red;
 		}
@@ -1054,6 +1071,9 @@ body.light-bg {
 		font-size: 13px;
 		background-color: $vibBlue;
 		border-color: $vibBlue;
+		@media (max-width: $screen-xs-max) {
+			width: 100%;
+		}
 	}
 	#cm-status {
 	}
@@ -1094,11 +1114,13 @@ body.light-bg {
 		@media (min-width: $screen-md-min) {
 			margin-left: 25px;
 		}
+
 		#hc-logo2 path {
 			fill: $red;
 		}
 	}
 }
+
 
 .footer-nav {
 	padding-left: 0;
