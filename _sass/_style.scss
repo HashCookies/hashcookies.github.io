@@ -489,12 +489,7 @@ body.light-bg {
 
 .request-quote-block {
 	margin-top: 50px;
-<<<<<<< HEAD
 	margin-bottom: 50px;
-	}
-=======
-	margin-bottom: 20px;
->>>>>>> bdcfeac390a02d4b15ab2c913b42c5655473a040
 	h3 {
 		font-size: 48px !important;
 	}
@@ -1001,9 +996,6 @@ body.light-bg {
 	padding-top: 70px;
 }
 
-
-}
-
 #request-quote {
 	textarea {
 		height: 340px;
@@ -1296,7 +1288,7 @@ body.light-bg {
 	}
 }
 
- .logo-short-path {
+.logo-short-path {
 	stroke: $red;
 	stroke-dasharray: 100;
 	stroke-dashoffset: 0;
@@ -1957,7 +1949,6 @@ and (orientation : landscape) {
 			-webkit-transform: scale(0.35);
 			-webkit-transform-origin: top left;
 		}		
-
 	}	
 
 }
