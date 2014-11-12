@@ -98,7 +98,9 @@ $(document).ready(function() {
 	}, { offset: '70%'});
 	
 	$('#menu-btn').click(function() {
-
+		$('#main-header').toggleClass('visible');
+		$('#menu-btn').toggleClass('clicked');
+		return false;
 	});
 	
 	$('#scroll-tip').click(function() {
