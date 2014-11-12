@@ -1638,6 +1638,40 @@ body.light-bg {
 		#nav-items {
 			display: none;
 		}
+		#header-logo {
+			display: none;
+		}
+	}
+	
+	#main-header.visible {
+		#nav-items {
+			display: block;
+		}
+	}
+	
+	#menu-btn {
+		display: block;
+		width: 26px;
+		height: 24px;
+		padding: 5px;
+		border: 1px solid #47a7c4;
+		position: absolute;
+		right: 60px;
+		top: 17px;
+		.menubar {
+			width: 100%;
+			background: #47a7c4;
+			width: 14px;
+			height: 1px;
+			display: block;
+			margin-bottom: 4px;
+		}
+	}
+	#menu-btn.clicked {
+		background: white;
+		border-color: transparentize(#47a7c4, 0.7);
+		border-bottom: none;
+		
 	}
 }
 
