@@ -512,13 +512,10 @@ body.light-bg {
 		svg {
 
 			@media (max-width: $screen-md-max) {
-				width: 220px;
+				width: 300px;
 			}
 			@media (max-width: $screen-md-min) {
 				width: 200px;
-			}
-			@media (max-width: $screen-xs-max) {
-				width: 300px;
 			}
 			&:hover {
 				opacity: 0.6;
