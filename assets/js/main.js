@@ -223,6 +223,8 @@ $(document).ready(function() {
 				console.log(data);
 				if ($this.parent().parent().attr('id') == 'request-quote') {
 					$('#request-quote').modal('hide');
+					$('#main-header').removeClass('visible');
+					$('#menu-btn').removeClass('clicked');
 					$('#request-quote .btn-submit').val('Send Request');
 				}
 				
@@ -242,7 +244,7 @@ $(document).ready(function() {
 		e.preventDefault();
 	});
 	
-	$('.request-block a').click(function() {
+	$('#wrapper').on('click','.request-block a', function() {
 		var proj = $(this).attr('data-project');
 		$('#request-quote #project-type').val(proj);
 	});
