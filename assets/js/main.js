@@ -88,7 +88,13 @@ $(document).ready(function() {
 	
 	positionElems();
 	
-	
+//	var mountains = $('.mountain');
+//	mountains.each(function() {
+//		$(this).css({
+//			left: (winW - $(this).find('svg').width()) / 4
+//		});
+//		console.log($(this).find('svg').width());
+//	});
 
 	$(window).resize(function() {
 		winW = $(window).width();
