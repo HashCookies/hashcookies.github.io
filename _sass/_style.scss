@@ -1060,17 +1060,12 @@ body.light-bg {
 			line-height: 140%;
 		}
 	} 
-	#hc-logo {
+	#contact-card-logo {
 		margin-top: 5px;
-
 		@media (max-width: $screen-xs-max) {
 			width: 80px;
 			padding-right: 10px;
 			margin-top: 18px;
-		}
-
-		path {
-			fill: $red;
 		}
 	}
 	.btn {
