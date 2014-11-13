@@ -14,6 +14,7 @@ $(document).ready(function() {
 	var $scr = $('.screenshot-wrap .screenshot');
 	var $mainIntro = $('#main-intro');
 	var $cloudsCont = $('#clouds-container');
+	$w = $('#wrapper')
 
 	function refreshUI() {
 		$('.screenshot-wrap, .svg-wrap').waypoint(function() {
@@ -22,12 +23,18 @@ $(document).ready(function() {
 			offset: '70%'
 		});
 		
-		$('#skrollr-body').find('#scr-aether').css({
-			left: ($('#skrollr-body').find('#scr-aether').parent().width() - 813) / 2
+		var $aet = $w.find('#scr-aether');
+		var aetLeft = ($aet.parent().width() - $aet.find('img').width()) / 2
+		if (aetLeft < 0) {
+			aetLeft = 0;
+		}
+		
+		$aet.css({
+			left: aetLeft
 		});
 		
-		$('#skrollr-body').find('#intro-screenshots')
-			.height($('#skrollr-body').find('#scr-aether').height());	
+		$w.find('#intro-screenshots')
+			.height($aet.find('img').height());	
 		
 		if((/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
 		    $('.screenshot-wrap, #browser-frames, #social-web').addClass('animate');
@@ -86,6 +93,7 @@ $(document).ready(function() {
 		winW = $(window).width();
 		winH = $(window).height();
 		positionElems();
+		refreshUI();
 	});
 		
 	$('.screenshot-wrap, .svg-wrap').waypoint(function() {
@@ -111,7 +119,7 @@ $(document).ready(function() {
 	}
 	
 	// Load portfolio/work on non-mobile devices
-	if (winW < 768) {
+	if (!(/Android|iPhone|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera) && ($('body').hasClass('skrolling'))){
 		$('#work-container').load('portfolio/index.html #post-content', function() {
 			refreshUI();			
 			redrawSVG();	
