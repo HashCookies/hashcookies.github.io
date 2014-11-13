@@ -1957,21 +1957,20 @@ img.avatar {
 			font-family: $serif !important;
 			text-transform: none;
 			display: inline;
-			font-weight: 100;
+			font-weight: 300;
+			color: $dark;
 			a {
 				color: inherit;
 			}
 		}
 		.post-meta {
-			color: #999;
+			color: desaturate(lighten($dark, 50%), 50%);
 			font-style: italic;
 			font-family: $serif;
 			font-weight: 100;
 		}
 	}
-	* {
-		color: #222;
-	}
+
 }
 
 
@@ -2009,7 +2008,6 @@ img.avatar {
 	font-family: $mono !important;
 	margin-top: 50px;
 	margin-bottom: 50px;
-	color: #222;
 	a {
 		color: lighten($dark, 20%);
 	}
