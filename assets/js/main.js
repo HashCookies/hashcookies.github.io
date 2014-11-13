@@ -16,7 +16,7 @@ $(document).ready(function() {
 	var $cloudsCont = $('#clouds-container');
 
 	function refreshUI() {
-		$('.screenshot-wrap, #browser-frames, #social-web').waypoint(function() {
+		$('.screenshot-wrap, .svg-wrap').waypoint(function() {
 			$(this).addClass('animate');
 		}, { 
 			offset: '70%'
@@ -87,12 +87,8 @@ $(document).ready(function() {
 		winH = $(window).height();
 		positionElems();
 	});
-	
-	$('#proj-invoices').waypoint(function() {
-		$(this).addClass('visible');
-	}, { offset: '75%' });
-	
-	$('.screenshot-wrap, #browser-frames, #social-web').waypoint(function() {
+		
+	$('.screenshot-wrap, .svg-wrap').waypoint(function() {
 		$(this).addClass('animate');
 	}, { offset: '70%'});
 	
@@ -109,19 +105,22 @@ $(document).ready(function() {
 	
 	var s; // skrollr
 	
+	// Initialise skrollr on non-touch devices
 	if(!(/Android|iPhone|iPod|iPad|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera) && ($('body').hasClass('skrolling'))){
 		var s = skrollr.init();
 	}
 	
-	if(!(/Android|iPhone|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
+	// Load portfolio/work on non-mobile devices
+	if (winW < 768) {
 		$('#work-container').load('portfolio/index.html #post-content', function() {
 			refreshUI();			
 			redrawSVG();	
 		});
 	}
 	
+	// Pre-animate svgs on touch devices
 	if((/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
-	    $('.screenshot-wrap, #browser-frames, #social-web').addClass('animate');
+	    $('.screenshot-wrap, .svg-wrap').addClass('animate');
 	}
 	
 	
