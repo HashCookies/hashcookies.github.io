@@ -498,7 +498,7 @@ body.light-bg {
 
 .request-quote-block {
 	margin-top: 50px;
-	margin-bottom: 50px;
+	margin-bottom: 0px;
 	h3 {
 		font-size: 48px !important;
 	}
@@ -1693,10 +1693,12 @@ body.light-bg {
 	}
 	span {
 		color: $dark;
-		font-weight: 100;
+		font-weight: 300;
+		font-family: $serif;
 		margin-top: 14px;
 		margin-left: 5px;
 		display: inline-block;
+		font-size: 15px;
 		&:before {
 			content: "\002F";
 			display: inline-block;
