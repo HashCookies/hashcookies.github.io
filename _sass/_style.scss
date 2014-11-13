@@ -1663,6 +1663,9 @@ body.light-bg {
 	background: transparentize($dark, 0.05);
 	-webkit-transform: translateY(0px);
 	opacity: 1 !important;
+	.light-bg & {
+		background: transparentize(white, 0.05);
+	}
 
 }
 
