@@ -85,7 +85,8 @@ $(document).ready(function() {
 		}
 		$('#wrapper').find('.full-container').width(winW);
 	}
-
+	
+	positionElems();
 	
 	
 
