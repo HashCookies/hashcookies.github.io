@@ -418,7 +418,7 @@ body.light-bg {
 		font-weight: bold;
 		font-family: $sansAlt;
 		text-transform: uppercase;
-		font-size: 24px;
+		font-size: 36px;
 		.amp {
 			font-family: Baskerville;
 			font-style: italic;
@@ -555,6 +555,10 @@ body.light-bg {
 			font-size: 30px;
 			@media (min-width: $screen-sm-min) {
 				font-size: 60px;
+			}
+			@media (max-width: $screen-xs-max) {
+				color: $red;
+				font-size: 46px;
 			}
 		}
 	}
@@ -1741,9 +1745,10 @@ body.light-bg {
 		padding-top: 0px;
 		position: absolute;
 		z-index: -1;
-		right: 39px;
+		right: 60px;
+		left: auto;
 		top: 40px;
-		width: 190px;
+		width: 210px;
 		float: left;
 		border: 1px solid transparentize(#47a7c4, 0.7);
 		background: transparentize(white, 0);
@@ -1756,7 +1761,7 @@ body.light-bg {
 			list-style: none;
 			font-family: $sans;
 			font-weight: 600;
-			font-size: 14px;
+			font-size: 16px;
 			width: 100%;
 			border-bottom: 1px solid transparentize(#47a7c4, 0.7);
 			padding: 13px 25px 11px;
