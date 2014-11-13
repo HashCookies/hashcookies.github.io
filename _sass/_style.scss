@@ -1391,6 +1391,7 @@ body.light-bg {
 #mid-mountain-2 {
 	z-index: -8;
 	text-align: right;
+	
 }
 
 #main-intro {
@@ -1781,7 +1782,6 @@ body.light-bg {
 #hc-cup-main {
 	margin-top: 100px;
 	margin-bottom: 10px;
-	margin-left: 40px;
 	#hc-cup-icons path {
 		fill: $red;
 	}
@@ -2061,6 +2061,12 @@ and (orientation : landscape) {
 		-webkit-transform-origin: top left;
 		
 		
+	}
+	#mid-mountain-1 {
+		svg {
+			width: 2514px;
+			left: -700px;
+		}
 	}
 }
 
