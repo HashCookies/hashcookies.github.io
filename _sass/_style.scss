@@ -924,7 +924,7 @@ body.light-bg {
 
 			@media (max-width: $screen-xs-max) {
 				font-size: 25px;
-				margin-bottom: 10px;
+				margin-bottom: 5px;
 				font-weight: bold;
 			}
 		}
@@ -989,6 +989,12 @@ body.light-bg {
 	.modal-footer {
 		background: #eee;
 		padding: 0;
+	}
+
+	.row {
+		@media (max-width: $screen-xs-max) {
+			margin: 5px;
+		}
 	}
 }
 
@@ -2093,5 +2099,13 @@ and (orientation : landscape) {
 	.fading {
 		opacity: 1;
 		-webkit-transform: translateY(0px);
+	}
+}
+
+.req-btn {
+	@media (max-width: $screen-xs-max) {
+		margin-left: 20px;
+		margin-right: 20px;
+		margin-bottom: 20px;
 	}
 }
