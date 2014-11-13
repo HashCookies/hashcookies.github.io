@@ -1,9 +1,9 @@
 @import 'bootstrap/bootstrap';
 
-$serif: bree-serif, Georgia, serif;
+$serif: "bree-serif", Georgia, serif;
 $sans: bree, Helvetica, sans-serif;
-$sansAlt: bree, sans-serif;
-$mono: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$sansAlt: $sans;
+$mono: $serif;
 $yl: #e8ea1c;
 $red: #ee4853;
 $lightG: #f0f3f4;
@@ -149,7 +149,7 @@ body.light-bg {
 	text-align: center;
 	p {
 		font-size: 14px;
-		font-weight: 100;
+		font-weight: 300;
 		@media (min-width: $screen-xs-max) {
 			font-size: 20px;
 			br {
@@ -431,7 +431,7 @@ body.light-bg {
 	.lead {
 		font-size: 16px;
 		@media (min-width: $screen-sm-min) { 
-			font-size: 24px;
+			font-size: 22px;
 		}
 	}
 	h4 {
@@ -441,6 +441,7 @@ body.light-bg {
 		text-transform: uppercase;
 		margin-bottom: 5px;
 		margin-top: 20px;
+		color: $red;
 		@media (min-width: $screen-sm-min) {
 			font-size: 24px;
 			margin-top: 10px;
@@ -449,7 +450,7 @@ body.light-bg {
 	p {
 		font-size: 16px;
 		font-family: $serif;
-		font-weight: 100;
+		font-weight: 300;
 		strong {
 			font-weight: normal;
 		}
@@ -459,6 +460,14 @@ body.light-bg {
 	}
 	hr {
 		border-color: lighten($dark, 10%);
+	}
+	.btn {
+		margin-top: 20px;
+		margin-bottom: 20px;
+		background: $yl;
+		color: lighten($dark, 10%);
+		padding: 10px 15px;
+		border-radius: 3px;
 	}
 }
 
@@ -563,7 +572,7 @@ body.light-bg {
 		}
 	}
 	.lead {
-		font-weight: 100;
+		font-weight: 300;
 		font-family: $serif;
 		line-height: 160%;
 		font-size: 20px;
@@ -2012,13 +2021,14 @@ img.avatar {
 		font-family: $mono;
 		font-size: 16px;
 		line-height: 160%;
-		font-weight: 400;
+		font-weight: 300;
 		
 	}
 	.post-meta {
 		font-style: italic;
 		font-size: 14px;
 		font-family: $serif;
+		font-weight: 300;
 		margin: 20px 0 22px;
 	}
 }
