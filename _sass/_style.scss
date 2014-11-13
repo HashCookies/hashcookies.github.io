@@ -2109,3 +2109,22 @@ and (orientation : landscape) {
 		margin-bottom: 20px;
 	}
 }
+
+#write-in {
+	textarea {
+		height: 340px;
+	}
+	#project-type {
+		border: none;
+		border-bottom: 1px solid $lightG;
+		display: inline-block;
+		text-align:center;
+		width: 100px;
+		font-weight: bold;
+		&:focus {
+			outline: none;
+			border-bottom-color: #ddd;
+		}
+	}
+
+}
