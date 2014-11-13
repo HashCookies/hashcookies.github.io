@@ -5,9 +5,15 @@ var winW = $(window).width();
 
 $(document).ready(function() {
 
-
-
-
+	var $cover = $('.cover');
+	var $aet = $('#scr-aether');
+	var $cg = $('#scr-cg');
+	var $arev = $('#scr-arev');
+	var $palm = $('#scr-palmarinha');
+	var $gpc = $('#scr-gpc');
+	var $scr = $('.screenshot-wrap .screenshot');
+	var $mainIntro = $('#main-intro');
+	var $cloudsCont = $('#clouds-container');
 
 	function refreshUI() {
 		$('.screenshot-wrap, #browser-frames, #social-web').waypoint(function() {
@@ -53,45 +59,38 @@ $(document).ready(function() {
 				.attr('width', $this.find('img.screenshot').width() - 90);
 		});
 	}
-
-	var $cover = $('.cover');
 	
-	$cover.height(winH).width(winW);
-	$('#clouds-container').width(winW).height(winH);
-	
-	var coverTop = (winH - $cover.height()) / 2
-	
-	if (coverTop > 50) {
-		$cover.css({
-			marginTop: (winH - $cover.height()) / 2
+	function positionElems() {
+		$mainIntro.css({
+			top: (winH - 450) / 2,
+			left: (winW - $mainIntro.width()) / 2
 		});
+		
+		$cover.height(winH).width(winW);
+		$cloudsCont.width(winW).height(winH);
+		
+		var coverTop = (winH - $cover.height()) / 2
+		
+		if (coverTop > 50) {
+			$cover.css({
+				marginTop: (winH - $cover.height()) / 2
+			});
+		}
+		$('#wrapper').find('.full-container').width(winW);
 	}
+
 	
-	$('#main-intro').css({
-		top: (winH - 450) / 2,
-		left: (winW - $('#main-intro').width()) / 2
-	});
 	
-	$('#hc-logo-large').css({
-		left: (winW - 180) / 2
+
+	$(window).resize(function() {
+		winW = $(window).width();
+		winH = $(window).height();
+		positionElems();
 	});
 	
 	$('#proj-invoices').waypoint(function() {
 		$(this).addClass('visible');
 	}, { offset: '75%' });
-	
-	$('.full-container').width(winW);
-	
-	var $aet = $('#scr-aether');
-	var $cg = $('#scr-cg');
-	var $arev = $('#scr-arev');
-	var $palm = $('#scr-palmarinha');
-	var $gpc = $('#scr-gpc');
-	var $scr = $('.screenshot-wrap .screenshot');
-	
-	$aet.css({
-		left: ($aet.parent().width() - 813) / 2
-	});
 	
 	$('.screenshot-wrap, #browser-frames, #social-web').waypoint(function() {
 		$(this).addClass('animate');
@@ -118,7 +117,6 @@ $(document).ready(function() {
 		$('#work-container').load('portfolio/index.html #post-content', function() {
 			refreshUI();			
 			redrawSVG();	
-					
 		});
 	}
 	
