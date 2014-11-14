@@ -910,7 +910,7 @@ body.light-bg {
 }
 
 .modal {
-	color: $black;
+	color: $dark;
 	background: transparentize($darkBlue, 0.3);
 	z-index: 50001;
 	.modal-content {
@@ -2031,6 +2031,9 @@ img.avatar {
 		font-weight: 300;
 		margin: 20px 0 22px;
 	}
+	.post-content {
+		margin-top: 20px;
+	}
 }
 
 @media (min-width: $screen-xs-max) {
@@ -2065,7 +2068,7 @@ img.avatar {
 #blog-footer {
 	background: #f7f7f7;
 	border: 1px solid #f0f0f0;
-	max-width: 550px;
+	margin-top: 20px;
 	padding: 25px 30px;
 	margin-bottom: 30px;
 	font-weight: 100;

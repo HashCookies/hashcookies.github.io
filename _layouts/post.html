@@ -18,18 +18,19 @@ tags: "light-bg blog"
 			<div class="post">
 			  <header class="blog-post-header">
 			    <h1 class="post-title">{{ page.title }}</h1>
-			    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • by {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+			    <p class="post-meta">Posted on {{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • by {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
 			  </header>
 			
 			  <article class="post-content">
 			    {{ content }}
 			  </article>
+			  
+			  <footer>
+			  	<div id="blog-footer">
+			  		Hash Cookies Journal is penned by its co-founders Milind Alvares and Axel D'Souza. Feel free to send us comments via <a href="mailto:fresh@hashcooki.es">email</a> or <a href="http://facebook.com/hashcooks">facebook</a>.
+			  	</div>
+			  </footer>
 			
-			</div>
-		</div>
-		<div class="col-md-12">
-			<div id="blog-footer">
-				Hash Cookies Journal is penned by its co-founders Milind Alvares and Axel D'Souza. Feel free to send us comments via <a href="mailto:fresh@hashcooki.es">email</a> or <a href="http://facebook.com/hashcooks">facebook</a>.
 			</div>
 		</div>
 	</div>
