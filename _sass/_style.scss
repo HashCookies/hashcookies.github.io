@@ -452,7 +452,10 @@ body.light-bg {
 		font-family: $serif;
 		font-weight: 300;
 		strong {
-			font-weight: normal;
+			font-weight: bold;
+			color: $red;
+			font-variant: small-caps;
+			text-transform: uppercase;
 		}
 		@media (min-width: $screen-sm-min) {
 			font-size: 18px;
