@@ -125,13 +125,7 @@ $(document).ready(function() {
 		var s = skrollr.init();
 	}
 	
-	// Load portfolio/work on non-mobile devices
-	if (!(/Android|iPhone|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera) && ($('body').hasClass('skrolling'))){
-		$('#work-container').load('portfolio/index.html #post-content', function() {
-			refreshUI();			
-			redrawSVG();	
-		});
-	}
+	
 	
 	// Pre-animate svgs on touch devices
 	if((/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
@@ -144,6 +138,8 @@ $(document).ready(function() {
 		if ($('body').hasClass('default-page')) {
 			$('body').addClass('loaded');
 		}
+		
+		
 		
 		$('#main-intro').css({
 			top: (winH - 450) / 2,
@@ -164,6 +160,14 @@ $(document).ready(function() {
 		setTimeout(function() {
 			$('#hc-logo-large').addClass('animate');
 		}, 500);
+		
+		// Load portfolio/work on non-mobile devices
+		if (!(/Android|iPhone|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera) && ($('body').hasClass('skrolling'))){
+			$('#work-container').load('portfolio/index.html #post-content', function() {
+				refreshUI();			
+				redrawSVG();	
+			});
+		}
 		
 		setTimeout(function() {
 			$('#scroll-tip').addClass('animate');
