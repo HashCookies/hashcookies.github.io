@@ -1623,6 +1623,13 @@ body.light-bg {
 		float: left;
 		a {
 			color: #47a7c4;
+			&:hover {
+				text-decoration: none;
+				color: white;
+				.light-bg & {
+					color: $vibBlue;
+				}
+			}
 		}
 		&:last-child {
 			padding-right: 0;
