@@ -62,7 +62,7 @@ $(document).ready(function() {
 			$this.find('.browser-line')
 				.attr('x2', $this.find('img.screenshot').width());
 			
-			$this.find('#cg-frame .address-bar')
+			$this.find('.address-bar')
 				.attr('width', $this.find('img.screenshot').width() - 90);
 		});
 	}
@@ -101,6 +101,7 @@ $(document).ready(function() {
 		winH = $(window).height();
 		positionElems();
 		refreshUI();
+		redrawSVG();
 	});
 		
 	$('.screenshot-wrap, .svg-wrap').waypoint(function() {
