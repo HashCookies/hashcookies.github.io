@@ -2143,3 +2143,8 @@ and (orientation : landscape) {
 	}
 }
 
+.modal-dialog {
+	@media (max-width: $screen-xs-max) {
+		margin: 0px;
+	}
+}
