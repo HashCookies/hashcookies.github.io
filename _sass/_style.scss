@@ -1061,7 +1061,7 @@ body.light-bg {
 		text-transform: none;
 	}
 	ul {
-		margin-top: 23px;
+		margin-top: 3px;
 		@media (max-width: $screen-xs-max) {
 			margin-top: 5px;
 		}
@@ -1948,11 +1948,6 @@ img.avatar {
 			font-size: 12px;
 			-webkit-transform: translateY(-2px);
 		}
-
-		/*@media (max-width: $screen-xs-max) {
-			margin-top: 20px;
-			margin-left: 90px;
-		}	*/
 
 	}
 
