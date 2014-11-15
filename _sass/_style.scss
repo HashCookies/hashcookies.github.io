@@ -926,7 +926,12 @@ body.light-bg {
 	z-index: 50001;
 	.modal-content {
 		box-shadow: none;
+
+		@media (max-width: $screen-xs-max) {
+				border-radius: 0px;
+		}
 	}
+
 	.modal-header {
 		overflow: auto;
 		padding-bottom: 20px;
