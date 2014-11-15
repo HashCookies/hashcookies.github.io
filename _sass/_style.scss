@@ -409,6 +409,7 @@ body.light-bg {
 	background: $dark;
 	.services-block {
 		margin-bottom: 50px;
+		margin-top: 50px;
 	}
 	.intro-section {
 		margin-bottom: 50px;
@@ -419,6 +420,7 @@ body.light-bg {
 		font-family: $sansAlt;
 		text-transform: uppercase;
 		font-size: 36px;
+		font-size: 48px !important;
 		.amp {
 			font-family: Baskerville;
 			font-style: italic;
@@ -475,7 +477,9 @@ body.light-bg {
 	}
 }
 
-
+#services-block-1 .copy-block {
+	margin-bottom: 50px;
+}
 
 #services-block-2 {
 	@media (min-width: $screen-sm-min) {
