@@ -477,9 +477,12 @@ body.light-bg {
 	}
 }
 
-#services-block-1 .copy-block {
-	margin-bottom: 50px;
-}
+#services-block-1 {
+	padding-top: 50px;
+	.copy-block {
+		margin-bottom: 50px;
+	}	
+} 
 
 #services-block-2 {
 	@media (min-width: $screen-sm-min) {
