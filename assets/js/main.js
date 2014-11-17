@@ -217,13 +217,14 @@ $(document).ready(function() {
 		var $this = $(this);
 		var cmValue = $('#cm-message').val();
 		var formdata = $this.serialize();
+		var url = $(this).attr('action');
 		if ($this.parent().parent().attr('id') == 'request-quote') {
 			$('#request-quote .btn-submit').val('Sending...');
 		}
 		$.ajax({
 			type: 'POST',
 			data: formdata,
-			url: 'https://formkeep.com/f/9ec0ca575bff',
+			url: url,
 			success: function(data) {
 				console.log(data);
 				if ($this.parent().parent().attr('id') == 'request-quote') {
