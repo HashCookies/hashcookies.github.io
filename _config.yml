@@ -11,3 +11,4 @@ markdown: kramdown
 
 repository: https://github.com/milindalvares/hash-cookies/
 
+permalink: /journal/:title

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width initial-scale=1" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+      <title>{% if page.title %}{{ page.title }} on Hash Cookies Journal{% else %}{{ site.title }}{% endif %}</title>
+      <meta name="description" content="{{ site.description }}">
+  
+      <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
+      <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+      
+      <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300' rel='stylesheet' type='text/css'>
+      
+      <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+  </head>
+  
+
+  <body class="{{page.tags}}">
+
+    <div class="page-content">
+      <div id="wrapper">
+        {{ content }}
+        <div class="container blog-container">
+        	<div class="row">
+        		<div class="col-md-12">
+        			<div id="blog-footer">
+        				<a href="http://hashcooki.es/">Hash Cookies</a> is a software design studio based in Goa. This journal is penned by its co-founders Milind Alvares and Axel D'Souza. You can send us your comments <a data-toggle="modal" data-target="#contact-modal" href="/contact">privately</a> or on our <a href="http://facebook.com/hashcooks">facebook page</a>.
+        			</div>
+        		</div>
+        	</div>
+        </div>
+      </div>
+    </div>
+
+	{% include scripts.html %}
+	{% include modals.html %}
+  </body>
+
+</html>

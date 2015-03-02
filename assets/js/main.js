@@ -250,6 +250,33 @@ $(document).ready(function() {
 		e.preventDefault();
 	});
 	
+	
+	$('#private-message-form').submit(function(e) {
+		var $this = $(this);
+		var formdata = $this.serialize();
+		var url = $(this).attr('action');
+		$this.find('.btn').val('Sending...');
+		$.ajax({
+			type: 'POST',
+			data: formdata,
+			url: url,
+			success: function(data) {
+				console.log(data);
+				$this.hide();
+				$('<p>Message sent, thanks!</p>').css('text-align', 'center').appendTo('#private-message div');
+			},
+			error: function(data) {
+				console.log(data);
+				alert('Sorry, something went wrong! Please try again or contact fresh@hashcooki.es');
+			}
+		});
+		e.preventDefault();
+	});
+	
+	$('#private-message-form textarea').focus(function() {
+		$(this).height(150);
+	});
+	
 	$('#wrapper').on('click','.request-block a', function() {
 		var proj = $(this).attr('data-project');
 		$('#request-quote #project-type').val(proj);

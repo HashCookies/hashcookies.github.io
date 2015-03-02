@@ -1,8 +1,9 @@
 ---
-layout: default
+layout: blog
 tags: "light-bg blog"
+author: "Milind Alvares"
 ---
-<div class="container">
+<div class="container blog-container">
 	<div class="row">
 		<div class="col-xs-12">
 			<div id="blog-nav">
@@ -14,24 +15,31 @@ tags: "light-bg blog"
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-md-6">		
+		<div class="col-md-12">		
 			<div class="post">
 			  <header class="blog-post-header">
 			    <h1 class="post-title">{{ page.title }}</h1>
-			    <p class="post-meta">Posted on {{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • by {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+				 <p class="post-meta">Published on {{ page.date | date: "%b %-d, %Y" }} {% if page.author %} by {{ page.author }}{% endif %}</p>
 			  </header>
 			
 			  <article class="post-content">
 			    {{ content }}
-			  </article>
+			  </article>		
 			  
-			  <footer>
-			  	<div id="blog-footer">
-			  		Hash Cookies Journal is penned by its co-founders Milind Alvares and Axel D'Souza. Feel free to send us comments via <a href="mailto:fresh@hashcooki.es">email</a> or <a href="http://facebook.com/hashcooks">facebook</a>.
-			  	</div>
-			  </footer>
-			
-			</div>
+			</div>	
+		</div>
+	</div>
+	<div class="row"  id="private-message">
+		<div class="col-md-8 col-md-offset-2">
+			<form id="private-message-form" accept-charset="UTF-8" action="https://formkeep.com/f/9ec0ca575bff" method="POST">
+			  <input type="hidden" name="utf8" value="✓">
+			  <input type="hidden" name="post-title" value="{{ page.title }}" />
+			  <textarea name="message" class="form-control"></textarea>
+			  <div class="text-center">
+				  <input type="submit" value="Send Private Comment" class="btn btn-large  btn-primary" />
+			  </div>
+			</form>
 		</div>
 	</div>
 </div>
+<hr />

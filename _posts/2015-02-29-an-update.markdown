@@ -1,0 +1,39 @@
+---
+layout: post
+title: A quick update; it's been a while
+---
+
+It's been 6 months since our last public update. And probably about the same for the one before that. I'll tell you what the problem is: Axel needs a kick in the nuts. He's been holding back updates because he wants to do something grand with them but never actually doing it, so I'll ruin it with this text based post. Here goes a brief summary of a bunch of things that happened with hash cookies these past few months.
+
+**We've built a couple of interesting things.**  
+Progress has been made. We built a property site from the ground up with Sinatra Ruby. We designed a minimalist front-end for Nitido furniture. Designed, built, and just waiting to deploy a Rails based online bookstore. We even developed an iOS application for a startup, which was its own little journey. And then some. Point is, we've been busy; good busy.
+
+**We're building an app/service**  
+If you're a professional/small business that sends out invoices and receipts for your clients (kinda like us), you might be interested in what we've been working on. [Hit us up](mailto:fresh@hashcooki.es) and we could have you using it for free.
+
+**We have a new site.**  
+We were so caught up in our work, that we forgot to formally launch [the new front of the Hash Cookies site](http://hashcooki.es/). Though we hadn't gotten a negative opinion of the one before, it felt old to me. We have grown as a company, both in terms of what we can do, and what we want to do.
+
+I like what we've done with the new site. It's got animation effects but it feels way lighter than before, with more logical flow of information. As for what the landing 'scene' means, we'll get to that in a later post. For now, Coldplayers will appreciate 'a sky full of stars' that just makes perfect sense to have there.
+
+**We have a new office!**  
+Really, this should have been announced already (shame on you, Axe). We hired the brilliant self-learnt engineering talent that is Shippo who managed to deliver a beautiful workspace for hardly any cost. Designed by Hash Cookies. Come visit sometime.
+
+I'll leave it to Axel to post pictures of this; I believe he's been waiting on some final piece of a puzzle before he's ready to show it off.
+
+**We're a little bigger than two now**  
+We've so far had three people involved with us. Alistair joined us in May of last year to handle server admin, but he couldn't continue after a few months for personal reasons. Monica was our cheerful design intern from MIT Pune, who worked on several projects during her two month stint. And now Ravi, whose broad set of skills has impressed us so far. 
+
+We're looking for one more though, so if you're interested doing design with software, hit us up.
+ 
+**We have a new cat :(**  
+Billu died. We've got a new guy now and his name Porange, the only damn thing that rhymes with orange. Time will tell whether he lives up to the Billu legend.
+
+**We have this journal**  
+For a while we contemplated whether or not to have a blog. What would our audience be interested in? We don't want to bore with self-promotional marketing material, nor do we want to be the next buzzfeed.
+
+This is a tough one, but we'll make it work.
+
+••
+
+![Porange](/assets/images/porange.jpg)
