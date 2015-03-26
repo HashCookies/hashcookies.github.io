@@ -133,6 +133,12 @@ $(document).ready(function() {
 	    $('.screenshot-wrap, .svg-wrap').addClass('animate');
 	}
 	
+	setTimeout(function() {
+		$('body').addClass('loaded');
+		$('#hc-logo-large').addClass('animate');
+		
+	}, 12000)
+	
 	
 	$(window).load(function() {
 	
