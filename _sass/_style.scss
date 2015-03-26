@@ -1945,18 +1945,22 @@ img.avatar {
 }
 
 .post-list {
-	margin: 100px 0 0;
+	margin: 50px 0 0;
 	padding-left: 0;
+	@media (min-width: $screen-sm-min) {
+		margin-top: 100px;
+	}
 	li {
 		list-style: none;
 		font-family: $mono !important;
-		margin-bottom: 20px;
+		margin-bottom: 10px;
 		h4 {
 			font-family: $serif !important;
 			text-transform: none;
 			display: inline;
 			font-weight: 400;
 			color: $dark;
+			line-height: 160%;
 			a {
 				color: inherit;
 			}
@@ -1965,8 +1969,11 @@ img.avatar {
 			color: desaturate(lighten($dark, 30%), 40%);
 			font-weight: 300;
 			font-size: 12px;
-			letter-spacing: 3px;
-			margin-left: 15px;
+			width: 75px;
+			display: inline-block;
+			text-align: right;
+			margin-right: 15px;
+			
 		}
 	}
 
@@ -2005,8 +2012,11 @@ img.avatar {
 
 .post {
 	font-family: $mono !important;
-	margin-top: 50px;
+	margin-top: 20px;
 	margin-bottom: 0;
+	@media (min-width: $screen-sm-min) {
+		margin-top: 50px;
+	}
 	a {
 		color: lighten($dark, 20%);
 	}
@@ -2023,20 +2033,24 @@ img.avatar {
 		font-family: Baskerville, serif;
 	}
 	p {
-		font-family: "Baskerville", serif;
+		font-family: "PT Serif", "Baskerville", serif;
 		font-size: 18px;
 		line-height: 160%;
 		font-weight: 300;
-/*		text-indent: 20px;
-		margin-bottom: 0;*/
 		color: #444;
+		@media (max-width: $screen-xs-max) {
+			font-size: 18px;
+			line-height: 140%;
+		}
 	}
 	.post-meta {
 		margin: 15px 0 10px;
-		color: desaturate(lighten($dark, 0%), 0%);
+		color: $dark;
 		font-size: 13px;
-		font-family: $serif;
+		font-family: "PT Serif";
 		font-weight: 400;
+		font-style: italic;
+		
 	}
 	.post-content {
 		margin-top: 20px;
