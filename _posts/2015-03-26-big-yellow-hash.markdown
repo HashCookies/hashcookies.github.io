@@ -14,7 +14,7 @@ Here's a look into what was:
 
 ![Before pic of the studio]({{ site.http://hashcooki.es/ }}/assets/images/hashcookies-studio-before.jpg)
 
-That being said, we welcomed the challenges, made a lots of mistakes but enjoyed the ride. We did a lot of the manual work ourselves, well not the heavy-lifting really, we had a young but promising contractor from the village help us out with that. It’s not a 100% complete, and I think it never will be, for Rober M. Pirsig put it so well >"Sometimes it's a little better to travel thank to arrive." 
+That being said, we welcomed the challenges, made a lots of mistakes but enjoyed the ride. We did a lot of the manual work ourselves, well not the heavy-lifting really, we had a young but promising contractor from the village help us out with that. It’s not a 100% complete, and I think it never will be, for Rober M. Pirsig put it so well > Sometimes it's a little better to travel thank to arrive. 
 
 Although, for now we do have a pretty decent place that you can come visit:
 
