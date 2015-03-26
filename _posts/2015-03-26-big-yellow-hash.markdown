@@ -11,7 +11,7 @@ After being scattered all over the Alvares’ house for nearly two years, we got
 Finding the right room in the house was the easiest part, how to make it look like a design studio was a different ball game altogether. No amount of research on Pinterest can help you prepare for this. Two guys trying to make calls on the perfect lamp shades, the right colour for the walls, placement of furniture, yada yada. And to add to the stress, when what you do is designing for a living, the outcome better be good. 
 
 Here's a look into what was:
-![Before pic of the studio]({{ site.http://hashcooki.es/ }}/assets/porange.jpg)
+![Before pic of the studio]({{ site.http://hashcooki.es/ }}/assets/images/hashcookies-studio-before.jpg)
 
 That being said, we welcomed the challenges, made a lots of mistakes but enjoyed the ride. We did a lot of the manual work ourselves, well not the heavy-lifting really, we had a young but promising contractor from the village help us out with that. It’s not a 100% complete, and I think it never will be in but that’s okay. Although we do have a pretty decent place you can come visit, chat about creating something beautiful,  have a cup of chai, or maybe just to tickle the cat. They say we’re good company.
 
