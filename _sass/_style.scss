@@ -511,14 +511,10 @@ body.light-bg {
 
 .request-quote-block {
 	margin-top: 50px;
-<<<<<<< Updated upstream
-	margin-bottom: 0px;
-=======
 	margin-bottom: 50px;
 	h3 {
 		font-size: 48px !important;
 	}
->>>>>>> Stashed changes
 	.request-block {
 		margin-top: 5px;
 		margin-bottom: 15px;
@@ -1755,48 +1751,6 @@ body.light-bg {
 		border-bottom: none;
 		
 	}
-<<<<<<< Updated upstream
-	
-	#nav-items {
-		padding: 0;
-		display: none;
-		padding-top: 0px;
-		position: absolute;
-		z-index: -1;
-		right: 60px;
-		left: auto;
-		top: 40px;
-		width: 210px;
-		float: left;
-		border: 1px solid transparentize(#47a7c4, 0.7);
-		background: transparentize(white, 0);
-		border-top: 0;
-		border-bottom-left-radius: 3px;
-		border-bottom-right-radius: 3px;
-		li {
-			text-transform: uppercase;
-			color: $dark;
-			list-style: none;
-			font-family: $sans;
-			font-weight: 600;
-			font-size: 16px;
-			width: 100%;
-			border-bottom: 1px solid transparentize(#47a7c4, 0.7);
-			padding: 13px 25px 11px;
-			margin-bottom: 0;
-			a {
-				color: #47a7c4;
-			}
-			&:last-child {
-				border-bottom: 0;
-			}
-			&:first-child {
-				border-top: 1px solid transparentize(#47a7c4, 0.7);;
-			}
-			#header-logo {
-				display: block;
-			}	
-=======
 	#nav-title {
 		float: left;
 		/*background: white;*/
@@ -1854,7 +1808,6 @@ body.light-bg {
 		}
 		&:last-child {
 			padding-right: 0;
->>>>>>> Stashed changes
 		}
 		&:first-child {
 		
@@ -2012,11 +1965,7 @@ img.avatar {
 }
 
 .post-list {
-<<<<<<< Updated upstream
-	margin: 100px 0 0;
-=======
 	margin: 100px 0 50px;
->>>>>>> Stashed changes
 	padding-left: 0;
 	li {
 		list-style: none;
@@ -2041,8 +1990,6 @@ img.avatar {
 		}
 	}
 
-<<<<<<< Updated upstream
-=======
 .post-header {
 	max-width: 500px;
 	z-index: 2000;
@@ -2052,7 +1999,6 @@ img.avatar {
 	.blog & {
 		left: auto;
 	}
->>>>>>> Stashed changes
 }
 
 
