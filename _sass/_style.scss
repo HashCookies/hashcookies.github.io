@@ -511,7 +511,14 @@ body.light-bg {
 
 .request-quote-block {
 	margin-top: 50px;
+<<<<<<< Updated upstream
 	margin-bottom: 0px;
+=======
+	margin-bottom: 50px;
+	h3 {
+		font-size: 48px !important;
+	}
+>>>>>>> Stashed changes
 	.request-block {
 		margin-top: 5px;
 		margin-bottom: 15px;
@@ -1748,6 +1755,7 @@ body.light-bg {
 		border-bottom: none;
 		
 	}
+<<<<<<< Updated upstream
 	
 	#nav-items {
 		padding: 0;
@@ -1788,7 +1796,69 @@ body.light-bg {
 			#header-logo {
 				display: block;
 			}	
+=======
+	#nav-title {
+		float: left;
+		/*background: white;*/
+		height: 32px;
+		font-family: $sans;
+		font-weight: 100;
+		font-size: 18px;
+		text-transform: uppercase;
+		color: #47a7c4;
+		/*border: 1px solid lighten(#47a7c4, 40%);*/
+	}
+	#contact-btn {
+		display: block;
+		/*background-color: #47a7c4;*/
+		width: 32px;
+		height: 32px;
+		float: left;
+		text-align: center;
+		margin-top: 3px;
+		margin-left: 7px;
+		svg {
+			padding-right: 1px;
 		}
+	}
+}
+
+#nav-items {
+	padding: 0;
+	display: none;
+	padding-top: 0px;
+	position: absolute;
+	z-index: 100;
+	left: 80px;
+	top: 30px;
+	background: none;
+	border-top: 0;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	.blog & {
+		left: auto;
+		margin-left: 60px;
+	}
+	li {
+		text-transform: uppercase;
+		color: $dark;
+		list-style: none;
+		font-family: $sans;
+		font-weight: 100;
+		font-size: 16px;
+		padding: 0px 10px;
+		margin-bottom: 0;
+		float: left;
+		a {
+			color: #47a7c4;
+		}
+		&:last-child {
+			padding-right: 0;
+>>>>>>> Stashed changes
+		}
+		&:first-child {
+		
+		}	
 	}
 	
 }
@@ -1942,7 +2012,11 @@ img.avatar {
 }
 
 .post-list {
+<<<<<<< Updated upstream
 	margin: 100px 0 0;
+=======
+	margin: 100px 0 50px;
+>>>>>>> Stashed changes
 	padding-left: 0;
 	li {
 		list-style: none;
@@ -1967,6 +2041,18 @@ img.avatar {
 		}
 	}
 
+<<<<<<< Updated upstream
+=======
+.post-header {
+	max-width: 500px;
+	z-index: 2000;
+	position: absolute;
+	top: 0px;
+	left: 20px;
+	.blog & {
+		left: auto;
+	}
+>>>>>>> Stashed changes
 }
 
 
