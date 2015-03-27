@@ -10,8 +10,10 @@ After being scattered all over the Alvares’ house for nearly two years, we got
 
 Finding the right room in the house was the easiest part, how to make it look like a design studio was a whole another ball game. No amount of research on Pinterest can help you prepare for this. Two guys trying to make calls on the perfect lamp shades, the right colour for the walls, placement of furniture, a place for the Coldplay poster, yada yada. And when what you do depends on your creative and artistic taste, the outcome better be good. 
 
+*A look into what was...*
+
 ![Before pic of the studio]({{ site.http://hashcooki.es/ }}/assets/images/hashcookies-studio-before.jpg)
-*a look into what was...*
+
 
 But like any other product made at Hash Cookies, we welcomed the challenges, made lots of mistakes, learnt from them, found a fix and most importantly enjoyed the ride. We did a lot of the manual work ourselves, well not the heavy-lifting really, we had a little help with that, and still it’s not a 100% complete, and I think it never will be, but that's okay. 
 Mr. Pirsig in The Zen And The Art Of Motorcycle Maintainence put it so well -  *"Sometimes it's a little better to travel thank to arrive."*
