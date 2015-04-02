@@ -245,7 +245,7 @@ $(document).ready(function() {
 						$('#cm-original').val(cmValue);
 					}
 					$('#cm-message').val('').attr('placeholder', '');
-					$('#cm-status').html('<strong>Message sent!</strong> Feel free to add more details...');
+					$('#cm-status').html('<strong>Message sent!</strong> Feel free to attach more details...');
 				}
 			},
 			error: function(data) {
