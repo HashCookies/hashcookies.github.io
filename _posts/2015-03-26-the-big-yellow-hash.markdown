@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "The Big Yellow Hash"
+title:  "The Hash Cookies Studio"
 date:   2015-03-26 23:00:53
 categories: hashcookies
 author: "Axel D'Souza"
