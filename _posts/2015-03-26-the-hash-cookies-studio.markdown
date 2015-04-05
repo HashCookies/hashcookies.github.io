@@ -14,7 +14,6 @@ Finding the right room in the house was the easiest part, how to make it look li
 
 ![Before pic of the studio]({{ site.http://hashcooki.es/ }}/assets/images/hashcookies-studio-before.jpg)
 
-
 But like any other product made at Hash Cookies, we welcomed the challenges, made lots of mistakes, learnt from them, found a fix and most importantly enjoyed the ride. We did a lot of the manual work ourselves, well not the heavy-lifting really, we had a little help with that. It’s still not a 100% complete, and I think it never will be, but that's okay. 
 Mr. Pirsig in The Zen And The Art Of Motorcycle Maintainence put it so well -  *"Sometimes it's a little better to travel than to arrive."*
 
