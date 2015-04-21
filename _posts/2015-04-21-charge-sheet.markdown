@@ -6,7 +6,7 @@ categories: hashcookies
 author: "Axel D'Souza"
 ---
 
-At Hash Cookies, we charge for our services by the hour. We put in all efforts in to delivering best version of a product, one that is designed with a good amount of research and creativity, and then carefully built with detailed precision. To compensate ourselves, we try to follow a pricing methodology, and this blog attempts to throw light on the how, what, and why of that process.
+At Hash Cookies, we charge for our services by the hour. We put in all efforts in to delivering the best version of a product, one that is designed with a good amount of research and creativity, and then carefully built with detailed precision. To compensate ourselves, we try to follow a pricing methodology, and this blog attempts to throw light on the how, what, and why of that process.
 
 ###The Concept:###
 There are several stages we go through time and again to create that perfectly orchestrated product. We breakdown the entire process in stages so we can correctly compensate ourselves for all the effort we put in, and at the same time charge the client with a justifyable figure, rather than pulling it out of thin air. 
