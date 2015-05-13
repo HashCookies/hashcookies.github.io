@@ -6,7 +6,7 @@ categories: hashcookies
 author: "Axel D'Souza"
 ---
 
- We are proud to introduce Cūr, a pain releief wearable that has officially launched in the USA. Hash Cookies was an integral part of the User Interface design team that built the iOS application. We are really excited for the Cūr team and wish them great success. 
+ We are proud to introduce Cūr, a pain releief wearable that has officially launched in the USA. Hash Cookies was an integral part of the User Interface design for the iOS application. We are really excited for the Cūr team and wish them great success. 
 
 Shaun Rahimi of Cūr on the product:
 
