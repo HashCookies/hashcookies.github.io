@@ -10,6 +10,6 @@ Cūr is the first pain releief wearable that has officially launched in the USA.
 
 Here's Shaun Rahimi, founder of Cūr:
 
-*It’s finally here. Meet Cūr, the world's first smart pain relief wearable. It senses pain to deliver TENS therapy for optimized and sustained relief. It’s small and discreet enough to be used anywhere on the body, whether you're watching a movie or playing sports. Effortless to use, all you have to do is place it and wait 5 seconds for effective relief. See the attached fact sheet for details.*
+> It’s finally here. Meet Cūr, the world's first smart pain relief wearable. It senses pain to deliver TENS therapy for optimized and sustained relief. It’s small and discreet enough to be used anywhere on the body, whether you're watching a movie or playing sports. Effortless to use, all you have to do is place it and wait 5 seconds for effective relief. See the attached fact sheet for details.
 
 You can learn more about Cūr --> [here.](http://cur.com)
