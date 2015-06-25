@@ -7,13 +7,9 @@ image: <meta property="og:image" content="http://hashcooki.es/assets/images/hash
 author: "Axel D'Souza"
 --- 
 
-*"Web designing in Goa? Isn’t it a place to vacation?”*
-
-Milind and I’ve had ample of opportunity to move out of the state, or for that matter the country, but we chose to stay rooted in Goa. I did gig for a bit in Mumbai; but as it was meant to be, Country roads took me home. We are Goan boys, in body, mind and soul, but that is not the only reason we chose to set up base in Goa. Less traffic, more greenery, fresh air, and wide open spaces; we always wanted to have that, but more importantly, we wanted to be our own bosses. Goa gives you that liberty and several options. We chose to run our studio out of a quaint village called Parra, not very far from the capital city. We struggled initially with internet, however options in the city then were pretty bad too. Now after 2 years, we have a prompt ISP, the business is smooth sailing, and our clients, well they really appreciate the serenity we chose to surround ourselves in. With most people today choosing to coordinate online, the relevance of where you’re located is nearly insignificant. We've made sure we have a very strong online communication system set up for that. But for those who decide to come visit us, they enjoy more than just a job well done.  
-
-
+Milind and I’ve had ample of opportunity to move out of the state, or for that matter the country, but we have so many reasons for staying rooted in Goa. I gigged for a bit in Mumbai, but as it was meant to be, Country roads took me home. We are Goan boys, in body, mind and soul; love the fresh air, wide open spaces, and the fact that you are never running against time. We always wanted to have that, and Goa gives you that liberty. With most people today choosing to coordinate online, the relevance of where you’re located is nearly insignificant. We've made sure we have a very strong online communication system set up for that. Hash Cookies, the studio resides in a quaint village called Parra, which is not very far from the capital city. Of course, we have experienced a few hardships, but our state of mind, which is our most important tool, is costantly being serviced by chirping birds, peaceful silence, and therepeutic purring of Porange, the cat.  
 
 ![Hash Cookies studio entrance]({{site.hashcooki.es/ }}/assets/images/hashcookies-studio-outside.jpg)       
 
-*Web designing in Goa? Isn’t it a place to vacation?”* And so what if it is? Today, Goa nests a happy home for many startups. We saw it coming , and we’re glad to call it's Hash Cookies' home.
+Our clients who visit, they often compliment us on the serenity we chose to surround ourselves in. And small as it may seem, we love the sort of impression it has on them. Today, Goa nests a happy home for many new business owners, largely growing in the tech industry. We saw it coming, and we’re glad to call it the Hash Cookies' home.
 
