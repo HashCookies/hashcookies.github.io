@@ -7,7 +7,7 @@ image: <meta property="og:image" content="http://hashcooki.es/_site/assets/image
 author: "Axel D'Souza"
 ---
 
-Hey folks, it has been way to long since I put fingers to keys ;^) but gratefuly it's only for good reasons. We have been keeping very busy, building beautiful products thanks to our talents at the studio, making people happy, and most importantly, keeping the cats (that's right, double the fun) well fed. Chess is back on the menu. Seems like we are pacing ourselves this time around, but the anxiety still feels the same. A small setback was the terminal illness of our primary work machine, but we hope it makes a full recovery soon. Overall the boat is rocking, the birds are chirping, and life is good. See you soon! 
+Hey folks, it has been way too long since I put fingers to keys ;^) but gratefuly for good reasons. We have been keeping very busy at the #C home, building beautiful products all thanks to the rocking team, making people happy, and most importantly, keeping the cats (that's right, double the fun) well fed. Chess is back on the menu. Seems like we are pacing ourselves this time around, but the anxiety still feels the same. A small setback was the terminal illness of our primary work machine, and we are hoping it makes a full recovery soon. Its substitute is proving pretty decent (A shiny new MacBook pro), what with all the mobility convenience, zippy flash drive, and all that swank, but the warmth of the iMac is still not replaceable. Overall the boat is rocking, the birds are chirping, and life is good. See you soon! 
 
 <span style="padding-top: 50px;">![New cat]({{site.hashcooki.es/ }}/assets/images/kitty-bitty.jpg)</span>
 <span class="pull-right">*...Kit-Bit jr.*</span> 
