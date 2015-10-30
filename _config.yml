@@ -5,6 +5,7 @@ description: "Beautiful responsive web designs created professionally at competi
 baseurl: "" # the subpath of your site, e.g. /blog/
 twitter_username: goobimama
 github_username:  milindalvares
+thumbnail: http://hashcooki.es/assets/images/hc-thumbnail.png
 
 # Build settings
 markdown: kramdown
