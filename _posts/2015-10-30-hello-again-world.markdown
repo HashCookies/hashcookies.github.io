@@ -3,7 +3,7 @@ layout: post
 title:  "Hello again, world"
 date:   2015-10-30 1:35:53
 categories: hashcookies
-image: <meta property="og:image" content="http://hashcooki.es/_site/assets/images/kitty-bitty.jpg"/>
+image: /assets/image/hc-thumbnail.png
 thumbnail: /assets/image/hc-thumbnail.png
 author: "Axel D'Souza"
 ---
