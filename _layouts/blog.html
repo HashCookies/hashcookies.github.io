@@ -17,9 +17,7 @@
       {% endif %}
 
       {% if page.image %}
-        <meta  content="/assets/images/{{ page.image | prepend: site.url }}" property="og:image" >
-      {% else %}
-        <meta content="/assets/images/hc-thumbnail.png{{ prepend: site.url }}" property="og:image">
+        <meta  content="{{ page.image | prepend: site.url }}" property="og:image" >
       {% endif %}
 
       {% if page.categories %}
