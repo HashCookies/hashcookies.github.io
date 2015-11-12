@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Hello again, world"
+title:  "Hello Again, World"
 date:   2015-10-30 1:35:53
 categories: hashcookies
 image: /assets/image/hc-thumbnail.png
