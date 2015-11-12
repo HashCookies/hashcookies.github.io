@@ -3,7 +3,7 @@ layout: post
 title:  "Web Designing in Goa"
 date:   2015-05-13 15:07:53
 categories: hashcookies
-image: /assets/images/hashcookies-studio-outside.jpg"/>
+image: /assets/images/hashcookies-studio-outside.jpg
 author: "Axel D'Souza"
 --- 
 
