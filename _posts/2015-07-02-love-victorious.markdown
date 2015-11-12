@@ -3,7 +3,7 @@ layout: post
 title:  "Love Victorious"
 date:   2015-07-02 04:07:53
 categories: hashcookies
-image: <meta property="og:image" content="http://hashcooki.es/assets/images/hc-cover-rainbow-blog.jpg"/>
+image: assets/images/hc-cover-rainbow-blog.jpg
 author: "Axel D'Souza"
 --- 
 
