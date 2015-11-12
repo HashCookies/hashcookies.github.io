@@ -3,7 +3,7 @@ layout: post
 title:  "Hello Again, World"
 date:   2015-10-30 1:35:53
 categories: hashcookies
-image: /assets/image/hc-thumbnail.png
+image: /assets/images/hc-thumbnail.png
 author: "Axel D'Souza"
 ---
 
