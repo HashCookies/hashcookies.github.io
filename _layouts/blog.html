@@ -19,7 +19,7 @@
       {% if page.image %}
         <meta  content="{{ page.image | prepend: site.url }}" property="og:image" >
       {% else %}
-        <meta content="http://hashcooki.es/assets/images/hc-thumbnail.png" property="og:image">
+        <meta content="{{ "/assets/images/hc-thumbnail.png" | prepend: site.url }}" property="og:image">
       {% endif %}
 
       {% if page.categories %}
