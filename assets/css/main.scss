@@ -24,7 +24,11 @@ $grey-color-dark:  darken($grey-color, 25%);
 $on-palm:          600px;
 $on-laptop:        800px;
 
-
+//social icons colors
+$fb: #3b5998;
+$gplus: #dd4b39;
+$tw: #00aced;
+$tmblr: #32506d;
 
 // Using media queries with like this:
 // @include media-query($palm) {

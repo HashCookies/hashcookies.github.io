@@ -7,25 +7,25 @@ tags: "light-bg blog"
 		<div class="col-xs-12">
 			<div id="blog-nav">
 				<a href="/"><img src="/assets/images/logo.svg" id="blog-logo" alt="" /></a>
-				<a href="/journal">	
+				<a href="/journal">
 					<span>Journal</span>
 				</a>
 			</div>
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-md-12">		
+		<div class="col-md-12">
 			<div class="post">
 			  <header class="blog-post-header">
 			    <h1 class="post-title">{{ page.title }}</h1>
 				 <p class="post-meta">Published on {{ page.date | date: "%b %-d, %Y" }} {% if page.author %} by {{ page.author }}{% endif %}</p>
 			  </header>
-			
+
 			  <article class="post-content">
 			    {{ content }}
-			  </article>		
-			  
-			</div>	
+			  </article>
+
+			</div>
 		</div>
 	</div>
 	<div class="row"  id="private-message">
@@ -38,6 +38,21 @@ tags: "light-bg blog"
 				  <input type="submit" value="Send Private Comment" class="btn btn-large  btn-primary" />
 			  </div>
 			</form>
+			<div class="col-md-8 col-md-offset-2 social-share-buttons">
+				{% assign shareUrl = page.url | prepend: site.url | replace: 's//' , 's' %}
+			  <a href="https://facebook.com/sharer.php?u={{ shareUrl }}&p[title]={{ page.title }}" rel="nofollow" target="_blank" title="Share on Facebook">
+					<i data-icon="ei-sc-facebook" data-size="s"></i>
+				</a>
+			  <a href="https://www.tumblr.com/share/link?url={{ shareUrl}}&name={{ page.title }}&content={{ page.content | strip_html | trim }}&caption={{ page.tags }}"  rel="nofollow" target="_blank" title="Share on Tumblr">
+					<i data-icon="ei-sc-tumblr" data-size="s"></i>
+				</a>
+			  <a href="https://twitter.com/intent/tweet?text={{ page.title | append: shareUrl }}&via={{ site.twitter_username }}&related={{ site.twitter_username }}&hashtags={{ page.tags }}" rel="nofollow" target="_blank" title="Share on Twitter">
+			    <i data-icon="ei-sc-twitter" data-size="s"></i>
+			  </a>
+			  <a href="https://plus.google.com/share?url={{ shareUrl }}" rel="nofollow" target="_blank" title="Share on Google+" >
+					<i data-icon="ei-sc-google-plus" data-size="s"></i>
+				</a>
+			</div>
 		</div>
 	</div>
 </div>
