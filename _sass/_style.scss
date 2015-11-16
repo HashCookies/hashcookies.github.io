@@ -2214,40 +2214,65 @@ and (orientation : landscape) {
 	}
 }
 
-.social-share-buttons {
-	svg {
-		width:70px;
-		float:left;
+.social-share-bar {
+	margin-top:15px;
+	.social-share-buttons {
+		margin-top:10px;
+		text-align: center;
 	}
 	.icon {
+		display: inline-block;
 		fill: white;
 		stroke: $grey-color;
-		-webkit-transition: fill 200ms linear;
-		-moz-transition: fill 200ms linear;
-		-o-transition: fill 200ms linear;
-		transition: fill 200ms linear;
-		&:hover {
-			stroke: none;
+		svg {
+			width: 50px;
+			height: 50px;
+			background-color: white;
+			margin: 0 4px;
+			padding: 7px;
+			border: 1px solid $grey-color;
+			border-radius: 55px;
+			-webkit-transition: all 100ms linear;
+			-moz-transition: all 100ms linear;
+			-o-transition: all 100ms linear;
+			transition: all 100ms linear;
 		}
 	}
-	.icon--ei-sc-facebook {
+	a {
 		&:hover {
-			fill: $fb;
+			text-decoration: none;
+		}
+		&:visited {
+			color: white;
+		}
+		.icon.icon--ei-sc-facebook > svg {
+			&:hover {
+				border: none;
+				stroke: none;
+				background-color: $fb;
+			}
+		}
+		.icon.icon--ei-sc-tumblr > svg {
+			&:hover {
+				border: none;
+				stroke: none;
+				background-color: $tmblr;
+			}
+		}
+		.icon.icon--ei-sc-twitter > svg {
+			&:hover {
+				border: none;
+				stroke: none;
+				background-color: $tw;
+			}
+		}
+		.icon.icon--ei-sc-google-plus > svg {
+			&:hover {
+				border: none;
+				stroke: none;
+				background-color: $gplus;
+			}
 		}
 	}
-	.icon--ei-sc-tumblr {
-		&:hover {
-			fill: $tmblr;
-		}
-	}
-	.icon--ei-sc-twitter {
-		&:hover {
-			fill: $tw;
-		}
-	}
-	.icon--ei-sc-google-plus {
-		&:hover {
-			fill: $gplus;
-		}
-	}
+
 }
