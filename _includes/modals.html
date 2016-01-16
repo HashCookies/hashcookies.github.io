@@ -5,7 +5,7 @@
  			<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
 
  			<div class="col-md-3 col-xs-12 text-center">
- 				<img src="/assets/images/logo.svg" id="contact-card-logo" width="100" height="100" alt="" />	
+ 				<img src="/assets/images/logo.svg" id="contact-card-logo" width="100" height="100" alt="" />
 
  			</div>
 			<div class="col-md-4 col-sm-offset-0 col-xs-offset-3 col-xs-9">
@@ -19,22 +19,23 @@
 					<li><span class="label">Facebook</span> <a href="http://facebook.com/hashcooks" title="Hash Cookies Facebook page">fb.com/hashcooks</a></li>
 				</ul>
 			</div>
-			
+
  		</div>
    	  	<!-- Header ends -->
-     	
+
 		<div class="modal-body">
 			<span id="cm-status"></span>
 			<form id="contact-messages" accept-charset="UTF-8" action="http://hashcookies.net/contact/hashcookies" method="POST">
 				<input type="hidden" name="utf8" value="✓">
 				<input type="hidden" name="form_id" value="contact-messages-form" />
 				<div id="cm-inputs">
+          <input type="text" name="name" class="namefield" />
 					<textarea id="cm-message" name="message" placeholder="Feel free to say anything!" class="form-control" rows="1"></textarea>
 					<input type="hidden" id="cm-original" name="original" />
 				</div>
 				<input type="submit" class="btn btn-primary pull-right" value="Send Message" />
 			</form>
-			
+
         </div> <!--end modal body-->
 
      </div>  <!-- Content ends -->
@@ -46,11 +47,12 @@
   	<form id="request-quote-form" accept-charset="UTF-8" action="http://hashcookies.net/contact/hashcookies" method="POST">
 		<input type="hidden" name="utf8" value="✓">
 		<input type="hidden" name="form_id" value="request-quote-form" />
+    <input type="text" name="name" class="namefield" />
 	    <div class="modal-content">
 	 		<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-	 			<h4 class="text-center"><span>Request for a </span><span class="hidden-xs"><input type="text" name="project_type" id="project-type" value="custom" /></span> Website</h4><br />	
-				<div class="col-md-9"> 
+	 			<h4 class="text-center"><span>Request for a </span><span class="hidden-xs"><input type="text" name="project_type" id="project-type" value="custom" /></span> Website</h4><br />
+				<div class="col-md-9">
 		        	<div class="row">
 	    	        	<div class="col-md-6">
 		    	        	<div class="form-group">
@@ -67,21 +69,21 @@
 				 	</div>
 				</div>
 
-				<div class="col-md-3 req-btn">	    			 	
+				<div class="col-md-3 req-btn">
 	 				<input class="btn btn-large btn-primary btn-submit" type="submit" value="Send Request" />
 	 			</div>
 	 		</div>
 	   	  	<!-- Header ends -->
 	   	  	<div class="clearfix"></div>
-	     	
+
 			<div class="modal-body">
 				<div class="col-md-7">
 					<h4>Project Brief (Optional)</h4>
 	        	</div>
 	        	<div class="clearfix"></div>
-	        	<div class="col-md-7">	        		
-					<textarea name="message" class="form-control" rows="10"></textarea>		
-	    		</div> 
+	        	<div class="col-md-7">
+					<textarea name="message" class="form-control" rows="10"></textarea>
+	    		</div>
 	    		<div class="col-md-5" id="optional-instructions">
 	    			<h5>Information that we need:</h5>
 	    			<ul>
@@ -100,4 +102,3 @@
 	    </form>
   </div>
 </div>
-
