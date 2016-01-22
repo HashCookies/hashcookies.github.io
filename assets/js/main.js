@@ -222,13 +222,14 @@ $(document).ready(function() {
 	$('#contact-messages, #request-quote-form').submit(function(e) {
 		var $this = $(this);
 		var cmValue = $('#cm-message').val();
-		var spamValue = $('.namefield').val();
+		var spamValue1 = $('#namefield-2').val();
+		var spamValue2 = $('#namefield-2').val();
 		var formdata = $this.serialize();
 		var url = $(this).attr('action');
 		if ($this.parent().parent().attr('id') == 'request-quote') {
 			$('#request-quote .btn-submit').val('Sending...');
 		}
-		if (!spamValue) {
+		if (!spamValue1 && !spamValue2) {
 			$.ajax({
 				type: 'POST',
 				data: formdata,
