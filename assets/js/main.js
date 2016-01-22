@@ -222,7 +222,7 @@ $(document).ready(function() {
 	$('#contact-messages, #request-quote-form').submit(function(e) {
 		var $this = $(this);
 		var cmValue = $('#cm-message').val();
-		var spamValue1 = $('#namefield-2').val();
+		var spamValue1 = $('#namefield-1').val();
 		var spamValue2 = $('#namefield-2').val();
 		var formdata = $this.serialize();
 		var url = $(this).attr('action');
