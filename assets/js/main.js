@@ -225,7 +225,7 @@ $(document).ready(function() {
 		var spamValue1 = $('#namefield-1').val();
 		var spamValue2 = $('#namefield-2').val();
 		var formdata = $this.serialize();
-		var url = $(this).attr('action');
+		var url = $(this).attr('data-action');
 		if ($this.parent().parent().attr('id') == 'request-quote') {
 			$('#request-quote .btn-submit').val('Sending...');
 		}
