@@ -219,13 +219,14 @@ $(document).ready(function() {
 
 	});
 
+	var formUrl = 'http://hashcookies.net/contact/hashcookies';
+
 	$('#contact-messages, #request-quote-form').submit(function(e) {
 		var $this = $(this);
 		var cmValue = $('#cm-message').val();
 		var spamValue1 = $('#namefield-1').val();
 		var spamValue2 = $('#namefield-2').val();
 		var formdata = $this.serialize();
-		var url = $(this).attr('data-action');
 		if ($this.parent().parent().attr('id') == 'request-quote') {
 			$('#request-quote .btn-submit').val('Sending...');
 		}
@@ -233,7 +234,7 @@ $(document).ready(function() {
 			$.ajax({
 				type: 'POST',
 				data: formdata,
-				url: url,
+				url: formUrl,
 				success: function(data) {
 					console.log(data);
 					if ($this.parent().parent().attr('id') == 'request-quote') {
@@ -264,14 +265,13 @@ $(document).ready(function() {
 	$('#private-message-form').submit(function(e) {
 		var $this = $(this);
 		var formdata = $this.serialize();
-		var url = $(this).attr('action');
 		$this.find('.btn').val('Sending...');
 		var spamValue = $('.namefield').val();
 		if (!spamValue) {
 			$.ajax({
 				type: 'POST',
 				data: formdata,
-				url: url,
+				url: formUrl,
 				success: function(data) {
 					console.log(data);
 					$this.hide();
