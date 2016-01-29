@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Latest work - I Speak Your Language"
+title:  "I Speak Your Language"
 date:   2016-01-29 13:35:53
 categories: hashcookies
 image: /assets/images/scr-isyl.jpg
