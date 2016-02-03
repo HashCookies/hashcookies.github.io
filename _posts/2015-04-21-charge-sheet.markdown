@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Charging by the hour"
+title:  "What makes an hour"
 date:   2015-04-21 23:55:53
 categories: hashcookies
 author: "Axel D'Souza"
