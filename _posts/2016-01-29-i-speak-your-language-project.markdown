@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  "I Speak Your Language"
-date:   2016-01-29 13:35:53
+title:  "Free from Free Basics"
+date:   2016-02-15 15:35:53
 categories: hashcookies
-image: /assets/images/scr-isyl.jpg
+image: /assets/images/free-from-free-basics.png
 author: "Axel D'Souza"
 ---
+Free Basics, a similar seductress like its twin Internet.org, came to us again as a noble cause; claiming to bring internet to the poor. But in a country like India where service operators providing the world wide web, unadulterated, unsupervised, for less than a rupee a day, it nearly is a right. Especially if you can afford a device to access it. Point being, if Facebook really had noble intentions, it could have availed a data pack to those less privileged, rather than pushing a bunch of curated websites, and since they practically then owned those who availed of free basics, they could feed you any content it seeemed fit. It was definitely a desperate attempt to prey on a rapidly growing media hungry audience.
 
-This was our very first project from the beautiful Australia, and we were really excited about it. [I Speak Your Language](http://ispeakyourlanguage.com.au) is a project geared towards helping ageing people from diverse background connect with medical or social services based on the language they are most comfortable speaking. Considering our core demographic, we designed a simple navigation and cross-platformed the web app for all devices. We used [ember.js](http://emberjs.com) to make the front end zippy, and the backend was called with the mighty [ruby on rails](http://rubyonrails.org). The project didn’t just stop there. We built in a customized CMS for the admin, a subscription service for users to receive updates from service providers, designed a logo, and even designed simple auto response mailers. Hash Cookies took about 5 weeks to get the show on the road, while managing all communication online via Skype. 
+<span style="padding-top: 50px;">![I Speak Your Language logo]({{site.hashcooki.es/ }}/assets/images/free-from-free-basics.png)</span>
 
-<span style="padding-top: 50px;">![I Speak Your Language logo]({{site.hashcooki.es/ }}/assets/images/scr-isyl.jpg)</span>
+The world wide web is an endless sea of knowledge and information from which a user can choose what to and what not to access, that is is the internet we have grown to love. The power of the people have fought to keep it that way, and victory is ours again. People 2, Facebook 0.
