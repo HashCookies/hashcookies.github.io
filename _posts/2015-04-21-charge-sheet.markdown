@@ -3,13 +3,13 @@ layout: post
 title:  "What makes an hour"
 date:   2015-04-21 23:55:53
 categories: hashcookies
-image: /assets/images/makes-an-hour.png
 author: "Axel D'Souza"
 ---
 
 At Hash Cookies, we charge for our services by the hour. We put in all efforts in to delivering the best version of a product, one that is designed with a good amount of research and creativity, and then carefully built with detailed precision. To compensate those efforts and charge our clients a fair sum, we follow this pricing methodology. This blog post attempts to throw light on the how, what, and why of that process.
 
-###The Concept:###
+### The Concept
+
 There are several stages we go through time and again to create that perfectly orchestrated product. The making of it involves several stages. We premeditate those stages rationally, and then arrive at an estimated number of hours in which the product will be ready. 
 
 ###The Breakdown:###
