@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title:  "What makes an hour"
