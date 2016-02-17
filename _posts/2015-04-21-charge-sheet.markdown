@@ -3,6 +3,7 @@ layout: post
 title:  "What makes an hour"
 date:   2015-04-21 23:55:53
 categories: hashcookies
+image: /assets/images/makes-an-hour.png
 author: "Axel D'Souza"
 ---
 
