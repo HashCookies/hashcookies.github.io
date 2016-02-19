@@ -20,7 +20,7 @@ But like any other product made at Hash Cookies, we welcomed the challenges, mad
 
 
 
-So we'll keep traveling. We do have a pretty decent place that you can now come visit 
+So we'll keep travelling. We do have a pretty decent place that you can now come visit 
 
 ![After pic of the studio]({{ site.http://hashcooki.es/ }}/assets/images/hashcookies-studio-after.jpg)
 
