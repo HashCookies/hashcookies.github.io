@@ -14,7 +14,7 @@ Server-client separation is no new concept. Any software services company like T
 
 Aside from the slightly unfortunate acronym (ISYL), I Speak Your Language is a directory of health service providers with special emphasis on languages spoken, for older migrant populations in Australia. Our task was to create a website that made it simple for people with limited technical and language abilities to access that information.
 
-Much of our approach hasn’t changed. We still put in a lot of effort in crafting the user interface, still argue over sentence structures, or semantics of UI labels. But where we would have previously built the site with a CMS like Wordpress, or serve pages from from Ruby on Rails application server, we now separate the concerns of server from client. A javascript client powered by the Ember framework.
+Much of our approach hasn’t changed. We still put in a lot of effort in crafting the user interface, still argue over sentence structures, or semantics of UI labels. But where we would have previously built the site with a CMS like Wordpress, or serve pages from from Ruby on Rails server, we now separate the concerns of data (server) from the visual (client). A javascript client powered by the Ember framework.
 
 ### A non-technical technical explanation
 
