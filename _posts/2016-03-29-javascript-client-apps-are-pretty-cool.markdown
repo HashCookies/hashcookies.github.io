@@ -1,9 +1,10 @@
 ---
-layout: post
+layout: post_image
 title:  "Javascript front-ends are the new hot sauce"
 date:   2016-02-15 15:35:53
 categories: hashcookies
-image: /assets/images/free-from-free-basics.png
+image: /assets/images/api-first.png
+tags: 'api-first'
 author: "Milind Alvares"
 ---
 

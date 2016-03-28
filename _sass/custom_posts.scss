@@ -1,0 +1,19 @@
+body.api-first {
+  background-color: #F1FFE3;
+  h3, .post-title {
+    color: #6CB51D;
+  }
+  .post-meta {
+    color: #A2C77D;
+    font-family: "Open Sans";
+    font-weight: 200;
+    font-style: normal;
+  }
+  .post-content p {
+    color: #356300;
+    a {
+      color: #6CB51D;
+      text-decoration: underline;
+    }
+  }
+}
