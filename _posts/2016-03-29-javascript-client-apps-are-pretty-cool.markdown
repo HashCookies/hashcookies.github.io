@@ -22,7 +22,7 @@ Traditionally, if a user requests page ‘x’, the browser asks the server for 
 
 A front-end powered with javascript makes the user’s browser do all the hard work while the server purely handles data. A request for page ‘x’ or ‘y’ will send back the application structure in one response once, and the data in a separate response. The application then continues to exist on the user’s browser through the lifetime of that session, with the browser only making data requests to the server, _when required_. Which is important because if the first request had responded with the entire alphabet of items, a subsequent request to x, y, or z would not call back the server and the data would be presented instantaneously. And because we control every aspect of the client and server, we can fine tune these data payloads to common usage scenarios.
 
-What all this boils down to is a fast desktop-like user experience where the page appears alive.
+What all this boils down to is a fast desktop application-like user experience.
 
 ### Save in the long run
 
@@ -30,6 +30,8 @@ With a client side application, we can effortlessly handle calculations using th
 
 We also get a standards compliant API. Which means we can easily make it power a multitude of services like native mobile applications, b2b communication, and data analytics. Start small and effortlessly grow the platform as the need arises. An independent client means that if the server is overburdened, we don’t have a client that crashes along with it, such that we can show fallback data or point to a backup server.
 
-What this means for our clients A better user experience translates to better user engagement for whatever the goals of your project. A device agnostic server means you can expand your business to more platforms, and even communicate with other platforms through a standards based api. And sticking to standards and conventions means your project’s code and API can be quickly understood and manipulated by any software developer of your choice. 
+### What this means for our clients
+
+A better user experience translates to better user engagement for whatever the goals of your project. A device agnostic server means you can expand your business to more platforms, and even communicate with other platforms through a standards based api. And sticking to standards and conventions means your project’s code and API can be quickly understood and manipulated by any software developer of your choice. 
 
 [Get in touch](mailto:fresh@hashcooki.es) if you have an interesting project in mind.
