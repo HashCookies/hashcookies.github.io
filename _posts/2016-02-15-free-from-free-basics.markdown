@@ -8,6 +8,6 @@ author: "Axel D'Souza"
 ---
 Free Basics, a similar seductress like its otherwise popularly known desguise -Internet.org, came to us claiming that it would bring free internet to the poor. But in a country like India where service operators are providing the world wide web, unadulterated, unsupervised, for less than a rupee a day, the internet is nearly a right. Especially if you can afford a device to access it. Point being, if Facebook really had noble intentions, it could have availed a data pack to those less privileged, rather than pushing a bunch of curated websites, and feed those fallen to the scheme any content it seeemed fit. It was clear that this was another desperate attempt to prey on a rapidly growing social media hungry audience.
 
-<span style="padding-top: 50px;">![I Speak Your Language logo]({{site.hashcooki.es/ }}/assets/images/free-from-free-basics.png)</span>
+<span style="padding-top: 50px;">![Free from Free Basics artwork]({{site.hashcooki.es/ }}/assets/images/free-from-free-basics.png)</span>
 
 The world wide web is an endless sea of knowledge and information from which a user can choose what to and what not to access, that is is the internet we have grown to love. The power of the people have fought to keep it that way, and victory is ours again. People 2, Facebook 0.
