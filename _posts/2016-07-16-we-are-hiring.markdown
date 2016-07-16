@@ -5,7 +5,7 @@ date:   2016-07-15 15:57:53
 categories: hashcookies
 image: /assets/images/fb-ad.png
 author: "Axel D'Souza"
-description: "Can you code? Come join the Hash Cookies family"
+description: "Can you code? Come join the Hash Cookies family."
 ---
 
 Hello World!
