@@ -16,6 +16,10 @@
         <meta property="article:author" content="{{ page.author }}">
       {% endif %}
 
+      {% if page.description %}
+        <meta  content="{{ page.description | truncate: 20 }}" property="og:description" >
+      {% endif %}
+
       {% if page.image %}
         <meta  content="{{ page.image | prepend: site.url }}" property="og:image" >
       {% else %}
