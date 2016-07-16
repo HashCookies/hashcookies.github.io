@@ -6,7 +6,7 @@
 
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
     <meta content="{{ site.url }}" property="og:url">
-    <meta content="{{ site.description }}" property="og:description">
+    <meta content="{{ site.description | truncate: 75 }}" property="og:description">
     <meta content="{{ "/assets/images/hash-cookies-main-page.jpg" | prepend: site.url }}" property="og:image" >
     <meta content="{{ site.title }}" property="og:title">
 
