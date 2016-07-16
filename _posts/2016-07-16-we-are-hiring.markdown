@@ -5,7 +5,7 @@ date:   2016-07-15 15:57:53
 categories: hashcookies
 image: /assets/images/fb-ad.png
 author: "Axel D'Souza"
-description: "We at Hash Cookies are looking to hire object oriented developers"
+description: "We at Hash Cookies are looking to hire Object Oriented Developers"
 ---
 
 Hello World!
