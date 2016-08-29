@@ -16,3 +16,4 @@ permalink: /journal/:title
 
 gems:
   - jekyll-seo-tag
+  - jekyll-sitemap
