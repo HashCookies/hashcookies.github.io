@@ -219,7 +219,7 @@ $(document).ready(function() {
 
 	});
 
-	var formUrl = 'http://hashcookies.net/contact/hashcookies';
+	var formUrl = 'http://128.199.218.232:89/contact/hashcookies';
 
 	$('#contact-messages, #request-quote-form').submit(function(e) {
 		var $this = $(this);
