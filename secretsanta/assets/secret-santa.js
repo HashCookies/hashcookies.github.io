@@ -95,17 +95,19 @@ define('secret-santa/components/people-list', ['exports', 'ember', 'npm:randomco
 
       this._reset(people);
       people.sortBy('sortId').forEach(function (person) {
-        person.get('cantDraw').then(function (assigned) {
-          var randModel = _this._getRandomModel(people.filterBy('available').removeObject(person).removeObject(assigned));
+        person.set('sent_status', false);
+        person.get('cantDraw').then(function (cantDraw) {
+          var randModel = _this._getRandomModel(people.filterBy('available').removeObject(person).removeObject(cantDraw));
           if (randModel !== undefined) {
+            randModel.set('available', false);
+
             person.set('assigned', randModel.get('name'));
             person.save().then(function () {
-              randModel.set('available', false);
               randModel.save().then(function () {
                 var data = {};
 
                 data["email"] = person.get('email');
-                data["name"] = randModel.get('assigned');
+                data["assigned"] = randModel.get('name');
 
                 _ember['default'].$.ajax({
                   type: 'POST',
@@ -141,6 +143,7 @@ define('secret-santa/components/people-list', ['exports', 'ember', 'npm:randomco
 });
 define('secret-santa/components/person-form', ['exports', 'ember'], function (exports, _ember) {
   exports['default'] = _ember['default'].Component.extend({
+    classNames: ['person-form'],
     actions: {
       savePerson: function savePerson(person) {
         this.get('save-person')(person);
@@ -152,6 +155,7 @@ define('secret-santa/components/person-show', ['exports', 'ember'], function (ex
   var get = _ember['default'].get;
   var computed = _ember['default'].computed;
   exports['default'] = _ember['default'].Component.extend({
+    classNames: ['person-item'],
     classNameBindings: ['isSelectedPerson'],
     isSelectedPerson: computed('selectedPerson', function () {
       if (get(this, 'model') == get(this, 'selectedPerson')) {
@@ -537,10 +541,7 @@ define('secret-santa/router', ['exports', 'ember', 'secret-santa/config/environm
 define('secret-santa/routes/index', ['exports', 'ember'], function (exports, _ember) {
   exports['default'] = _ember['default'].Route.extend({
     model: function model() {
-      return _ember['default'].RSVP.hash({
-        people: this.store.findAll('person'),
-        newPerson: this.store.createRecord('person')
-      });
+      return this.store.findAll('person');
     },
     afterModel: function afterModel() {
       this.store.createRecord('person');
@@ -728,6 +729,47 @@ define("secret-santa/templates/components/add-person", ["exports"], function (ex
 define("secret-santa/templates/components/people-list", ["exports"], function (exports) {
   exports["default"] = Ember.HTMLBars.template((function () {
     var child0 = (function () {
+      var child0 = (function () {
+        return {
+          meta: {
+            "revision": "Ember@2.9.1",
+            "loc": {
+              "source": null,
+              "start": {
+                "line": 2,
+                "column": 2
+              },
+              "end": {
+                "line": 4,
+                "column": 2
+              }
+            },
+            "moduleName": "secret-santa/templates/components/people-list.hbs"
+          },
+          isEmpty: false,
+          arity: 1,
+          cachedFragment: null,
+          hasRendered: false,
+          buildFragment: function buildFragment(dom) {
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode("      ");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createComment("");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createTextNode("\n");
+            dom.appendChild(el0, el1);
+            return el0;
+          },
+          buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+            var morphs = new Array(1);
+            morphs[0] = dom.createMorphAt(fragment, 1, 1, contextualElement);
+            return morphs;
+          },
+          statements: [["inline", "person-show", [], ["model", ["subexpr", "@mut", [["get", "person", ["loc", [null, [3, 26], [3, 32]]], 0, 0, 0, 0]], [], [], 0, 0], "save-person", ["subexpr", "action", ["savePerson"], [], ["loc", [null, [3, 45], [3, 66]]], 0, 0], "delete-person", ["subexpr", "action", ["deletePerson"], [], ["loc", [null, [3, 81], [3, 104]]], 0, 0], "select-person", ["subexpr", "action", ["selectPerson"], [], ["loc", [null, [3, 119], [3, 142]]], 0, 0], "isSelectingAssociate", ["subexpr", "@mut", [["get", "isSelectingAssociate", ["loc", [null, [3, 164], [3, 184]]], 0, 0, 0, 0]], [], [], 0, 0], "select-associate", ["subexpr", "action", ["selectAssociate"], [], ["loc", [null, [3, 202], [3, 228]]], 0, 0], "selectedPerson", ["subexpr", "@mut", [["get", "selectedPerson", ["loc", [null, [3, 244], [3, 258]]], 0, 0, 0, 0]], [], [], 0, 0]], ["loc", [null, [3, 6], [3, 260]]], 0, 0]],
+          locals: ["person"],
+          templates: []
+        };
+      })();
       return {
         meta: {
           "revision": "Ember@2.9.1",
@@ -738,33 +780,83 @@ define("secret-santa/templates/components/people-list", ["exports"], function (e
               "column": 0
             },
             "end": {
-              "line": 3,
+              "line": 6,
               "column": 0
             }
           },
           "moduleName": "secret-santa/templates/components/people-list.hbs"
         },
         isEmpty: false,
-        arity: 1,
+        arity: 0,
         cachedFragment: null,
         hasRendered: false,
         buildFragment: function buildFragment(dom) {
           var el0 = dom.createDocumentFragment();
-          var el1 = dom.createTextNode("    ");
-          dom.appendChild(el0, el1);
           var el1 = dom.createComment("");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("  ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createElement("button");
+          dom.setAttribute(el1, "class", "btn btn-primary");
+          var el2 = dom.createTextNode("Randomize and Send");
+          dom.appendChild(el1, el2);
           dom.appendChild(el0, el1);
           var el1 = dom.createTextNode("\n");
           dom.appendChild(el0, el1);
           return el0;
         },
         buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-          var morphs = new Array(1);
-          morphs[0] = dom.createMorphAt(fragment, 1, 1, contextualElement);
+          var element0 = dom.childAt(fragment, [2]);
+          var morphs = new Array(2);
+          morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);
+          morphs[1] = dom.createElementMorph(element0);
+          dom.insertBoundary(fragment, 0);
           return morphs;
         },
-        statements: [["inline", "person-show", [], ["model", ["subexpr", "@mut", [["get", "person", ["loc", [null, [2, 24], [2, 30]]], 0, 0, 0, 0]], [], [], 0, 0], "save-person", ["subexpr", "action", ["savePerson"], [], ["loc", [null, [2, 43], [2, 64]]], 0, 0], "delete-person", ["subexpr", "action", ["deletePerson"], [], ["loc", [null, [2, 79], [2, 102]]], 0, 0], "select-person", ["subexpr", "action", ["selectPerson"], [], ["loc", [null, [2, 117], [2, 140]]], 0, 0], "isSelectingAssociate", ["subexpr", "@mut", [["get", "isSelectingAssociate", ["loc", [null, [2, 162], [2, 182]]], 0, 0, 0, 0]], [], [], 0, 0], "select-associate", ["subexpr", "action", ["selectAssociate"], [], ["loc", [null, [2, 200], [2, 226]]], 0, 0], "selectedPerson", ["subexpr", "@mut", [["get", "selectedPerson", ["loc", [null, [2, 242], [2, 256]]], 0, 0, 0, 0]], [], [], 0, 0]], ["loc", [null, [2, 4], [2, 258]]], 0, 0]],
-        locals: ["person"],
+        statements: [["block", "each", [["get", "savedPeople", ["loc", [null, [2, 10], [2, 21]]], 0, 0, 0, 0]], [], 0, null, ["loc", [null, [2, 2], [4, 11]]]], ["element", "action", ["randomize", ["get", "savedPeople", ["loc", [null, [5, 31], [5, 42]]], 0, 0, 0, 0]], [], ["loc", [null, [5, 10], [5, 44]]], 0, 0]],
+        locals: [],
+        templates: [child0]
+      };
+    })();
+    var child1 = (function () {
+      return {
+        meta: {
+          "revision": "Ember@2.9.1",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 6,
+              "column": 0
+            },
+            "end": {
+              "line": 8,
+              "column": 0
+            }
+          },
+          "moduleName": "secret-santa/templates/components/people-list.hbs"
+        },
+        isEmpty: false,
+        arity: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        buildFragment: function buildFragment(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("  ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createElement("span");
+          dom.setAttribute(el1, "class", "placeholder text-center");
+          var el2 = dom.createTextNode("Your List is empty.");
+          dom.appendChild(el1, el2);
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        buildRenderNodes: function buildRenderNodes() {
+          return [];
+        },
+        statements: [],
+        locals: [],
         templates: []
       };
     })();
@@ -778,7 +870,7 @@ define("secret-santa/templates/components/people-list", ["exports"], function (e
             "column": 0
           },
           "end": {
-            "line": 6,
+            "line": 9,
             "column": 0
           }
         },
@@ -792,27 +884,18 @@ define("secret-santa/templates/components/people-list", ["exports"], function (e
         var el0 = dom.createDocumentFragment();
         var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("\n");
-        dom.appendChild(el0, el1);
-        var el1 = dom.createElement("button");
-        var el2 = dom.createTextNode("Randomize and Send");
-        dom.appendChild(el1, el2);
-        dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("\n");
-        dom.appendChild(el0, el1);
         return el0;
       },
       buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-        var element0 = dom.childAt(fragment, [2]);
-        var morphs = new Array(2);
+        var morphs = new Array(1);
         morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);
-        morphs[1] = dom.createElementMorph(element0);
         dom.insertBoundary(fragment, 0);
+        dom.insertBoundary(fragment, null);
         return morphs;
       },
-      statements: [["block", "each", [["get", "savedPeople", ["loc", [null, [1, 8], [1, 19]]], 0, 0, 0, 0]], [], 0, null, ["loc", [null, [1, 0], [3, 9]]]], ["element", "action", ["randomize", ["get", "savedPeople", ["loc", [null, [5, 29], [5, 40]]], 0, 0, 0, 0]], [], ["loc", [null, [5, 8], [5, 42]]], 0, 0]],
+      statements: [["block", "if", [["get", "savedPeople", ["loc", [null, [1, 6], [1, 17]]], 0, 0, 0, 0]], [], 0, 1, ["loc", [null, [1, 0], [8, 7]]]]],
       locals: [],
-      templates: [child0]
+      templates: [child0, child1]
     };
   })());
 });
@@ -1015,7 +1098,14 @@ define("secret-santa/templates/components/person-show", ["exports"], function (e
         hasRendered: false,
         buildFragment: function buildFragment(dom) {
           var el0 = dom.createDocumentFragment();
-          var el1 = dom.createTextNode("  Done\n");
+          var el1 = dom.createTextNode("  ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createElement("span");
+          dom.setAttribute(el1, "class", "sent-label");
+          var el2 = dom.createTextNode("Sent");
+          dom.appendChild(el1, el2);
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
           dom.appendChild(el0, el1);
           return el0;
         },
@@ -1054,7 +1144,7 @@ define("secret-santa/templates/components/person-show", ["exports"], function (e
         var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
         var el1 = dom.createElement("button");
-        dom.setAttribute(el1, "class", "btn");
+        dom.setAttribute(el1, "class", "btn btn-delete");
         var el2 = dom.createTextNode("Delete");
         dom.appendChild(el1, el2);
         dom.appendChild(el0, el1);
@@ -1158,7 +1248,7 @@ define("secret-santa/templates/index", ["exports"], function (exports) {
         dom.insertBoundary(fragment, 0);
         return morphs;
       },
-      statements: [["inline", "people-list", [], ["model", ["subexpr", "@mut", [["get", "model.people", ["loc", [null, [1, 20], [1, 32]]], 0, 0, 0, 0]], [], [], 0, 0]], ["loc", [null, [1, 0], [1, 34]]], 0, 0], ["inline", "person-form", [], ["model", ["subexpr", "@mut", [["get", "model.newPerson", ["loc", [null, [3, 20], [3, 35]]], 0, 0, 0, 0]], [], [], 0, 0], "save-person", ["subexpr", "route-action", ["savePerson"], [], ["loc", [null, [3, 48], [3, 75]]], 0, 0]], ["loc", [null, [3, 0], [3, 77]]], 0, 0]],
+      statements: [["inline", "people-list", [], ["model", ["subexpr", "@mut", [["get", "model", ["loc", [null, [1, 20], [1, 25]]], 0, 0, 0, 0]], [], [], 0, 0]], ["loc", [null, [1, 0], [1, 27]]], 0, 0], ["inline", "person-form", [], ["model", ["subexpr", "@mut", [["get", "model.lastObject", ["loc", [null, [3, 20], [3, 36]]], 0, 0, 0, 0]], [], [], 0, 0], "save-person", ["subexpr", "route-action", ["savePerson"], [], ["loc", [null, [3, 49], [3, 76]]], 0, 0]], ["loc", [null, [3, 0], [3, 78]]], 0, 0]],
       locals: [],
       templates: []
     };
@@ -1200,7 +1290,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("secret-santa/app")["default"].create({"name":"secret-santa","version":"0.0.0+561a2a9d"});
+  require("secret-santa/app")["default"].create({"name":"secret-santa","version":"0.0.0+53fffc9e"});
 }
 
 /* jshint ignore:end */

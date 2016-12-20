@@ -33,7 +33,7 @@ define('secret-santa/tests/components/people-list.jshint', ['exports'], function
   QUnit.module('JSHint | components/people-list.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'components/people-list.js should pass jshint.\ncomponents/people-list.js: line 68, col 45, \'data\' is defined but never used.\ncomponents/people-list.js: line 84, col 7, Missing semicolon.\ncomponents/people-list.js: line 92, col 29, \'index\' is defined but never used.\ncomponents/people-list.js: line 4, col 19, \'observer\' is defined but never used.\n\n4 errors');
+    assert.ok(false, 'components/people-list.js should pass jshint.\ncomponents/people-list.js: line 70, col 45, \'data\' is defined but never used.\ncomponents/people-list.js: line 86, col 7, Missing semicolon.\ncomponents/people-list.js: line 94, col 29, \'index\' is defined but never used.\ncomponents/people-list.js: line 4, col 19, \'observer\' is defined but never used.\n\n4 errors');
   });
 });
 define('secret-santa/tests/components/person-form.jshint', ['exports'], function (exports) {
@@ -51,7 +51,7 @@ define('secret-santa/tests/components/person-show.jshint', ['exports'], function
   QUnit.module('JSHint | components/person-show.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'components/person-show.js should pass jshint.\ncomponents/person-show.js: line 8, col 30, Expected \'===\' and instead saw \'==\'.\ncomponents/person-show.js: line 23, col 39, Missing semicolon.\n\n2 errors');
+    assert.ok(false, 'components/person-show.js should pass jshint.\ncomponents/person-show.js: line 9, col 30, Expected \'===\' and instead saw \'==\'.\ncomponents/person-show.js: line 24, col 39, Missing semicolon.\n\n2 errors');
   });
 });
 define('secret-santa/tests/components/snow-fall.jshint', ['exports'], function (exports) {
