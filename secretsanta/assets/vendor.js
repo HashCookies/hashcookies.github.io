@@ -64658,9 +64658,9 @@ requireModule("ember");
   return randomColor;
 }));
 
-},{}],"/home/latesh-hash/sites/secret-santa/tmp/core_object-input_staging-z4ezYOnA.tmp/browserify_stubs.js":[function(require,module,exports){
+},{}],"/home/latesh-hash/sites/secret-santa/tmp/core_object-input_staging-ngItBNfH.tmp/browserify_stubs.js":[function(require,module,exports){
 define('npm:randomcolor', function(){ return { 'default': require('randomcolor')};})
-},{"randomcolor":"/home/latesh-hash/sites/secret-santa/node_modules/randomcolor/randomColor.js"}]},{},["/home/latesh-hash/sites/secret-santa/tmp/core_object-input_staging-z4ezYOnA.tmp/browserify_stubs.js"]);
+},{"randomcolor":"/home/latesh-hash/sites/secret-santa/node_modules/randomcolor/randomColor.js"}]},{},["/home/latesh-hash/sites/secret-santa/tmp/core_object-input_staging-ngItBNfH.tmp/browserify_stubs.js"]);
 
 ;/* globals define */
 define('ember/load-initializers', ['exports', 'ember-load-initializers', 'ember'], function(exports, loadInitializers, Ember) {
