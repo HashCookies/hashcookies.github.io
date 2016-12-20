@@ -529,7 +529,7 @@ define('secret-santa/router', ['exports', 'ember', 'secret-santa/config/environm
   });
 
   Router.map(function () {
-    this.route('index', { path: '/' });
+    this.route('index', { path: '/secretsanta' });
   });
 
   exports['default'] = Router;
