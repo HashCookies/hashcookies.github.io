@@ -3,6 +3,7 @@ layout: post
 title:  "Introducing Pahadi Local "
 date:   2017-01-03 15:57:53
 categories: hashcookies
+image: /assets/images/blog-pl-logo.png
 author: "Axel D'Souza"
 description: "An eCommerce platform designed and built in house."
 ---
