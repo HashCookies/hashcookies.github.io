@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post_image
 title:  "Introducing Pahadi Local "
 date:   2017-01-03 15:57:53
 categories: hashcookies
