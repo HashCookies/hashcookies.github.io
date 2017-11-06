@@ -257,6 +257,7 @@ $(document).ready(function() {
 					alert('Sorry, something went wrong! Please try again or contact fresh@hashcooki.es');
 				}
 			});
+			ga('send', { hitType: 'event', eventCategory: 'Request Quote', eventAction: 'send', eventLabel: 'Request Quote'});
 		}
 		e.preventDefault();
 	});
@@ -282,6 +283,7 @@ $(document).ready(function() {
 					alert('Sorry, something went wrong! Please try again or contact fresh@hashcooki.es');
 				}
 			});
+			ga('send', { hitType: 'event', eventCategory: 'Private Message', eventAction: 'send', eventLabel: 'Private Message'});
 		}
 		e.preventDefault();
 	});
