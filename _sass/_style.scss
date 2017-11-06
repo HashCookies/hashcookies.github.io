@@ -2282,3 +2282,14 @@ and (orientation : landscape) {
 .namefield { // anti spam field
 	display: none;
 }
+
+.fb-container {
+  bottom: 0px;
+  position: fixed;
+  right: 0%;
+  z-index: 100;
+}
+
+.panel-body {
+	padding :0px
+}
