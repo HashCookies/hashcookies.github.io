@@ -227,6 +227,7 @@ $(document).ready(function() {
 		var spamValue1 = $('#namefield-1').val();
 		var spamValue2 = $('#namefield-2').val();
 		var formdata = $this.serialize();
+		var requestType = $("#project-type").val();
 		if ($this.parent().parent().attr('id') == 'request-quote') {
 			$('#request-quote .btn-submit').val('Sending...');
 		}
@@ -257,7 +258,7 @@ $(document).ready(function() {
 					alert('Sorry, something went wrong! Please try again or contact fresh@hashcooki.es');
 				}
 			});
-			ga('send', { hitType: 'event', eventCategory: 'Request Quote', eventAction: 'send', eventLabel: 'Request Quote'});
+			ga('send', { hitType: 'event', eventCategory: 'Request Quote', eventAction: 'send', eventLabel: requestType });
 		}
 		e.preventDefault();
 	});
@@ -274,8 +275,7 @@ $(document).ready(function() {
 				data: formdata,
 				url: formUrl,
 				success: function(data) {
-					console.log(data);
-					$this.hide();
+				 $this.hide();
 					$('<p>Message sent, thanks!</p>').css('text-align', 'center').appendTo('#private-message div');
 				},
 				error: function(data) {
@@ -283,7 +283,6 @@ $(document).ready(function() {
 					alert('Sorry, something went wrong! Please try again or contact fresh@hashcooki.es');
 				}
 			});
-			ga('send', { hitType: 'event', eventCategory: 'Private Message', eventAction: 'send', eventLabel: 'Private Message'});
 		}
 		e.preventDefault();
 	});
