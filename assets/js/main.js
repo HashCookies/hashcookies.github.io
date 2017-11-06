@@ -252,13 +252,13 @@ $(document).ready(function() {
 						$('#cm-message').val('').attr('placeholder', '');
 						$('#cm-status').html('<strong>Message sent!</strong> Feel free to attach more details...');
 					}
-				},
+					ga('send', { hitType: 'event', eventCategory: 'Request Quote', eventAction: 'Submit', eventLabel: requestType });
+                },
 				error: function(data) {
 					console.log(data);
 					alert('Sorry, something went wrong! Please try again or contact fresh@hashcooki.es');
 				}
 			});
-			ga('send', { hitType: 'event', eventCategory: 'Request Quote', eventAction: 'send', eventLabel: requestType });
 		}
 		e.preventDefault();
 	});
