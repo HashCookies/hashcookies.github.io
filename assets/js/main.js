@@ -258,7 +258,7 @@ $(document).ready(function() {
 					alert('Sorry, something went wrong! Please try again or contact fresh@hashcooki.es');
 				}
 			});
-			ga('send', { hitType: 'event', eventCategory: 'Request Quote', eventAction: 'send', eventLabel: requestType });
+			_trackEvent('Request quote', 'Submit', requestType);
 		}
 		e.preventDefault();
 	});
