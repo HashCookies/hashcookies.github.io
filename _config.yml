@@ -23,3 +23,6 @@ sass:
     style: compressed
 
 
+webrick:
+  headers:
+     Cache-Control: 'max-age=608400,public'
