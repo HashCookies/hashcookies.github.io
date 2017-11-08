@@ -18,8 +18,8 @@ permalink: /journal/:title
 gems:
   - jekyll-seo-tag
   - jekyll-sitemap
-  - octopress-minify-html
 
 sass:
     style: compressed
+
 
