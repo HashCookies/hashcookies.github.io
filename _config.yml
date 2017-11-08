@@ -25,4 +25,4 @@ sass:
 
 webrick:
   headers:
-     Cache-Control: 'max-age=608400,public'
+     Cache-Control: max-age=608400
