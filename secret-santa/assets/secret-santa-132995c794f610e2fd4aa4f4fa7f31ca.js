@@ -14,9 +14,9 @@ e.default=n.extend(s,{classNames:["person-form"],name:"",email:"",actions:{saveP
 this.attrs.savePerson(e,t).then(function(e){a(n,"name",null),a(n,"email",null)})}}})}),define("secret-santa/components/person-show",["exports"],function(e){Object.defineProperty(e,"__esModule",{value:!0})
 var t=Ember.get,n=Ember.computed
 e.default=Ember.Component.extend({classNames:["person-item"],classNameBindings:["isSelectedPerson"],isSelectedPerson:n("selectedPerson",function(){return t(this,"model")==t(this,"selectedPerson")}),isSent:n("model.sent_status",function(){return!!t(this,"model.sent_status")}),actions:{delete:function(e){this.get("delete-person")(e)},edit:function(){this.set("isEditing",!0)},savePerson:function(e){this.set("isEditing",!1),this.get("save-person")(e)},selectPerson:function(e){this.get("select-person")(e)},selectAssociate:function(e){this.get("select-associate")(e)},cancelAssociation:function(e){this.get("cancel-association")(e)}}})}),define("secret-santa/components/send-wishlist",["exports"],function(e){Object.defineProperty(e,"__esModule",{value:!0})
-var t=Ember.Component,n=Ember.Object,a=(Ember.get,Ember.set)
-e.default=t.extend({classNames:["send-wishlist"],actions:{send:function(e,t){var s={}
-s.recipient=atob(t),s.message=e,n.$.ajax({type:"POST",data:s,url:"http://128.199.218.232:89/secretsanta-wishlist/",success:function(e){a(this,"sent",!0),a(this,"message",null)},error:function(e){console.log(e)}})}}})}),define("secret-santa/components/snow-fall",["exports"],function(e){Object.defineProperty(e,"__esModule",{value:!0}),e.default=Ember.Component.extend({didInsertElement:function(){function e(){s.clearRect(0,0,a.width,a.height)
+var t=Ember.Component,n=(Ember.Object,Ember.get,Ember.set)
+e.default=t.extend({classNames:["send-wishlist"],actions:{send:function(e,t){var a={}
+a.recipient=atob(t),a.message=e,$.ajax({type:"POST",data:a,url:"http://128.199.218.232:89/secretsanta-wishlist/",success:function(e){n(this,"sent",!0),n(this,"message",null)},error:function(e){console.log(e)}})}}})}),define("secret-santa/components/snow-fall",["exports"],function(e){Object.defineProperty(e,"__esModule",{value:!0}),e.default=Ember.Component.extend({didInsertElement:function(){function e(){s.clearRect(0,0,a.width,a.height)
 for(var l=0;l<r;l++){var d=n[l],c=o,u=i,f=d.x,m=d.y,p=Math.sqrt((f-c)*(f-c)+(m-u)*(m-u))
 if(p<100){var b=(c-f)/p,v=(u-m)/p,h=100/(p*p)/2
 d.velX-=h*b,d.velY-=h*v}else d.velX*=.18,d.velY<=d.speed&&(d.velY=d.speed),d.velX+=Math.cos(d.step+=.05)*d.stepSize
