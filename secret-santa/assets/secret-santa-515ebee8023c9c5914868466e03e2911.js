@@ -20,14 +20,16 @@ var t=Ember.Component,n=(Ember.Object,Ember.get,Ember.set)
 e.default=t.extend({classNames:["send-wishlist"],actions:{send:function(e,t){n(this,"sending",!0)
 var a=this,s={}
 s.recipient=atob(t),s.message=e,$.ajax({type:"POST",data:s,url:"http://128.199.218.232:89/secretsanta-wishlist/",success:function(e){n(a,"sending",!1),n(a,"message",null)},error:function(e){console.log(e)}})}}})}),define("secret-santa/components/sending-form",["exports"],function(e){Object.defineProperty(e,"__esModule",{value:!0})
-var t=Ember.Component,n=(Ember.Object,Ember.computed,Ember.observer,Ember.get),a=Ember.set
-e.default=t.extend({classNames:["sending-form","paper-stack"],error:!1,actions:{randomize:function(e,t,n){var s=this
-a(this,"isSending",!0),a(this,"error",!1),this._reset(e).then(function(e){s._randomize(e,t,n)})},reset:function(e){this._reset(e)}},_randomize:function(e,t,s){var r=this,o=[],i=e.get("length")
-e.sortBy("sortId").forEach(function(l,c){l.get("cantDraw").then(function(d){var u=r._getRandomModel(e.filterBy("available").removeObject(l).removeObject(d))
-void 0!==u?(l.set("assigned",u.get("name")),l.save().then(function(){u.save().then(function(){var e={}
-e.name=l.get("name"),e.email=l.get("email"),e.assigned=u.get("name"),e.message=s,t&&(e.recepient_hash=btoa(u.get("email"))),o.pushObject(e),c+1===i&&(n(r,"error")||r._sendPayload(o))})})):(a(r,"error",!0),a(r,"isSending",!1))})})},_sendPayload:function(e){var t=this
-$.ajax({type:"POST",data:{payload:e},url:"http://128.199.218.232:89/secretsanta/",success:function(e){a(t,"isSending",!1),t.attrs.success()},error:function(e){console.log(e,"error")}})},_getRandomModel:function(e){var t=Math.floor(Math.random()*(e.get("length")-1))
-return e.objectAt(t)},_reset:function(e){return e.forEach(function(e,t){e.set("sortId",Math.floor(500*Math.random())),"aveenalopes@gmail.com"==e.get("email")?(e.set("assigned","Cinatra"),e.set("available",!1)):"cinatra.fernandes@gmail.com"==e.get("email")?(e.set("assigned","Leo"),e.set("available",!1)):"thomasatm@gmail.com"==e.get("email")?(e.set("assigned","Simi"),e.set("available",!1)):e.set("available",!0),e.save()}),e}})}),define("secret-santa/components/snow-fall",["exports"],function(e){Object.defineProperty(e,"__esModule",{value:!0}),e.default=Ember.Component.extend({didInsertElement:function(){function e(){s.clearRect(0,0,a.width,a.height)
+var t=Ember.Component,n=Ember.RSVP,a=(Ember.Object,Ember.computed,Ember.observer,Ember.get),s=Ember.set
+e.default=t.extend({classNames:["sending-form","paper-stack"],error:!1,actions:{randomize:function(e,t,n){var a=this
+s(this,"isSending",!0),s(this,"error",!1),this._reset(e).then(function(e){a._randomize(e,t,n)})},reset:function(e){this._reset(e)}},_randomize:function(e,t,n){var r=this,o=[],i=e.filterBy("available").get("length")
+e.filterBy("available",!1).forEach(function(a){var s={}
+s.name=a.get("name"),s.email=a.get("email"),s.assigned=a.get("assigned"),s.message=n,t&&(s.recepient_hash=btoa(e.filterBy("name",a.get("assigned")).get("firstObject").get("email"))),o.pushObject(s)}),e.filterBy("available").sortBy("sortId").forEach(function(l,c){l.get("cantDraw").then(function(d){var u=r._getRandomModel(e.filterBy("available").removeObject(l).removeObject(d))
+void 0!==u?(l.set("assigned",u.get("name")),l.save().then(function(){u.save().then(function(){console.log(l.get("name"))
+var e={}
+e.name=l.get("name"),e.email=l.get("email"),e.assigned=u.get("name"),e.message=n,t&&(e.recepient_hash=btoa(u.get("email"))),o.pushObject(e),c+1===i&&(a(r,"error")||console.log(o))})})):(s(r,"error",!0),s(r,"isSending",!1))})})},_sendPayload:function(e){var t=this
+$.ajax({type:"POST",data:{payload:e},url:"http://128.199.218.232:89/secretsanta/",success:function(e){s(t,"isSending",!1),t.attrs.success()},error:function(e){console.log(e,"error")}})},_getRandomModel:function(e){var t=Math.floor(Math.random()*(e.get("length")-1))
+return e.objectAt(t)},_reset:function(e){return new n.Promise(function(t){Ember.run.later(function(){e.forEach(function(n,a){n.set("sortId",Math.floor(500*Math.random())),"aveenalopes@gmail.com"==n.get("email")?(n.set("assigned","Cinatra"),n.set("available",!1)):"cinatra.fernandes@gmail.com"==n.get("email")?(n.set("assigned","Leo"),n.set("available",!1)):"thomasatm@gmail.com"==n.get("email")?(n.set("assigned","Simi"),n.set("available",!1)):n.set("available",!0),n.save().then(function(){a+1===e.get("length")&&t(e)})})},1e3)})}})}),define("secret-santa/components/snow-fall",["exports"],function(e){Object.defineProperty(e,"__esModule",{value:!0}),e.default=Ember.Component.extend({didInsertElement:function(){function e(){s.clearRect(0,0,a.width,a.height)
 for(var l=0;l<r;l++){var c=n[l],d=o,u=i,m=c.x,f=c.y,p=Math.sqrt((m-d)*(m-d)+(f-u)*(f-u))
 if(p<100){var b=(d-m)/p,v=(u-f)/p,h=100/(p*p)/2
 c.velX-=h*b,c.velY-=h*v}else c.velX*=.18,c.velY<=c.speed&&(c.velY=c.speed),c.velX+=Math.cos(c.step+=.05)*c.stepSize
