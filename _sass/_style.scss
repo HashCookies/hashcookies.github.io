@@ -2312,3 +2312,27 @@ and (orientation : landscape) {
 .panel-body {
 	padding :0px
 }
+
+.anglebrackets-content {
+	min-height: 50vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	#logo-svg {
+		max-width: 150px;
+		max-height: 200px;
+		display: inline-block;
+	}
+	h1 {
+		text-transform: lowercase;
+		font-weight: 300;
+		margin: 0 0 60px;
+	}
+	.description {
+		text-align: left;
+		font-size: 18px;
+		p {
+			margin-bottom: 20px;
+		}
+	}
+}
