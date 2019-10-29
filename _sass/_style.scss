@@ -1199,6 +1199,25 @@ body.light-bg {
 	}
 }
 
+.angle-brackets {
+	border-top: 1px solid lighten($dark, 10%);
+	padding-top: 5px;
+	padding-bottom: 5px;
+	.angle-link {
+		font-size: 11px;
+		color: $vibBlue;
+		svg {
+			display: inline-block;
+			vertical-align: middle;
+			max-height: 40px;
+			max-width: 50px;
+			path {
+				fill: $vibBlue !important;
+			}
+		}
+	}
+}
+
 #cold-quote {
 	margin-top: 0px;
 	/*font-family: $serif;*/
