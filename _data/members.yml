@@ -10,17 +10,25 @@
   designation: Sr. Software Developer
   avatar: av-ravi.jpg
 
+- name: Colenso Castellino
+  designation: Software Developer
+  avatar: av-colenso.jpg
+
 - name: Anish Gadekar
   designation: Software Developer
   avatar: av-anish.jpg
 
-- name: Hassan Shaikh
-  designation: Software Developer
-  avatar: av-hassan.jpg
-
 - name: Jarryd Parsekar
   designation: UI Designer
   avatar: av-jarryd.jpg
+
+- name: Chandramohan Naik
+  designation: Quality Analyst
+  avatar: av-chandra.jpg
+
+- name: Hassan Shaikh
+  designation: Software Developer
+  avatar: av-hassan.jpg
 
 - name: KitBit
   designation: Stress Buster
