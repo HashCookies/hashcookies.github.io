@@ -38,10 +38,14 @@
   designation: Software Developer
   avatar: av-shirish.jpg
 
-- name: Coco Puss
-  designation: Stress Buster
-  avatar: av-kitty.jpg
-
 - name: Juliana Thayil
   designation: Junior Software Developer
   avatar: av-juliana.jpg
+
+- name: Jayesh Patel
+  designation: Junior Software Developer
+  avatar: av-jayesh.jpg
+
+- name: Coco Puss
+  designation: Stress Buster
+  avatar: av-kitty.jpg
