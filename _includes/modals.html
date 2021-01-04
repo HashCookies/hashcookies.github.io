@@ -5,8 +5,8 @@
  			<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
 
  			<div class="col-md-3 col-xs-12 text-center">
- 				<img src="/assets/images/logo.svg" id="contact-card-logo" width="100" height="100" alt="Hash Cookies logo" />
-
+				 <img src="/assets/images/logo.svg" id="contact-card-logo" width="100" height="100" alt="Hash Cookies logo" />
+				 
  			</div>
 			<div class="col-md-4 col-sm-offset-0 col-xs-offset-3 col-xs-9">
 				<h5>Hash Cookies</h5>
@@ -19,7 +19,6 @@
 					<li><span class="label">Facebook</span> <a href="http://facebook.com/hashcookies.social" title="Hash Cookies Facebook page">fb.com/hashcookies.design</a></li>
 				</ul>
 			</div>
-
  		</div>
    	  	<!-- Header ends -->
 
@@ -29,15 +28,23 @@
 				<input type="hidden" name="utf8" value="✓">
 				<input type="hidden" name="form_id" value="contact-messages-form" />
 				<div id="cm-inputs">
-          <input type="text" name="name" id="namefield-1" class="namefield" />
-					<textarea id="cm-message" name="message" placeholder="Feel free to say anything!" class="form-control" rows="1"></textarea>
+          			<input type="text" name="name" id="namefield-1" class="namefield" />
+					<textarea id="cm-message" name="message" placeholder="Feel free to say anything!" class="form-control" rows="1" required></textarea>
 					<input type="hidden" id="cm-original" name="original" />
 				</div>
-				<input type="submit" class="btn btn-primary pull-right" value="Send Message" />
+				<div id="cm-inputs"> 
+					<div class="row">
+						<div class="col-md-9">
+							<input type="email" name="email" placeholder="hello@email.com" class="form-control" required>
+							<small class="form-text text-muted">*email is required</small>
+						</div>
+						<div class="col-md-3">
+							<input type="submit" class="btn btn-primary pull-right" value="Send Message"/>
+						</div>
+					</div>
+				</div>
 			</form>
-
         </div> <!--end modal body-->
-
      </div>  <!-- Content ends -->
   </div>
 </div>
@@ -58,13 +65,13 @@
 		    	        	<div class="form-group">
 
 		    	        		<label for="email">Your Email</label>
-							    <input class="form-control input-lg" type="email" name="email" id="email" placeholder="Your Email" />
+							    <input class="form-control input-lg" type="email" name="email" id="email" placeholder="Your Email" required/>
 		    			 	</div>
 	    			 	</div>
 	    			 	<div class="col-md-6">
 		    			 	<div class="form-group">
 		    			 		<label for="phone">Your phone</label>
-		    			 		<input class="form-control input-lg" type="text" name="phone" id="phone" placeholder="Your Phone" />
+		    			 		<input class="form-control input-lg" type="text" name="phone" id="phone" placeholder="Your Phone" required/>
 		    			 	</div>
 	    			 	</div>
 				 	</div>
