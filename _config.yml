@@ -14,8 +14,7 @@ repository: https://github.com/milindalvares/hash-cookies/
 
 permalink: /journal/:title
 
-
-gems:
+plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
